@@ -11,7 +11,7 @@ import Oauth2TokenViewer from '../Oauth2TokenViewer/index';
 import Oauth2ActionButtons from '../Oauth2ActionButtons/index';
 import AdditionalParams from '../AdditionalParams/index';
 import { getAllVariables } from 'utils/collections/index';
-import { interpolate } from '@usebruno/common';
+import { interpolate } from '@usedaffy/common';
 import { savePreferences } from 'providers/ReduxStore/slices/app';
 import toast from 'react-hot-toast';
 
@@ -117,7 +117,7 @@ const OAuth2Implicit = ({ save, item = {}, request, handleRun, updateAuth, colle
               onRun={handleRun}
               collection={collection}
               item={item}
-              placeholder={useSystemBrowser ? 'https://oauth.usebruno.com/callback' : undefined}
+              placeholder={useSystemBrowser ? 'https://oauth.usedaffy.com/callback' : undefined}
               isCompact
             />
           </div>

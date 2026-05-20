@@ -1,5 +1,5 @@
-import type { FolderRequest as BrunoFolderRequest } from '@usebruno/schema-types/collection/folder';
-import type { KeyValue as BrunoKeyValue } from '@usebruno/schema-types/common/key-value';
+import type { FolderRequest as BrunoFolderRequest } from '@usedaffy/schema-types/collection/folder';
+import type { KeyValue as BrunoKeyValue } from '@usedaffy/schema-types/common/key-value';
 import type { HttpRequestHeader, HttpResponseHeader } from '@opencollection/types/requests/http';
 import { uuid, ensureString } from '../../../utils';
 

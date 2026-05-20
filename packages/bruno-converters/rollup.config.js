@@ -9,8 +9,8 @@ const path = require('path');
 const packageJson = require('./package.json');
 
 const externalDeps = [
-  '@usebruno/schema',
-  '@usebruno/schema-types',
+  '@usedaffy/schema',
+  '@usedaffy/schema-types',
   /@usebruno\/schema-types\/.*/,
   '@opencollection/types',
   /@opencollection\/types\/.*/,

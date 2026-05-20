@@ -2,12 +2,12 @@ import { normalizeProxyUrl, normalizeNoProxy } from './common';
 
 describe('normalizeProxyUrl', () => {
   it('should add http protocol when missing', () => {
-    expect(normalizeProxyUrl('proxy.usebruno.com:8080')).toBe('http://proxy.usebruno.com:8080');
+    expect(normalizeProxyUrl('proxy.usedaffy.com:8080')).toBe('http://proxy.usedaffy.com:8080');
   });
 
   it('should not modify URL with existing protocol', () => {
-    expect(normalizeProxyUrl('http://proxy.usebruno.com:8080')).toBe('http://proxy.usebruno.com:8080');
-    expect(normalizeProxyUrl('https://proxy.usebruno.com:8443')).toBe('https://proxy.usebruno.com:8443');
+    expect(normalizeProxyUrl('http://proxy.usedaffy.com:8080')).toBe('http://proxy.usedaffy.com:8080');
+    expect(normalizeProxyUrl('https://proxy.usedaffy.com:8443')).toBe('https://proxy.usedaffy.com:8443');
   });
 
   it('should handle empty string', () => {
@@ -15,12 +15,12 @@ describe('normalizeProxyUrl', () => {
   });
 
   it('should handle various protocols', () => {
-    expect(normalizeProxyUrl('socks5://proxy.usebruno.com:1080')).toBe('socks5://proxy.usebruno.com:1080');
-    expect(normalizeProxyUrl('socks4://proxy.usebruno.com:1080')).toBe('socks4://proxy.usebruno.com:1080');
+    expect(normalizeProxyUrl('socks5://proxy.usedaffy.com:1080')).toBe('socks5://proxy.usedaffy.com:1080');
+    expect(normalizeProxyUrl('socks4://proxy.usedaffy.com:1080')).toBe('socks4://proxy.usedaffy.com:1080');
   });
 
   it('should handle URLs without port', () => {
-    expect(normalizeProxyUrl('proxy.usebruno.com')).toBe('http://proxy.usebruno.com');
+    expect(normalizeProxyUrl('proxy.usedaffy.com')).toBe('http://proxy.usedaffy.com');
   });
 });
 

@@ -9,7 +9,7 @@ const generateUID = () => {
 };
 
 import { get, each } from 'lodash';
-import { collectionSchema } from '@usebruno/schema';
+import { collectionSchema } from '@usedaffy/schema';
 
 // --- Inlined from src/common/index.js ---
 export const validateSchema = (collection = {}) => {

@@ -3,7 +3,7 @@ import xmlFormat from 'xml-formatter';
 import { JSONPath } from 'jsonpath-plus';
 import fastJsonFormat from 'fast-json-format';
 import { format, applyEdits } from 'jsonc-parser';
-import { patternHasher } from '@usebruno/common/utils';
+import { patternHasher } from '@usedaffy/common/utils';
 import prettierFormat from 'prettier/standalone';
 import parserBabel from 'prettier/parser-babel';
 

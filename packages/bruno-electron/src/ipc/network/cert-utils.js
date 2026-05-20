@@ -1,7 +1,7 @@
 const fs = require('node:fs');
 const path = require('path');
 const { get } = require('lodash');
-const { getCACertificates } = require('@usebruno/requests');
+const { getCACertificates } = require('@usedaffy/requests');
 const { preferencesUtil } = require('../../store/preferences');
 const { getBrunoConfig } = require('../../store/bruno-config');
 const { getCachedSystemProxy } = require('../../store/system-proxy');
@@ -21,7 +21,7 @@ const getCertsAndProxyConfig = async ({
   globalEnvironmentVariables
 }) => {
   /**
-   * @see https://github.com/usebruno/bruno/issues/211 set keepAlive to true, this should fix socket hang up errors
+   * @see https://github.com/usedaffy/daffy/issues/211 set keepAlive to true, this should fix socket hang up errors
    * @see https://github.com/nodejs/node/pull/43522 keepAlive was changed to true globally on Node v19+
    */
   const httpsAgentRequestFields = { keepAlive: true };

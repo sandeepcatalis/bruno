@@ -33,7 +33,7 @@ import type {
   BrunoExample,
   BrunoHttpRequest
 } from '../types';
-import type { HttpItemSettings as BrunoHttpItemSettings } from '@usebruno/schema-types/collection/item';
+import type { HttpItemSettings as BrunoHttpItemSettings } from '@usedaffy/schema-types/collection/item';
 
 const getHttpBody = (body: HttpRequestBody | Array<{ title: string; selected?: boolean; body: HttpRequestBody }> | undefined): HttpRequestBody | undefined => {
   if (!body) return undefined;

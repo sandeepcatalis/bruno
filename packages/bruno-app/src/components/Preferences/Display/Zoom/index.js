@@ -6,7 +6,7 @@ import StyledWrapper from './StyledWrapper';
 import { IconReload } from '@tabler/icons';
 import { IconChevronDown, IconCheck } from '@tabler/icons';
 import Button from 'ui/Button/index';
-const { percentageToZoomLevel } = require('@usebruno/common');
+const { percentageToZoomLevel } = require('@usedaffy/common');
 
 // Zoom options for dropdown (50% to 150%)
 const ZOOM_OPTIONS = [

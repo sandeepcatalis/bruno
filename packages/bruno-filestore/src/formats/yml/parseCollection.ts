@@ -1,5 +1,5 @@
 import type { OpenCollection } from '@opencollection/types';
-import type { FolderRoot } from '@usebruno/schema-types/collection/folder';
+import type { FolderRoot } from '@usedaffy/schema-types/collection/folder';
 import { parseYml } from './utils';
 import { toBrunoAuth } from './common/auth';
 import { toBrunoHttpHeaders } from './common/headers';

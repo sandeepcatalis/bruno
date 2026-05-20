@@ -1,6 +1,6 @@
 let mockInitialize;
 
-jest.mock('@usebruno/requests', () => ({
+jest.mock('@usedaffy/requests', () => ({
   initializeShellEnv: (...args) => mockInitialize(...args)
 }));
 

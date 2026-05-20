@@ -40,9 +40,9 @@ describe('LinuxProxyResolver', () => {
   describe('gsettings proxy detection', () => {
     it('should detect manual proxy configuration', async () => {
       const modeOutput = '\'manual\'';
-      const httpHostOutput = '\'proxy.usebruno.com\'';
+      const httpHostOutput = '\'proxy.usedaffy.com\'';
       const httpPortOutput = '8080';
-      const httpsHostOutput = '\'secure-proxy.usebruno.com\'';
+      const httpsHostOutput = '\'secure-proxy.usedaffy.com\'';
       const httpsPortOutput = '8443';
       const ignoreHostsOutput = '[\'localhost\', \'127.0.0.1\']';
 
@@ -57,8 +57,8 @@ describe('LinuxProxyResolver', () => {
       const result = await detector.detect();
 
       expect(result).toEqual({
-        http_proxy: 'http://proxy.usebruno.com:8080',
-        https_proxy: 'http://secure-proxy.usebruno.com:8443',
+        http_proxy: 'http://proxy.usedaffy.com:8080',
+        https_proxy: 'http://secure-proxy.usedaffy.com:8443',
         no_proxy: 'localhost,127.0.0.1',
         source: 'linux-system'
       });
@@ -66,9 +66,9 @@ describe('LinuxProxyResolver', () => {
 
     it('should detect identical HTTP and HTTPS proxies', async () => {
       const modeOutput = '\'manual\'';
-      const httpHostOutput = '\'proxy.usebruno.com\'';
+      const httpHostOutput = '\'proxy.usedaffy.com\'';
       const httpPortOutput = '8080';
-      const httpsHostOutput = '\'proxy.usebruno.com\'';
+      const httpsHostOutput = '\'proxy.usedaffy.com\'';
       const httpsPortOutput = '8080';
       const ignoreHostsOutput = '[]';
 
@@ -83,8 +83,8 @@ describe('LinuxProxyResolver', () => {
       const result = await detector.detect();
 
       expect(result).toEqual({
-        http_proxy: 'http://proxy.usebruno.com:8080',
-        https_proxy: 'http://proxy.usebruno.com:8080',
+        http_proxy: 'http://proxy.usedaffy.com:8080',
+        https_proxy: 'http://proxy.usedaffy.com:8080',
         no_proxy: null,
         source: 'linux-system'
       });
@@ -100,7 +100,7 @@ describe('LinuxProxyResolver', () => {
 
     it('should handle empty ignore hosts list', async () => {
       const modeOutput = '\'manual\'';
-      const httpHostOutput = '\'proxy.usebruno.com\'';
+      const httpHostOutput = '\'proxy.usedaffy.com\'';
       const httpPortOutput = '8080';
       const httpsHostOutput = '\'\'';
       const httpsPortOutput = '';
@@ -117,7 +117,7 @@ describe('LinuxProxyResolver', () => {
       const result = await detector.detect();
 
       expect(result).toEqual({
-        http_proxy: 'http://proxy.usebruno.com:8080',
+        http_proxy: 'http://proxy.usedaffy.com:8080',
         https_proxy: null,
         no_proxy: null,
         source: 'linux-system'
@@ -135,16 +135,16 @@ describe('LinuxProxyResolver', () => {
       // Mock /etc/environment file
       mockExistsSync.mockReturnValueOnce(true);
       mockReadFile.mockResolvedValueOnce(`
-http_proxy=http://proxy.usebruno.com:8080
-https_proxy=http://proxy.usebruno.com:8080
+http_proxy=http://proxy.usedaffy.com:8080
+https_proxy=http://proxy.usedaffy.com:8080
 no_proxy=localhost,127.0.0.1
 `);
 
       const result = await detector.detect();
 
       expect(result).toEqual({
-        http_proxy: 'http://proxy.usebruno.com:8080',
-        https_proxy: 'http://proxy.usebruno.com:8080',
+        http_proxy: 'http://proxy.usedaffy.com:8080',
+        https_proxy: 'http://proxy.usedaffy.com:8080',
         no_proxy: 'localhost,127.0.0.1',
         source: 'linux-system'
       });
@@ -166,16 +166,16 @@ no_proxy=localhost,127.0.0.1
       // Mock systemd proxy file to exist
       mockExistsSync.mockReturnValueOnce(true);
       mockReadFile.mockResolvedValueOnce(`
-http_proxy=http://proxy.usebruno.com:8080
-https_proxy=http://proxy.usebruno.com:8080
+http_proxy=http://proxy.usedaffy.com:8080
+https_proxy=http://proxy.usedaffy.com:8080
 no_proxy=localhost,127.0.0.1
 `);
 
       const result = await detector.detect();
 
       expect(result).toEqual({
-        http_proxy: 'http://proxy.usebruno.com:8080',
-        https_proxy: 'http://proxy.usebruno.com:8080',
+        http_proxy: 'http://proxy.usedaffy.com:8080',
+        https_proxy: 'http://proxy.usedaffy.com:8080',
         no_proxy: 'localhost,127.0.0.1',
         source: 'linux-system'
       });

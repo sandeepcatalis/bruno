@@ -6,7 +6,7 @@ const getBruJsonWithAdditionalParams = (grantType) => ({
   },
   "http": {
     "method": "get",
-    "url": "https://api.usebruno.com/protected"
+    "url": "https://api.usedaffy.com/protected"
   },
   "auth": {
     "oauth2": {

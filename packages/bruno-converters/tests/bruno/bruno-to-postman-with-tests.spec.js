@@ -17,7 +17,7 @@ describe('Bruno to Postman Converter with Tests and Scripts', () => {
         tags: [],
         examples: [],
         request: {
-          url: 'https://echo.usebruno.com',
+          url: 'https://echo.usedaffy.com',
           method: 'POST',
           headers: [],
           params: [],
@@ -76,7 +76,7 @@ describe('Bruno to Postman Converter with Tests and Scripts', () => {
             tags: [],
             examples: [],
             request: {
-              url: 'https://echo.usebruno.com',
+              url: 'https://echo.usedaffy.com',
               method: 'POST',
               headers: [],
               params: [],
@@ -135,7 +135,7 @@ describe('Bruno to Postman Converter with Tests and Scripts', () => {
                 tags: [],
                 examples: [],
                 request: {
-                  url: 'https://echo.usebruno.com',
+                  url: 'https://echo.usedaffy.com',
                   method: 'POST',
                   headers: [],
                   params: [],

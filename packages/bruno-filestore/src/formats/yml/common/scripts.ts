@@ -1,8 +1,8 @@
 import type { Scripts, Script } from '@opencollection/types/common/scripts';
-import type { FolderRequest as BrunoFolderRequest } from '@usebruno/schema-types/collection/folder';
-import type { HttpRequest as BrunoHttpRequest } from '@usebruno/schema-types/requests/http';
-import type { WebSocketRequest as BrunoWebSocketRequest } from '@usebruno/schema-types/requests/websocket';
-import type { GrpcRequest as BrunoGrpcRequest } from '@usebruno/schema-types/requests/grpc';
+import type { FolderRequest as BrunoFolderRequest } from '@usedaffy/schema-types/collection/folder';
+import type { HttpRequest as BrunoHttpRequest } from '@usedaffy/schema-types/requests/http';
+import type { WebSocketRequest as BrunoWebSocketRequest } from '@usedaffy/schema-types/requests/websocket';
+import type { GrpcRequest as BrunoGrpcRequest } from '@usedaffy/schema-types/requests/grpc';
 
 export const toOpenCollectionScripts = (request: BrunoFolderRequest | BrunoHttpRequest | BrunoWebSocketRequest | BrunoGrpcRequest | null | undefined): Scripts | undefined => {
   const ocScripts: Scripts = [];

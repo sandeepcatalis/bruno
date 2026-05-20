@@ -1,5 +1,5 @@
 const { parentPort } = require('node:worker_threads');
-const { postmanTranslation } = require('@usebruno/converters');
+const { postmanTranslation } = require('@usedaffy/converters');
 
 parentPort.on('message', (workerData) => {
   try {

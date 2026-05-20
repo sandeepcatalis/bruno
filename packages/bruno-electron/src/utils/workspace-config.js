@@ -10,8 +10,8 @@ const posixifyPath = (p) => (p ? p.replace(/\\/g, '/') : p);
 
 const WORKSPACE_TYPE = 'workspace';
 const OPENCOLLECTION_VERSION = '1.0.0';
-const GITIGNORE_MANAGED_BLOCK_START = '# Bruno managed collection remotes';
-const GITIGNORE_MANAGED_BLOCK_END = '# End Bruno managed collection remotes';
+const GITIGNORE_MANAGED_BLOCK_START = '# Daffy managed collection remotes';
+const GITIGNORE_MANAGED_BLOCK_END = '# End Daffy managed collection remotes';
 
 const quoteYamlValue = (value) => {
   if (typeof value !== 'string') {

@@ -1,4 +1,4 @@
-import { mockDataFunctions } from '@usebruno/common';
+import { mockDataFunctions } from '@usedaffy/common';
 
 const CodeMirror = require('codemirror');
 
@@ -642,7 +642,7 @@ export const showRootHints = (cm, showHintsFor = []) => {
 };
 
 /**
- * Bruno AutoComplete Helper - Main function with context awareness
+ * Daffy AutoComplete Helper - Main function with context awareness
  * @param {Object} cm - CodeMirror instance
  * @param {Object} allVariables - All available variables
  * @param {string[]} anywordAutocompleteHints - Custom autocomplete hints
@@ -766,7 +766,7 @@ const handleKeyupForAutocomplete = (cm, event, options) => {
 };
 
 /**
- * Setup Bruno AutoComplete Helper on a CodeMirror editor
+ * Setup Daffy AutoComplete Helper on a CodeMirror editor
  * @param {Object} editor - CodeMirror editor instance
  * @param {Object} options - Configuration options
  * @returns {Function} Cleanup function

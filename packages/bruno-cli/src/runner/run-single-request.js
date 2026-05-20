@@ -6,7 +6,7 @@ const { forOwn, each, extend, get, compact } = require('lodash');
 const prepareRequest = require('./prepare-request');
 const interpolateVars = require('./interpolate-vars');
 const { interpolateString, interpolateObject } = require('./interpolate-string');
-const { ScriptRuntime, TestRuntime, VarsRuntime, AssertRuntime, formatErrorWithContext, SCRIPT_TYPES } = require('@usebruno/js');
+const { ScriptRuntime, TestRuntime, VarsRuntime, AssertRuntime, formatErrorWithContext, SCRIPT_TYPES } = require('@usedaffy/js');
 const { stripExtension } = require('../utils/filesystem');
 const { getOptions } = require('../utils/bru');
 const { makeAxiosInstance } = require('../utils/axios-instance');
@@ -17,11 +17,11 @@ const { parseDataFromResponse } = require('../utils/common');
 const { getCookieStringForUrl, saveCookies } = require('../utils/cookies');
 const { createFormData } = require('../utils/form-data');
 const { NtlmClient } = require('axios-ntlm');
-const { addDigestInterceptor, getHttpHttpsAgents, makeAxiosInstance: makeAxiosInstanceForOauth2, applyOAuth1ToRequest } = require('@usebruno/requests');
-const { getCACertificates, transformProxyConfig } = require('@usebruno/requests');
+const { addDigestInterceptor, getHttpHttpsAgents, makeAxiosInstance: makeAxiosInstanceForOauth2, applyOAuth1ToRequest } = require('@usedaffy/requests');
+const { getCACertificates, transformProxyConfig } = require('@usedaffy/requests');
 const { getOAuth2Token, getFormattedOauth2Credentials } = require('../utils/oauth2');
 const tokenStore = require('../store/tokenStore');
-const { encodeUrl, buildFormUrlEncodedPayload, extractPromptVariables, isFormData, extractBoundaryFromContentType, hasExplicitScheme } = require('@usebruno/common').utils;
+const { encodeUrl, buildFormUrlEncodedPayload, extractPromptVariables, isFormData, extractBoundaryFromContentType, hasExplicitScheme } = require('@usedaffy/common').utils;
 
 const onConsoleLog = (type, args) => {
   console[type](...args);
@@ -330,7 +330,7 @@ const runSingleRequest = async function (
     interpolateVars(request, envVariables, runtimeVariables, processEnvVars);
 
     // if this is a graphql request, parse the variables, only after interpolation
-    // https://github.com/usebruno/bruno/issues/884
+    // https://github.com/usedaffy/daffy/issues/884
     if (request.mode === 'graphql' && typeof request.data?.variables === 'string') {
       try {
         request.data.variables = JSON.parse(request.data.variables);

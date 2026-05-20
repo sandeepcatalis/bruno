@@ -1,5 +1,5 @@
 const fs = require('fs');
-const { generateHtmlReport } = require('@usebruno/common/runner');
+const { generateHtmlReport } = require('@usedaffy/common/runner');
 const { CLI_VERSION } = require('../constants');
 
 const makeHtmlOutput = async (results, outputPath, runCompletionTime, environment = null) => {

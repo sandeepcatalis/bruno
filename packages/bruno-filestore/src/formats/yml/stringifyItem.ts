@@ -1,4 +1,4 @@
-import type { Item as BrunoItem } from '@usebruno/schema-types/collection/item';
+import type { Item as BrunoItem } from '@usedaffy/schema-types/collection/item';
 import stringifyHttpRequest from './items/stringifyHttpRequest';
 import stringifyGraphqlRequest from './items/stringifyGraphQLRequest';
 import stringifyGrpcRequest from './items/stringifyGrpcRequest';

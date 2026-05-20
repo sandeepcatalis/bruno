@@ -1,5 +1,5 @@
 {
-  "name": "@usebruno/js",
+  "name": "@usedaffy/js",
   "version": "0.12.0",
   "license": "MIT",
   "main": "src/index.js",
@@ -13,8 +13,8 @@
     "sandbox:bundle-libraries": "node ./src/sandbox/bundle-libraries.js"
   },
   "dependencies": {
-    "@usebruno/common": "0.1.0",
-    "@usebruno/query": "0.1.0",
+    "@usedaffy/common": "0.1.0",
+    "@usedaffy/query": "0.1.0",
     "ajv": "^8.12.0",
     "ajv-formats": "^2.1.1",
     "atob": "^2.1.2",

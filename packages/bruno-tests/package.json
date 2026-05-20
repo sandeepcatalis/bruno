@@ -1,5 +1,5 @@
 {
-  "name": "@usebruno/tests",
+  "name": "@usedaffy/tests",
   "version": "0.0.1",
   "description": "",
   "main": "src/index.js",
@@ -8,15 +8,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/usebruno/bruno-testbench.git"
+    "url": "git+https://github.com/usedaffy/daffy-testbench.git"
   },
   "keywords": [],
   "author": "",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/usebruno/bruno-testbench/issues"
+    "url": "https://github.com/usedaffy/daffy-testbench/issues"
   },
-  "homepage": "https://github.com/usebruno/bruno-testbench#readme",
+  "homepage": "https://github.com/usedaffy/daffy-testbench#readme",
   "dependencies": {
     "axios": "1.13.6",
     "body-parser": "2.2.0",

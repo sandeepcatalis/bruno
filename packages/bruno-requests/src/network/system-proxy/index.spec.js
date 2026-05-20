@@ -36,29 +36,29 @@ describe('SystemProxyResolver Integration', () => {
 
   describe('Environment Variables', () => {
     it('should prioritize lowercase over uppercase variables', () => {
-      process.env.http_proxy = 'http://proxy.usebruno.com:8080';
-      process.env.HTTP_PROXY = 'http://proxy.usebruno.com:8081';
-      process.env.https_proxy = 'https://proxy.usebruno.com:8082';
-      process.env.HTTPS_PROXY = 'https://proxy.usebruno.com:8083';
+      process.env.http_proxy = 'http://proxy.usedaffy.com:8080';
+      process.env.HTTP_PROXY = 'http://proxy.usedaffy.com:8081';
+      process.env.https_proxy = 'https://proxy.usedaffy.com:8082';
+      process.env.HTTPS_PROXY = 'https://proxy.usedaffy.com:8083';
 
       const result = detector.getEnvironmentVariables();
 
       expect(result).toEqual({
-        http_proxy: 'http://proxy.usebruno.com:8080',
-        https_proxy: 'https://proxy.usebruno.com:8082',
+        http_proxy: 'http://proxy.usedaffy.com:8080',
+        https_proxy: 'https://proxy.usedaffy.com:8082',
         no_proxy: null,
         source: 'environment'
       });
     });
 
     it('should fall back to uppercase when lowercase is not set', () => {
-      process.env.HTTP_PROXY = 'http://proxy.usebruno.com:8081';
+      process.env.HTTP_PROXY = 'http://proxy.usedaffy.com:8081';
       process.env.NO_PROXY = 'localhost,127.0.0.1';
 
       const result = detector.getEnvironmentVariables();
 
       expect(result).toEqual({
-        http_proxy: 'http://proxy.usebruno.com:8081',
+        http_proxy: 'http://proxy.usedaffy.com:8081',
         https_proxy: null,
         no_proxy: 'localhost,127.0.0.1',
         source: 'environment'
@@ -163,14 +163,14 @@ describe('SystemProxyResolver Integration', () => {
       const { WindowsProxyResolver } = require('./utils/windows');
       WindowsProxyResolver.mockImplementation(() => ({
         detect: jest.fn().mockResolvedValue({
-          http_proxy: 'http://system-proxy.usebruno.com:8080',
-          https_proxy: 'https://system-proxy.usebruno.com:8443',
+          http_proxy: 'http://system-proxy.usedaffy.com:8080',
+          https_proxy: 'https://system-proxy.usedaffy.com:8443',
           no_proxy: 'localhost',
           source: 'windows-system'
         })
       }));
 
-      process.env.http_proxy = 'http://env-proxy.usebruno.com:9090';
+      process.env.http_proxy = 'http://env-proxy.usedaffy.com:9090';
 
       // Require the module after mocking
       const { getSystemProxy: getSystemProxyFresh } = require('./index');
@@ -178,8 +178,8 @@ describe('SystemProxyResolver Integration', () => {
 
       // Environment variables take priority
       expect(result).toEqual({
-        http_proxy: 'http://env-proxy.usebruno.com:9090',
-        https_proxy: 'https://system-proxy.usebruno.com:8443',
+        http_proxy: 'http://env-proxy.usedaffy.com:9090',
+        https_proxy: 'https://system-proxy.usedaffy.com:8443',
         no_proxy: 'localhost',
         source: 'windows-system + environment'
       });
@@ -194,8 +194,8 @@ describe('SystemProxyResolver Integration', () => {
       const { MacOSProxyResolver } = require('./utils/macos');
       MacOSProxyResolver.mockImplementation(() => ({
         detect: jest.fn().mockResolvedValue({
-          http_proxy: 'http://system-proxy.usebruno.com:8080',
-          https_proxy: 'https://system-proxy.usebruno.com:8443',
+          http_proxy: 'http://system-proxy.usedaffy.com:8080',
+          https_proxy: 'https://system-proxy.usedaffy.com:8443',
           no_proxy: 'localhost',
           source: 'macos-system'
         })
@@ -206,8 +206,8 @@ describe('SystemProxyResolver Integration', () => {
       const result = await getSystemProxyFresh();
 
       expect(result).toEqual({
-        http_proxy: 'http://system-proxy.usebruno.com:8080',
-        https_proxy: 'https://system-proxy.usebruno.com:8443',
+        http_proxy: 'http://system-proxy.usedaffy.com:8080',
+        https_proxy: 'https://system-proxy.usedaffy.com:8443',
         no_proxy: 'localhost',
         source: 'macos-system'
       });
@@ -224,16 +224,16 @@ describe('SystemProxyResolver Integration', () => {
         detect: jest.fn().mockRejectedValue(new Error('Detection failed'))
       }));
 
-      process.env.http_proxy = 'http://proxy.usebruno.com:8080';
-      process.env.https_proxy = 'https://proxy.usebruno.com:8443';
+      process.env.http_proxy = 'http://proxy.usedaffy.com:8080';
+      process.env.https_proxy = 'https://proxy.usedaffy.com:8443';
 
       // Require the module after mocking
       const { getSystemProxy: getSystemProxyFresh } = require('./index');
       const result = await getSystemProxyFresh();
 
       expect(result).toEqual({
-        http_proxy: 'http://proxy.usebruno.com:8080',
-        https_proxy: 'https://proxy.usebruno.com:8443',
+        http_proxy: 'http://proxy.usedaffy.com:8080',
+        https_proxy: 'https://proxy.usedaffy.com:8443',
         no_proxy: null,
         source: 'environment'
       });

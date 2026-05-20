@@ -55,7 +55,7 @@ if (!SERVER_RENDERED) {
 
     /*
      * Filter out errors due to top level awaits
-     * See https://github.com/usebruno/bruno/issues/1214
+     * See https://github.com/usedaffy/daffy/issues/1214
      *
      * - E058: Missing semicolon at top level await
      *  codemirror error: "Missing semicolon."

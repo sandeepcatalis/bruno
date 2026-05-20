@@ -8,8 +8,8 @@ const peerDepsExternal = require('rollup-plugin-peer-deps-external');
 const packageJson = require('./package.json');
 
 const externalDeps = [
-  '@usebruno/lang',
-  '@usebruno/schema-types',
+  '@usedaffy/lang',
+  '@usedaffy/schema-types',
   /@usebruno\/schema-types\/.*/,
   '@opencollection/types',
   /@opencollection\/types\/.*/,

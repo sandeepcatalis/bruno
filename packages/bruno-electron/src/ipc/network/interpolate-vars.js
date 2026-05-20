@@ -1,6 +1,6 @@
-const { interpolate } = require('@usebruno/common');
+const { interpolate } = require('@usedaffy/common');
 const { each, forOwn, cloneDeep } = require('lodash');
-const { isFormData } = require('@usebruno/common').utils;
+const { isFormData } = require('@usedaffy/common').utils;
 
 const isBinaryRequestBody = (data) => Buffer.isBuffer(data) || typeof data?.pipe === 'function';
 

@@ -1,6 +1,6 @@
 const yargs = require('yargs');
 const chalk = require('chalk');
-const { initializeShellEnv } = require('@usebruno/requests');
+const { initializeShellEnv } = require('@usedaffy/requests');
 
 const { CLI_EPILOGUE, CLI_VERSION } = require('./constants');
 

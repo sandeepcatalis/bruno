@@ -309,7 +309,7 @@ describe('postman-collection', () => {
             method: 'GET',
             header: [],
             url: {
-              raw: 'https://echo.usebruno.com/get',
+              raw: 'https://echo.usedaffy.com/get',
               protocol: 'https',
               host: ['echo', 'usebruno', 'com'],
               path: ['get']
@@ -325,7 +325,7 @@ describe('postman-collection', () => {
             method: 'POST',
             header: [],
             url: {
-              raw: 'https://echo.usebruno.com/post',
+              raw: 'https://echo.usedaffy.com/post',
               protocol: 'https',
               host: ['echo', 'usebruno', 'com'],
               path: ['post']
@@ -338,7 +338,7 @@ describe('postman-collection', () => {
             method: 'PUT',
             header: [],
             url: {
-              raw: 'https://echo.usebruno.com/put',
+              raw: 'https://echo.usedaffy.com/put',
               protocol: 'https',
               host: ['echo', 'usebruno', 'com'],
               path: ['put']
@@ -1180,7 +1180,7 @@ const postmanCollection = {
             method: 'GET',
             header: [],
             url: {
-              raw: 'https://usebruno.com',
+              raw: 'https://usedaffy.com',
               protocol: 'https',
               host: [
                 'usebruno',
@@ -1198,7 +1198,7 @@ const postmanCollection = {
         method: 'GET',
         header: [],
         url: {
-          raw: 'https://usebruno.com',
+          raw: 'https://usedaffy.com',
           protocol: 'https',
           host: [
             'usebruno',
@@ -1442,7 +1442,7 @@ const expectedOutput = {
           type: 'http-request',
           seq: 1,
           request: {
-            url: 'https://usebruno.com',
+            url: 'https://usedaffy.com',
             method: 'GET',
             auth: {
               mode: 'inherit',
@@ -1497,7 +1497,7 @@ const expectedOutput = {
       type: 'http-request',
       seq: 2,
       request: {
-        url: 'https://usebruno.com',
+        url: 'https://usedaffy.com',
         method: 'GET',
         auth: {
           mode: 'inherit',

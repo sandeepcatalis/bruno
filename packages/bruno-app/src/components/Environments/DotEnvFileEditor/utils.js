@@ -1,5 +1,5 @@
 import { uuid } from 'utils/common';
-import { utils } from '@usebruno/common';
+import { utils } from '@usedaffy/common';
 
 export const variablesToRaw = (variables) => {
   return utils.jsonToDotenv(variables);

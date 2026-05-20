@@ -10,7 +10,7 @@ import { sortByNameThenSequence } from 'utils/common/index';
 import path from 'utils/common/path';
 import { cloneDeep, get } from 'lodash';
 import Button from 'ui/Button/index';
-import { isRequestTagsIncluded } from '@usebruno/common';
+import { isRequestTagsIncluded } from '@usedaffy/common';
 
 const isRequestDisabled = (item, tags) => {
   // WS and gRPC are not supported by the collection runner

@@ -8,7 +8,7 @@ const { resolveDefaultLocation } = require('../utils/default-location');
 const onboardUser = require('../app/onboarding');
 const LastOpenedCollections = require('../store/last-opened-collections');
 const WindowStateStore = require('../store/window-state');
-const { clearAgentCache } = require('@usebruno/requests');
+const { clearAgentCache } = require('@usedaffy/requests');
 
 const registerPreferencesIpc = (mainWindow) => {
   const lastOpenedCollections = new LastOpenedCollections();

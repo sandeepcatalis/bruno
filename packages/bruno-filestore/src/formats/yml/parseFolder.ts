@@ -1,4 +1,4 @@
-import type { FolderRoot } from '@usebruno/schema-types/collection/folder';
+import type { FolderRoot } from '@usedaffy/schema-types/collection/folder';
 import type { Folder } from '@opencollection/types/collection/item';
 import { parseYml } from './utils';
 import { toBrunoAuth } from './common/auth';

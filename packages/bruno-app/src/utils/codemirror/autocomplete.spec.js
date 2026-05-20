@@ -129,7 +129,7 @@ describe('Bruno Autocomplete', () => {
         mockedCodemirror.getRange.mockReturnValue('{{config.api.');
 
         const allVariables = {
-          'config.api.url': 'https://echo.usebruno.com',
+          'config.api.url': 'https://echo.usedaffy.com',
           'config.api.client_id': 'client_id',
           'config.api.client_secret': 'client_secret',
           'config.app.name': 'bruno'

@@ -295,7 +295,7 @@ components:
         type: "string"
         default: "value2"
 servers:
-  - url: "https://echo.usebruno.com"
+  - url: "https://echo.usedaffy.com"
 `;
 
 const expectedOutput = {
@@ -310,7 +310,7 @@ const expectedOutput = {
           secret: false,
           type: 'text',
           uid: 'mockeduuidvalue123456',
-          value: 'https://echo.usebruno.com'
+          value: 'https://echo.usedaffy.com'
         }
       ]
     }

@@ -323,7 +323,7 @@ const sequenceChangedCollection = {
       seq: 1,
       request: {
         method: 'GET',
-        url: 'https://usebruno.com',
+        url: 'https://usedaffy.com',
         auth: {
           mode: 'inherit'
         },
@@ -345,7 +345,7 @@ const sequenceChangedCollection = {
       seq: 2,
       request: {
         method: 'GET',
-        url: 'https://usebruno.com',
+        url: 'https://usedaffy.com',
         auth: {
           mode: 'inherit'
         },
@@ -367,7 +367,7 @@ const sequenceChangedCollection = {
       seq: 2,
       request: {
         method: 'GET',
-        url: 'https://usebruno.com',
+        url: 'https://usedaffy.com',
         auth: {
           mode: 'inherit'
         },

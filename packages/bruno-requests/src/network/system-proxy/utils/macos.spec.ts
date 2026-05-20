@@ -26,10 +26,10 @@ describe('MacOSProxyResolver', () => {
       const scutilOutput = `<dictionary> {
   HTTPEnable : 1
   HTTPPort : 8080
-  HTTPProxy : proxy.usebruno.com
+  HTTPProxy : proxy.usedaffy.com
   HTTPSEnable : 1
   HTTPSPort : 8443
-  HTTPSProxy : secure-proxy.usebruno.com
+  HTTPSProxy : secure-proxy.usedaffy.com
   ExceptionsList : <array> {
     0 : localhost
     1 : 127.0.0.1
@@ -42,8 +42,8 @@ describe('MacOSProxyResolver', () => {
       const result = await detector.detect();
 
       expect(result).toEqual({
-        http_proxy: 'http://proxy.usebruno.com:8080',
-        https_proxy: 'http://secure-proxy.usebruno.com:8443',
+        http_proxy: 'http://proxy.usedaffy.com:8080',
+        https_proxy: 'http://secure-proxy.usedaffy.com:8443',
         no_proxy: 'localhost,127.0.0.1,<local>',
         source: 'macos-system'
       });
@@ -52,9 +52,9 @@ describe('MacOSProxyResolver', () => {
     it('should handle disabled proxy settings', async () => {
       const scutilOutput = `<dictionary> {
   HTTPEnable : 0
-  HTTPProxy : proxy.usebruno.com
+  HTTPProxy : proxy.usedaffy.com
   HTTPSEnable : 0
-  HTTPSProxy : proxy.usebruno.com
+  HTTPSProxy : proxy.usedaffy.com
 }`;
 
       mockExecFile.mockResolvedValueOnce({ stdout: scutilOutput, stderr: '' });
@@ -72,26 +72,26 @@ describe('MacOSProxyResolver', () => {
     it('should use default ports when not specified', async () => {
       const scutilOutput = `<dictionary> {
   HTTPEnable : 1
-  HTTPProxy : proxy.usebruno.com
+  HTTPProxy : proxy.usedaffy.com
   HTTPSEnable : 1
-  HTTPSProxy : secure-proxy.usebruno.com
+  HTTPSProxy : secure-proxy.usedaffy.com
 }`;
 
       mockExecFile.mockResolvedValueOnce({ stdout: scutilOutput, stderr: '' });
 
       const result = await detector.detect();
 
-      expect(result.http_proxy).toBe('http://proxy.usebruno.com:80');
-      expect(result.https_proxy).toBe('http://secure-proxy.usebruno.com:443');
+      expect(result.http_proxy).toBe('http://proxy.usedaffy.com:80');
+      expect(result.https_proxy).toBe('http://secure-proxy.usedaffy.com:443');
     });
 
     it('should handle only HTTP proxy enabled', async () => {
       const scutilOutput = `<dictionary> {
   HTTPEnable : 1
   HTTPPort : 8080
-  HTTPProxy : proxy.usebruno.com
+  HTTPProxy : proxy.usedaffy.com
   HTTPSEnable : 0
-  HTTPSProxy : secure-proxy.usebruno.com
+  HTTPSProxy : secure-proxy.usedaffy.com
 }`;
 
       mockExecFile.mockResolvedValueOnce({ stdout: scutilOutput, stderr: '' });
@@ -99,7 +99,7 @@ describe('MacOSProxyResolver', () => {
       const result = await detector.detect();
 
       expect(result).toEqual({
-        http_proxy: 'http://proxy.usebruno.com:8080',
+        http_proxy: 'http://proxy.usedaffy.com:8080',
         https_proxy: null,
         no_proxy: null,
         source: 'macos-system'
@@ -109,10 +109,10 @@ describe('MacOSProxyResolver', () => {
     it('should handle only HTTPS proxy enabled', async () => {
       const scutilOutput = `<dictionary> {
   HTTPEnable : 0
-  HTTPProxy : proxy.usebruno.com
+  HTTPProxy : proxy.usedaffy.com
   HTTPSEnable : 1
   HTTPSPort : 8443
-  HTTPSProxy : secure-proxy.usebruno.com
+  HTTPSProxy : secure-proxy.usedaffy.com
 }`;
 
       mockExecFile.mockResolvedValueOnce({ stdout: scutilOutput, stderr: '' });
@@ -121,7 +121,7 @@ describe('MacOSProxyResolver', () => {
 
       expect(result).toEqual({
         http_proxy: null,
-        https_proxy: 'http://secure-proxy.usebruno.com:8443',
+        https_proxy: 'http://secure-proxy.usedaffy.com:8443',
         no_proxy: null,
         source: 'macos-system'
       });
@@ -131,10 +131,10 @@ describe('MacOSProxyResolver', () => {
       const scutilOutput = `<dictionary> {
   HTTPEnable : 1
   HTTPPort : 8080
-  HTTPProxy : proxy.usebruno.com
+  HTTPProxy : proxy.usedaffy.com
   HTTPSEnable : 1
   HTTPSPort : 8080
-  HTTPSProxy : proxy.usebruno.com
+  HTTPSProxy : proxy.usedaffy.com
   ExceptionsList : <array> {
   }
   ExcludeSimpleHostnames : 0
@@ -145,8 +145,8 @@ describe('MacOSProxyResolver', () => {
       const result = await detector.detect();
 
       expect(result).toEqual({
-        http_proxy: 'http://proxy.usebruno.com:8080',
-        https_proxy: 'http://proxy.usebruno.com:8080',
+        http_proxy: 'http://proxy.usedaffy.com:8080',
+        https_proxy: 'http://proxy.usedaffy.com:8080',
         no_proxy: null,
         source: 'macos-system'
       });
@@ -156,10 +156,10 @@ describe('MacOSProxyResolver', () => {
       const scutilOutput = `<dictionary> {
   HTTPEnable : 1
   HTTPPort : 8080
-  HTTPProxy : proxy.usebruno.com
+  HTTPProxy : proxy.usedaffy.com
   HTTPSEnable : 1
   HTTPSPort : 8080
-  HTTPSProxy : proxy.usebruno.com
+  HTTPSProxy : proxy.usedaffy.com
   ExcludeSimpleHostnames : 1
 }`;
 
@@ -168,8 +168,8 @@ describe('MacOSProxyResolver', () => {
       const result = await detector.detect();
 
       expect(result).toEqual({
-        http_proxy: 'http://proxy.usebruno.com:8080',
-        https_proxy: 'http://proxy.usebruno.com:8080',
+        http_proxy: 'http://proxy.usedaffy.com:8080',
+        https_proxy: 'http://proxy.usedaffy.com:8080',
         no_proxy: '<local>',
         source: 'macos-system'
       });
@@ -179,10 +179,10 @@ describe('MacOSProxyResolver', () => {
       const scutilOutput = `<dictionary> {
   HTTPEnable : 1
   HTTPPort : 8080
-  HTTPProxy : proxy.usebruno.com
+  HTTPProxy : proxy.usedaffy.com
   HTTPSEnable : 1
   HTTPSPort : 8080
-  HTTPSProxy : proxy.usebruno.com
+  HTTPSProxy : proxy.usedaffy.com
   ExceptionsList : <array> {
     0 : localhost
     1 : 127.0.0.1
@@ -197,8 +197,8 @@ describe('MacOSProxyResolver', () => {
       const result = await detector.detect();
 
       expect(result).toEqual({
-        http_proxy: 'http://proxy.usebruno.com:8080',
-        https_proxy: 'http://proxy.usebruno.com:8080',
+        http_proxy: 'http://proxy.usedaffy.com:8080',
+        https_proxy: 'http://proxy.usedaffy.com:8080',
         no_proxy: 'localhost,127.0.0.1,*.local,192.168.1.0/24,<local>',
         source: 'macos-system'
       });
@@ -208,10 +208,10 @@ describe('MacOSProxyResolver', () => {
       const scutilOutput = `<dictionary> {
   HTTPEnable : 1
   HTTPPort : 8080
-  HTTPProxy : proxy.usebruno.com
+  HTTPProxy : proxy.usedaffy.com
   HTTPSEnable : 1
   HTTPSPort : 8080
-  HTTPSProxy proxy.usebruno.com
+  HTTPSProxy proxy.usedaffy.com
 }`;
 
       mockExecFile.mockResolvedValueOnce({ stdout: scutilOutput, stderr: '' });
@@ -219,7 +219,7 @@ describe('MacOSProxyResolver', () => {
       const result = await detector.detect();
 
       expect(result).toEqual({
-        http_proxy: 'http://proxy.usebruno.com:8080',
+        http_proxy: 'http://proxy.usedaffy.com:8080',
         https_proxy: null,
         no_proxy: null,
         source: 'macos-system'

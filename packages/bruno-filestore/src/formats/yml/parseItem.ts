@@ -1,4 +1,4 @@
-import type { Item as BrunoItem } from '@usebruno/schema-types/collection/item';
+import type { Item as BrunoItem } from '@usedaffy/schema-types/collection/item';
 import type { Item, ScriptFile } from '@opencollection/types/collection/item';
 import type { HttpRequest } from '@opencollection/types/requests/http';
 import type { GraphQLRequest } from '@opencollection/types/requests/graphql';

@@ -17,7 +17,7 @@ module.exports = registerNotificationsIpc;
 
 const fetchNotifications = async () => {
   try {
-    let url = process.env.BRUNO_INFO_ENDPOINT || 'https://appinfo.usebruno.com';
+    let url = process.env.BRUNO_INFO_ENDPOINT || 'https://appinfo.usedaffy.com';
     const data = await fetch(url).then((res) => res.json());
 
     return data?.notifications || [];

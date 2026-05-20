@@ -1,5 +1,5 @@
 const { ipcMain, app } = require('electron');
-const { WsClient } = require('@usebruno/requests');
+const { WsClient } = require('@usedaffy/requests');
 const { safeParseJSON, safeStringifyJSON } = require('../../utils/common');
 const { cloneDeep, each, get } = require('lodash');
 const interpolateVars = require('./interpolate-vars');

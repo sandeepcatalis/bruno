@@ -26,7 +26,7 @@ describe('WindowsProxyResolver', () => {
       const regOutput = `
 HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings
     ProxyEnable    REG_DWORD    0x1
-    ProxyServer    REG_SZ    proxy.usebruno.com:8080
+    ProxyServer    REG_SZ    proxy.usedaffy.com:8080
     ProxyOverride    REG_SZ    localhost;127.0.0.1
 `;
 
@@ -35,8 +35,8 @@ HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settin
       const result = await detector.detect();
 
       expect(result).toEqual({
-        http_proxy: 'http://proxy.usebruno.com:8080',
-        https_proxy: 'http://proxy.usebruno.com:8080',
+        http_proxy: 'http://proxy.usedaffy.com:8080',
+        https_proxy: 'http://proxy.usedaffy.com:8080',
         no_proxy: 'localhost,127.0.0.1',
         source: 'windows-system'
       });
@@ -46,7 +46,7 @@ HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settin
       const regOutput = `
 HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings
     ProxyEnable    REG_DWORD    0x1
-    ProxyServer    REG_SZ    http=proxy.usebruno.com:8080;https=proxy.usebruno.com:8443
+    ProxyServer    REG_SZ    http=proxy.usedaffy.com:8080;https=proxy.usedaffy.com:8443
 `;
 
       mockExecFile.mockResolvedValueOnce({ stdout: regOutput, stderr: '' });
@@ -54,8 +54,8 @@ HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settin
       const result = await detector.detect();
 
       expect(result).toEqual({
-        http_proxy: 'http://proxy.usebruno.com:8080',
-        https_proxy: 'http://proxy.usebruno.com:8443',
+        http_proxy: 'http://proxy.usedaffy.com:8080',
+        https_proxy: 'http://proxy.usedaffy.com:8443',
         no_proxy: null,
         source: 'windows-system'
       });
@@ -64,7 +64,7 @@ HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settin
     it('should fallback to WinHTTP when registry fails', async () => {
       const winhttpOutput = `
 Current WinHTTP proxy settings:
-    Proxy Server(s) :  proxy.usebruno.com:8080
+    Proxy Server(s) :  proxy.usedaffy.com:8080
     Bypass List     :  localhost
 `;
 
@@ -75,8 +75,8 @@ Current WinHTTP proxy settings:
       const result = await detector.detect();
 
       expect(result).toEqual({
-        http_proxy: 'http://proxy.usebruno.com:8080',
-        https_proxy: 'http://proxy.usebruno.com:8080',
+        http_proxy: 'http://proxy.usedaffy.com:8080',
+        https_proxy: 'http://proxy.usedaffy.com:8080',
         no_proxy: 'localhost',
         source: 'windows-system'
       });
@@ -95,7 +95,7 @@ Current WinHTTP proxy settings:
     it('should detect single proxy from WinHTTP', async () => {
       const winhttpOutput = `
 Current WinHTTP proxy settings:
-    Proxy Server(s) :  proxy.usebruno.com:8080
+    Proxy Server(s) :  proxy.usedaffy.com:8080
     Bypass List     :  localhost;127.0.0.1
 `;
 
@@ -106,8 +106,8 @@ Current WinHTTP proxy settings:
       const result = await detector.detect();
 
       expect(result).toEqual({
-        http_proxy: 'http://proxy.usebruno.com:8080',
-        https_proxy: 'http://proxy.usebruno.com:8080',
+        http_proxy: 'http://proxy.usedaffy.com:8080',
+        https_proxy: 'http://proxy.usedaffy.com:8080',
         no_proxy: 'localhost,127.0.0.1',
         source: 'windows-system'
       });
@@ -116,7 +116,7 @@ Current WinHTTP proxy settings:
     it('should detect protocol-specific proxy from WinHTTP', async () => {
       const winhttpOutput = `
 Current WinHTTP proxy settings:
-    Proxy Server(s) :  http=proxy.usebruno.com:8080;https=proxy.usebruno.com:8443
+    Proxy Server(s) :  http=proxy.usedaffy.com:8080;https=proxy.usedaffy.com:8443
     Bypass List     :  localhost
 `;
 
@@ -127,8 +127,8 @@ Current WinHTTP proxy settings:
       const result = await detector.detect();
 
       expect(result).toEqual({
-        http_proxy: 'http://proxy.usebruno.com:8080',
-        https_proxy: 'http://proxy.usebruno.com:8443',
+        http_proxy: 'http://proxy.usedaffy.com:8080',
+        https_proxy: 'http://proxy.usedaffy.com:8443',
         no_proxy: 'localhost',
         source: 'windows-system'
       });
@@ -137,7 +137,7 @@ Current WinHTTP proxy settings:
     it('should handle WinHTTP with no bypass list', async () => {
       const winhttpOutput = `
 Current WinHTTP proxy settings:
-    Proxy Server(s) :  proxy.usebruno.com:8080
+    Proxy Server(s) :  proxy.usedaffy.com:8080
     Bypass List     :  (none)
 `;
 
@@ -148,8 +148,8 @@ Current WinHTTP proxy settings:
       const result = await detector.detect();
 
       expect(result).toEqual({
-        http_proxy: 'http://proxy.usebruno.com:8080',
-        https_proxy: 'http://proxy.usebruno.com:8080',
+        http_proxy: 'http://proxy.usedaffy.com:8080',
+        https_proxy: 'http://proxy.usedaffy.com:8080',
         no_proxy: null,
         source: 'windows-system'
       });
@@ -160,8 +160,8 @@ Current WinHTTP proxy settings:
     it('should detect system-wide proxy environment variables', async () => {
       const regOutput = `
 HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\Session Manager\\Environment
-    HTTP_PROXY    REG_SZ    http://proxy.usebruno.com:8080
-    HTTPS_PROXY    REG_SZ    http://proxy.usebruno.com:8080
+    HTTP_PROXY    REG_SZ    http://proxy.usedaffy.com:8080
+    HTTPS_PROXY    REG_SZ    http://proxy.usedaffy.com:8080
     NO_PROXY    REG_SZ    localhost,127.0.0.1
 `;
 
@@ -173,8 +173,8 @@ HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\Session Manager\\Environ
       const result = await detector.detect();
 
       expect(result).toEqual({
-        http_proxy: 'http://proxy.usebruno.com:8080',
-        https_proxy: 'http://proxy.usebruno.com:8080',
+        http_proxy: 'http://proxy.usedaffy.com:8080',
+        https_proxy: 'http://proxy.usedaffy.com:8080',
         no_proxy: 'localhost,127.0.0.1',
         source: 'windows-system'
       });
@@ -183,7 +183,7 @@ HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\Session Manager\\Environ
     it('should handle only HTTP_PROXY in system environment', async () => {
       const regOutput = `
 HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\Session Manager\\Environment
-    HTTP_PROXY    REG_SZ    http://proxy.usebruno.com:8080
+    HTTP_PROXY    REG_SZ    http://proxy.usedaffy.com:8080
 `;
 
       mockExecFile
@@ -194,7 +194,7 @@ HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\Session Manager\\Environ
       const result = await detector.detect();
 
       expect(result).toEqual({
-        http_proxy: 'http://proxy.usebruno.com:8080',
+        http_proxy: 'http://proxy.usedaffy.com:8080',
         https_proxy: null,
         no_proxy: null,
         source: 'windows-system'
@@ -206,8 +206,8 @@ HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\Session Manager\\Environ
     it('should detect proxy from HKCU\\Environment', async () => {
       const regOutput = `
 HKEY_CURRENT_USER\\Environment
-    HTTP_PROXY    REG_SZ    http://proxy.usebruno.com:8080
-    HTTPS_PROXY    REG_SZ    http://proxy.usebruno.com:8080
+    HTTP_PROXY    REG_SZ    http://proxy.usedaffy.com:8080
+    HTTPS_PROXY    REG_SZ    http://proxy.usedaffy.com:8080
     NO_PROXY    REG_SZ    localhost,127.0.0.1
 `;
 
@@ -220,8 +220,8 @@ HKEY_CURRENT_USER\\Environment
       const result = await detector.detect();
 
       expect(result).toEqual({
-        http_proxy: 'http://proxy.usebruno.com:8080',
-        https_proxy: 'http://proxy.usebruno.com:8080',
+        http_proxy: 'http://proxy.usedaffy.com:8080',
+        https_proxy: 'http://proxy.usedaffy.com:8080',
         no_proxy: 'localhost,127.0.0.1',
         source: 'windows-system'
       });
@@ -233,7 +233,7 @@ HKEY_CURRENT_USER\\Environment
       const regOutput = `
 HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings
     ProxyEnable    REG_DWORD    0x1
-    ProxyServer    REG_SZ    http://proxy.usebruno.com:8080
+    ProxyServer    REG_SZ    http://proxy.usedaffy.com:8080
     ProxyOverride    REG_SZ    localhost;127.0.0.1
 `;
 
@@ -242,8 +242,8 @@ HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settin
       const result = await detector.detect();
 
       expect(result).toEqual({
-        http_proxy: 'http://proxy.usebruno.com:8080',
-        https_proxy: 'http://proxy.usebruno.com:8080',
+        http_proxy: 'http://proxy.usedaffy.com:8080',
+        https_proxy: 'http://proxy.usedaffy.com:8080',
         no_proxy: 'localhost,127.0.0.1',
         source: 'windows-system'
       });
@@ -253,7 +253,7 @@ HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settin
       const regOutput = `
 HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings
     ProxyEnable    REG_DWORD    0x1
-    ProxyServer    REG_SZ    http=http://proxy.usebruno.com:8080;https=https://secure-proxy.usebruno.com:8443
+    ProxyServer    REG_SZ    http=http://proxy.usedaffy.com:8080;https=https://secure-proxy.usedaffy.com:8443
 `;
 
       mockExecFile.mockResolvedValueOnce({ stdout: regOutput, stderr: '' });
@@ -261,8 +261,8 @@ HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settin
       const result = await detector.detect();
 
       expect(result).toEqual({
-        http_proxy: 'http://proxy.usebruno.com:8080',
-        https_proxy: 'https://secure-proxy.usebruno.com:8443',
+        http_proxy: 'http://proxy.usedaffy.com:8080',
+        https_proxy: 'https://secure-proxy.usedaffy.com:8443',
         no_proxy: null,
         source: 'windows-system'
       });
@@ -272,7 +272,7 @@ HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settin
       const regOutput = `
 HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings
     ProxyEnable    REG_DWORD    0x1
-    ProxyServer    REG_SZ    proxy.usebruno.com:8080
+    ProxyServer    REG_SZ    proxy.usedaffy.com:8080
     ProxyOverride    REG_SZ    
 `;
 
@@ -281,8 +281,8 @@ HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settin
       const result = await detector.detect();
 
       expect(result).toEqual({
-        http_proxy: 'http://proxy.usebruno.com:8080',
-        https_proxy: 'http://proxy.usebruno.com:8080',
+        http_proxy: 'http://proxy.usedaffy.com:8080',
+        https_proxy: 'http://proxy.usedaffy.com:8080',
         no_proxy: null,
         source: 'windows-system'
       });
@@ -292,7 +292,7 @@ HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settin
       const regOutput = `
 HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings
     ProxyEnable    REG_DWORD    0x0
-    ProxyServer    REG_SZ    proxy.usebruno.com:8080
+    ProxyServer    REG_SZ    proxy.usedaffy.com:8080
     ProxyOverride    REG_SZ    localhost;127.0.0.1
 `;
 
@@ -305,7 +305,7 @@ HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settin
       const regOutput = `
 HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings
     ProxyEnable    REG_DWORD    1
-    ProxyServer    REG_SZ    proxy.usebruno.com:8080
+    ProxyServer    REG_SZ    proxy.usedaffy.com:8080
     ProxyOverride    REG_SZ    localhost;127.0.0.1
 `;
 
@@ -314,8 +314,8 @@ HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settin
       const result = await detector.detect();
 
       expect(result).toEqual({
-        http_proxy: 'http://proxy.usebruno.com:8080',
-        https_proxy: 'http://proxy.usebruno.com:8080',
+        http_proxy: 'http://proxy.usedaffy.com:8080',
+        https_proxy: 'http://proxy.usedaffy.com:8080',
         no_proxy: 'localhost,127.0.0.1',
         source: 'windows-system'
       });
@@ -325,7 +325,7 @@ HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settin
       const regOutput = `
 HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings
     ProxyEnable    REG_DWORD    0
-    ProxyServer    REG_SZ    proxy.usebruno.com:8080
+    ProxyServer    REG_SZ    proxy.usedaffy.com:8080
     ProxyOverride    REG_SZ    localhost;127.0.0.1
 `;
 
@@ -338,7 +338,7 @@ HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settin
       const regOutput = `
 HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings
     ProxyEnable    REG_DWORD    0x1
-    ProxyServer    REG_SZ    proxy.usebruno.com:8080
+    ProxyServer    REG_SZ    proxy.usedaffy.com:8080
     ProxyOverride    REG_SZ    localhost;127.0.0.1
     SomeOtherValue    REG_SZ    ignored
 `;
@@ -348,8 +348,8 @@ HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settin
       const result = await detector.detect();
 
       expect(result).toEqual({
-        http_proxy: 'http://proxy.usebruno.com:8080',
-        https_proxy: 'http://proxy.usebruno.com:8080',
+        http_proxy: 'http://proxy.usedaffy.com:8080',
+        https_proxy: 'http://proxy.usedaffy.com:8080',
         no_proxy: 'localhost,127.0.0.1',
         source: 'windows-system'
       });
@@ -359,7 +359,7 @@ HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settin
       const regOutput = `
 HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings
     ProxyEnable    REG_DWORD    0x1
-    ProxyServer    REG_SZ    proxy.usebruno.com:8080
+    ProxyServer    REG_SZ    proxy.usedaffy.com:8080
     ProxyOverride    REG_SZ    localhost;127.0.0.1;*.local;192.168.1.0/24
 `;
 
@@ -368,8 +368,8 @@ HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settin
       const result = await detector.detect();
 
       expect(result).toEqual({
-        http_proxy: 'http://proxy.usebruno.com:8080',
-        https_proxy: 'http://proxy.usebruno.com:8080',
+        http_proxy: 'http://proxy.usedaffy.com:8080',
+        https_proxy: 'http://proxy.usedaffy.com:8080',
         no_proxy: 'localhost,127.0.0.1,*.local,192.168.1.0/24',
         source: 'windows-system'
       });

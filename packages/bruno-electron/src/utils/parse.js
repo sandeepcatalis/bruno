@@ -1,4 +1,4 @@
-const { parseRequestAndRedactBody, parseRequestViaWorker, DEFAULT_COLLECTION_FORMAT } = require('@usebruno/filestore');
+const { parseRequestAndRedactBody, parseRequestViaWorker, DEFAULT_COLLECTION_FORMAT } = require('@usedaffy/filestore');
 
 /**
  * Parses a large BRU request string by redacting body blocks, parsing the remainder,

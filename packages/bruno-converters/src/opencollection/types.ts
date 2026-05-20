@@ -109,28 +109,28 @@ export type {
 export type { AuthOAuth2 } from '@opencollection/types/common/auth-oauth2';
 
 // Bruno types - collection
-export type { Item as BrunoItem } from '@usebruno/schema-types/collection/item';
+export type { Item as BrunoItem } from '@usedaffy/schema-types/collection/item';
 export type {
   FolderRoot as BrunoFolderRoot,
   FolderRequest as BrunoFolderRequest,
   FolderMeta as BrunoFolderMeta
-} from '@usebruno/schema-types/collection/folder';
-export type { Collection as BrunoCollection } from '@usebruno/schema-types/collection/collection';
+} from '@usedaffy/schema-types/collection/folder';
+export type { Collection as BrunoCollection } from '@usedaffy/schema-types/collection/collection';
 export type {
   Environment as BrunoEnvironment,
   EnvironmentVariable as BrunoEnvironmentVariable
-} from '@usebruno/schema-types/collection/environment';
+} from '@usedaffy/schema-types/collection/environment';
 export type {
   Example as BrunoExample,
   ExampleRequest as BrunoExampleRequest,
   ExampleResponse as BrunoExampleResponse,
   ExampleResponseBody as BrunoExampleResponseBody
-} from '@usebruno/schema-types/collection/examples';
+} from '@usedaffy/schema-types/collection/examples';
 
 // Bruno types - common
-export type { KeyValue as BrunoKeyValue } from '@usebruno/schema-types/common/key-value';
-export type { Variable as BrunoVariable, Variables as BrunoVariables } from '@usebruno/schema-types/common/variables';
-export type { Script as BrunoScript } from '@usebruno/schema-types/common/scripts';
+export type { KeyValue as BrunoKeyValue } from '@usedaffy/schema-types/common/key-value';
+export type { Variable as BrunoVariable, Variables as BrunoVariables } from '@usedaffy/schema-types/common/variables';
+export type { Script as BrunoScript } from '@usedaffy/schema-types/common/scripts';
 export type {
   Auth as BrunoAuth,
   AuthMode as BrunoAuthMode,
@@ -143,10 +143,10 @@ export type {
   AuthApiKey as BrunoAuthApiKey,
   AuthOauth1 as BrunoAuthOauth1,
   OAuth2 as BrunoOAuth2
-} from '@usebruno/schema-types/common/auth';
-export type { MultipartFormEntry as BrunoMultipartFormEntry, MultipartForm as BrunoMultipartForm } from '@usebruno/schema-types/common/multipart-form';
-export type { FileEntry as BrunoFileEntry, FileList as BrunoFileList } from '@usebruno/schema-types/common/file';
-export type { GraphqlBody as BrunoGraphqlBody } from '@usebruno/schema-types/common/graphql';
+} from '@usedaffy/schema-types/common/auth';
+export type { MultipartFormEntry as BrunoMultipartFormEntry, MultipartForm as BrunoMultipartForm } from '@usedaffy/schema-types/common/multipart-form';
+export type { FileEntry as BrunoFileEntry, FileList as BrunoFileList } from '@usedaffy/schema-types/common/file';
+export type { GraphqlBody as BrunoGraphqlBody } from '@usedaffy/schema-types/common/graphql';
 
 // Bruno types - requests
 export type {
@@ -155,18 +155,18 @@ export type {
   HttpRequestBodyMode as BrunoHttpRequestBodyMode,
   HttpRequestParam as BrunoHttpRequestParam,
   HttpRequestParamType as BrunoHttpRequestParamType
-} from '@usebruno/schema-types/requests/http';
+} from '@usedaffy/schema-types/requests/http';
 export type {
   GrpcRequest as BrunoGrpcRequest,
   GrpcRequestBody as BrunoGrpcRequestBody,
   GrpcMessage as BrunoGrpcMessage,
   GrpcMethodType as BrunoGrpcMethodType
-} from '@usebruno/schema-types/requests/grpc';
+} from '@usedaffy/schema-types/requests/grpc';
 export type {
   WebSocketRequest as BrunoWebSocketRequest,
   WebSocketRequestBody as BrunoWebSocketRequestBody,
   WebSocketMessage as BrunoWsMessage
-} from '@usebruno/schema-types/requests/websocket';
+} from '@usedaffy/schema-types/requests/websocket';
 
 export interface BrunoConfig {
   version?: string;

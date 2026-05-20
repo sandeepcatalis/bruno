@@ -12,7 +12,7 @@ import StyledWrapper from './StyledWrapper';
 import demoImage from './demo.png';
 import { useApp } from 'providers/App';
 import { transformCollectionToSaveToExportAsFile, findCollectionByUid, areItemsLoading } from 'utils/collections/index';
-import { brunoToOpenCollection } from '@usebruno/converters';
+import { brunoToOpenCollection } from '@usedaffy/converters';
 import { sanitizeName } from 'utils/common/regex';
 import { escapeHtml } from 'utils/response';
 
@@ -83,7 +83,7 @@ const GenerateDocumentation = ({ onClose, collectionUid }) => {
         bruno: {
           ...openCollection.extensions?.bruno,
           exportedAt: new Date().toISOString(),
-          exportedUsing: version ? `Bruno/${version}` : 'Bruno'
+          exportedUsing: version ? `Daffy/${version}` : 'Daffy'
         }
       };
 

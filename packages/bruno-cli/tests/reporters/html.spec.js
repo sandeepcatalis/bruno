@@ -3,7 +3,7 @@ const fs = require('fs');
 
 const mockGenerateHtmlReport = jest.fn(() => '<html>Mock HTML</html>');
 
-jest.mock('@usebruno/common/runner', () => ({
+jest.mock('@usedaffy/common/runner', () => ({
   generateHtmlReport: mockGenerateHtmlReport
 }));
 

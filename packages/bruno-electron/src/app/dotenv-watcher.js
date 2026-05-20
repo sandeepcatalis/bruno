@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const chokidar = require('chokidar');
-const { parseDotEnv } = require('@usebruno/filestore');
+const { parseDotEnv } = require('@usedaffy/filestore');
 const { setDotEnvVars, clearDotEnvVars, setWorkspaceDotEnvVars, clearWorkspaceDotEnvVars } = require('../store/process-env');
 
 const isDotEnvFile = (filename) => {

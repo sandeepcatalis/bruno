@@ -10,7 +10,7 @@ const DeprecationWarning = ({ featureName, learnMoreUrl }) => {
         <span className="warning-text">
           {featureName} will be removed in <strong>v3.0.0</strong>. They are deprecated and will no longer be supported. Learn more in{' '}
           <a href={learnMoreUrl} target="_blank" rel="noreferrer">this post</a> or contact us at{' '}
-          <a href="mailto:support@usebruno.com">support@usebruno.com</a> with questions.
+          <a href="mailto:support@usedaffy.com">support@usedaffy.com</a> with questions.
         </span>
       </div>
     </StyledWrapper>

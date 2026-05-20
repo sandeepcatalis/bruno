@@ -7,7 +7,7 @@ jest.mock('../../src/runner/interpolate-string', () => ({
   interpolateString: jest.fn((s) => s),
   interpolateObject: jest.fn((o) => o)
 }));
-jest.mock('@usebruno/js', () => ({
+jest.mock('@usedaffy/js', () => ({
   ScriptRuntime: jest.fn(),
   TestRuntime: jest.fn(),
   VarsRuntime: jest.fn(),
@@ -47,7 +47,7 @@ jest.mock('../../src/utils/cookies', () => ({
 jest.mock('../../src/utils/form-data', () => ({
   createFormData: jest.fn()
 }));
-jest.mock('@usebruno/requests', () => ({
+jest.mock('@usedaffy/requests', () => ({
   addDigestInterceptor: jest.fn(),
   getHttpHttpsAgents: jest.fn(() => ({})),
   makeAxiosInstance: jest.fn(),
@@ -68,8 +68,8 @@ jest.mock('../../src/store/tokenStore', () => ({
 
 // Default: no prompt variables detected
 const mockExtractPromptVariables = jest.fn(() => []);
-jest.mock('@usebruno/common', () => {
-  const ogUtils = jest.requireActual('@usebruno/common').utils;
+jest.mock('@usedaffy/common', () => {
+  const ogUtils = jest.requireActual('@usedaffy/common').utils;
   return {
     utils: {
       encodeUrl: jest.fn((u) => u),

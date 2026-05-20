@@ -1,5 +1,5 @@
 {
-  "name": "@usebruno/schema",
+  "name": "@usedaffy/schema",
   "version": "0.7.0",
   "license": "MIT",
   "main": "src/index.js",

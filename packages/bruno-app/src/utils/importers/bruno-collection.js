@@ -1,6 +1,6 @@
 import { BrunoError } from 'utils/common/error';
 import { validateSchema, transformItemsInCollection, updateUidsInCollection, hydrateSeqInCollection } from './common';
-import { transformExampleStatusInCollection } from '@usebruno/common';
+import { transformExampleStatusInCollection } from '@usedaffy/common';
 
 const stripExportMetadata = (collection) => {
   delete collection.exportedAt;

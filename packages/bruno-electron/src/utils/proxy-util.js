@@ -6,9 +6,9 @@ const { interpolateString } = require('../ipc/network/interpolate-string');
 const { SocksProxyAgent } = require('socks-proxy-agent');
 const { HttpProxyAgent } = require('http-proxy-agent');
 const { isEmpty, get, isUndefined, isNull } = require('lodash');
-const { getOrCreateHttpsAgent, getOrCreateHttpAgent } = require('@usebruno/requests');
+const { getOrCreateHttpsAgent, getOrCreateHttpAgent } = require('@usedaffy/requests');
 const { preferencesUtil } = require('../store/preferences');
-const { getPacResolver } = require('@usebruno/requests');
+const { getPacResolver } = require('@usedaffy/requests');
 
 const DEFAULT_PORTS = {
   ftp: 21,

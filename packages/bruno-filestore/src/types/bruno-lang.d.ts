@@ -1,4 +1,4 @@
-declare module '@usebruno/lang' {
+declare module '@usedaffy/lang' {
   export function bruToJsonV2(bruContent: string): any;
   export function jsonToBruV2(jsonData: any): string;
   export function bruToEnvJsonV2(bruContent: string): any;

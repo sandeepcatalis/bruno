@@ -1,5 +1,5 @@
 {
-  "name": "@usebruno/graphql-docs",
+  "name": "@usedaffy/graphql-docs",
   "version": "0.1.0",
   "license" : "MIT",
   "main": "dist/cjs/index.js",

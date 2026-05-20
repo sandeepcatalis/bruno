@@ -1,5 +1,5 @@
-import { collectionSchema, environmentSchema, itemSchema } from '@usebruno/schema';
-import { parseQueryParams, extractPromptVariables } from '@usebruno/common/utils';
+import { collectionSchema, environmentSchema, itemSchema } from '@usedaffy/schema';
+import { parseQueryParams, extractPromptVariables } from '@usedaffy/common/utils';
 import { REQUEST_TYPES, DEFAULT_COLLECTION_FORMAT } from 'utils/common/constants';
 import cloneDeep from 'lodash/cloneDeep';
 import filter from 'lodash/filter';

@@ -145,7 +145,7 @@ function makeAxiosInstance({
 
     // Resolve all *.localhost to localhost and check if it should use IPv6 or IPv4
     // RFC: 6761 section 6.3 (https://tools.ietf.org/html/rfc6761#section-6.3)
-    // @see https://github.com/usebruno/bruno/issues/124
+    // @see https://github.com/usedaffy/daffy/issues/124
     if (getTld(url.hostname) === LOCALHOST || url.hostname === LOCAL_IPV4 || url.hostname === LOCAL_IPV6) {
       // use custom DNS lookup for localhost
       config.lookup = (hostname, options, callback) => {
@@ -188,7 +188,7 @@ function makeAxiosInstance({
 
     // Log request headers AFTER deletion so the timeline reflects what is actually sent.
     // Skip null values (headers marked for deletion) and false values (e.g. content-type
-    // suppressed for no-body requests — see https://github.com/usebruno/bruno/issues/1693).
+    // suppressed for no-body requests — see https://github.com/usedaffy/daffy/issues/1693).
     Object.entries(config.headers).forEach(([key, value]) => {
       if (value === null || value === false) return;
       timeline.push({

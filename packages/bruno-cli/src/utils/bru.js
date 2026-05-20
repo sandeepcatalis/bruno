@@ -2,7 +2,7 @@ const _ = require('lodash');
 const {
   parseRequest: _parseRequest,
   parseCollection: _parseCollection
-} = require('@usebruno/filestore');
+} = require('@usedaffy/filestore');
 
 const collectionBruToJson = (bru) => {
   try {

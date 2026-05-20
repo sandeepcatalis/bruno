@@ -1,17 +1,17 @@
 {
-  "name": "@usebruno/cli",
+  "name": "@usedaffy/cli",
   "version": "1.16.0",
   "license": "MIT",
   "main": "src/index.js",
   "bin": {
-    "bru": "./bin/bru.js"
+    "daffy": "./bin/bru.js"
   },
   "bugs": {
-    "url": "https://github.com/usebruno/bruno/issues"
+    "url": "https://github.com/usedaffy/daffy/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/usebruno/bruno.git"
+    "url": "git+https://github.com/usedaffy/daffy.git"
   },
   "keywords": [
     "API",
@@ -48,12 +48,12 @@
   ],
   "dependencies": {
     "@aws-sdk/credential-providers": "3.1019.0",
-    "@usebruno/common": "0.1.0",
-    "@usebruno/converters": "^0.1.0",
-    "@usebruno/filestore": "^0.1.0",
-    "@usebruno/js": "0.12.0",
-    "@usebruno/lang": "0.12.0",
-    "@usebruno/requests": "^0.1.0",
+    "@usedaffy/common": "0.1.0",
+    "@usedaffy/converters": "^0.1.0",
+    "@usedaffy/filestore": "^0.1.0",
+    "@usedaffy/js": "0.12.0",
+    "@usedaffy/lang": "0.12.0",
+    "@usedaffy/requests": "^0.1.0",
     "aws4-axios": "^3.3.15",
     "axios": "1.13.6",
     "axios-ntlm": "^1.4.2",

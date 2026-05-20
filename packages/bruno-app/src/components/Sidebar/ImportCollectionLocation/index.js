@@ -11,7 +11,7 @@ import { convertInsomniaToBruno } from 'utils/importers/insomnia-collection';
 import { convertOpenapiToBruno } from 'utils/importers/openapi-collection';
 import { processBrunoCollection } from 'utils/importers/bruno-collection';
 import { processOpenCollection } from 'utils/importers/opencollection';
-import { wsdlToBruno } from '@usebruno/converters';
+import { wsdlToBruno } from '@usedaffy/converters';
 import { toastError } from 'utils/common/error';
 import { useBetaFeature, BETA_FEATURES } from 'utils/beta-features';
 import Modal from 'components/Modal';
@@ -40,13 +40,13 @@ const getCollectionName = (format, rawData) => {
       // Fallback to root name property
       return rawData.name || 'Insomnia Collection';
     case 'bruno':
-      return rawData.name || 'Bruno Collection';
+      return rawData.name || 'Daffy Collection';
     case 'opencollection':
       return rawData.info?.name || 'OpenCollection';
     case 'wsdl':
       return 'WSDL Collection';
     case 'bruno-zip':
-      return rawData.collectionName || 'Bruno Collection';
+      return rawData.collectionName || 'Daffy Collection';
     default:
       return 'Collection';
   }
@@ -236,7 +236,7 @@ const ImportCollectionLocation = ({ onClose, handleSubmit, rawData, format, sour
               <label htmlFor="collectionLocation" className="font-medium mt-4 flex items-center">
                 Location
                 <Help>
-                  <p>Bruno stores your collections on your computer's filesystem.</p>
+                  <p>Daffy stores your collections on your computer's filesystem.</p>
                   <p className="mt-2">Choose the location where you want to store this collection.</p>
                 </Help>
               </label>
@@ -280,7 +280,7 @@ const ImportCollectionLocation = ({ onClose, handleSubmit, rawData, format, sour
                       <strong>OpenCollection (YAML):</strong> Industry-standard YAML format (.yml files)
                     </p>
                     <p className="mt-1">
-                      <strong>BRU:</strong> Bruno's native file format (.bru files)
+                      <strong>BRU:</strong> Daffy's native file format (.bru files)
                     </p>
                   </Help>
                 </label>

@@ -4,7 +4,7 @@ const { execSync } = require('node:child_process');
 const isDev = require('electron-is-dev');
 const os = require('os');
 const { initializeShellEnv, waitForShellEnv } = require('./store/shell-env-state');
-const { percentageToZoomLevel } = require('@usebruno/common');
+const { percentageToZoomLevel } = require('@usedaffy/common');
 
 if (isDev) {
   if (!fs.existsSync(path.join(__dirname, '../../bruno-js/src/sandbox/bundle-browser-rollup.js'))) {
@@ -28,7 +28,7 @@ if (isDev && process.env.ELECTRON_USER_DATA_PATH) {
 // Command line switches
 if (os.platform() === 'linux') {
   // Use portal version 4 that supports current_folder option
-  // to address https://github.com/usebruno/bruno/issues/5471
+  // to address https://github.com/usedaffy/daffy/issues/5471
   // Runtime sets the default version to 3, refs https://github.com/electron/electron/pull/44426
   app.commandLine.appendSwitch('xdg-portal-required-version', '4');
 }
@@ -143,13 +143,13 @@ if (useSingleInstance && !gotTheLock) {
   // This is the primary instance (or single instance is disabled)
 
   // Try to remove any existing registrations
-  app.removeAsDefaultProtocolClient('bruno');
-  // Register as default handler for `bruno://` protocol URLs
-  app.setAsDefaultProtocolClient('bruno');
+  app.removeAsDefaultProtocolClient('daffy');
+  // Register as default handler for `daffy://` protocol URLs
+  app.setAsDefaultProtocolClient('daffy');
 
   if (isLinux) {
     try {
-      execSync('xdg-mime default bruno.desktop x-scheme-handler/bruno');
+      execSync('xdg-mime default daffy.desktop x-scheme-handler/daffy');
     } catch (err) {}
   }
 
@@ -237,13 +237,13 @@ app.on('ready', async () => {
       preload: path.join(__dirname, 'preload.js'),
       webviewTag: true
     },
-    title: 'Bruno',
+    title: 'Daffy',
     icon: path.join(__dirname, 'about/256x256.png'),
     titleBarStyle: isMac ? 'hiddenInset' : isWindows ? 'hidden' : undefined,
     frame: isLinux ? false : true,
     trafficLightPosition: isMac ? { x: 12, y: 10 } : undefined
     // we will bring this back
-    // see https://github.com/usebruno/bruno/issues/440
+    // see https://github.com/usedaffy/daffy/issues/440
     // autoHideMenuBar: true
   });
 
@@ -367,7 +367,7 @@ app.on('ready', async () => {
     } else {
       console.error(
         'If you are using an official production build: the above error is most likely a bug! '
-        + ' Please report this under: https://github.com/usebruno/bruno/issues'
+        + ' Please report this under: https://github.com/usedaffy/daffy/issues'
       );
     }
   });

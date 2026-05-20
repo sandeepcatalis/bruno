@@ -1,5 +1,5 @@
-import type { Item as BrunoItem } from '@usebruno/schema-types/collection/item';
-import type { WebSocketRequest as BrunoWebSocketRequest } from '@usebruno/schema-types/requests/websocket';
+import type { Item as BrunoItem } from '@usedaffy/schema-types/collection/item';
+import type { WebSocketRequest as BrunoWebSocketRequest } from '@usedaffy/schema-types/requests/websocket';
 import type { WebSocketRequest, WebSocketMessage } from '@opencollection/types/requests/websocket';
 import { toBrunoAuth } from '../common/auth';
 import { toBrunoHttpHeaders } from '../common/headers';

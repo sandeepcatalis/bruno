@@ -489,7 +489,7 @@ const prepareRequest = async (item, collection = {}, abortController) => {
   if (request.body.mode === 'graphql') {
     const graphqlQuery = {
       query: get(request, 'body.graphql.query'),
-      // https://github.com/usebruno/bruno/issues/884 - we must only parse the variables after the variable interpolation
+      // https://github.com/usedaffy/daffy/issues/884 - we must only parse the variables after the variable interpolation
       variables: decomment(get(request, 'body.graphql.variables') || '{}')
     };
     if (!contentTypeDefined) {

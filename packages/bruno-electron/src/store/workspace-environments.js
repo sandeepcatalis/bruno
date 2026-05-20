@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const _ = require('lodash');
-const { parseEnvironment, stringifyEnvironment } = require('@usebruno/filestore');
+const { parseEnvironment, stringifyEnvironment } = require('@usedaffy/filestore');
 const { writeFile, createDirectory } = require('../utils/filesystem');
 const { generateUidBasedOnHash, uuid } = require('../utils/common');
 const { decryptStringSafe } = require('../utils/encryption');

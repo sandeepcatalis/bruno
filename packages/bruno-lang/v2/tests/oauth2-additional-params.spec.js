@@ -10,15 +10,15 @@ meta {
 }
 
 get {
-  url: https://api.usebruno.com/protected
+  url: https://api.usedaffy.com/protected
 }
 
 auth:oauth2 {
   grant_type: authorization_code
   client_id: bruno-client-id
   client_secret: bruno-client-secret
-  authorization_url: https://auth.usebruno.com/oauth/authorize
-  access_token_url: https://auth.usebruno.com/oauth/token
+  authorization_url: https://auth.usedaffy.com/oauth/authorize
+  access_token_url: https://auth.usedaffy.com/oauth/token
 }
 
 auth:oauth2:additional_params:auth_req:headers {
@@ -178,8 +178,8 @@ auth:oauth2 {
   grant_type: authorization_code
   client_id: bruno-client-id
   client_secret: bruno-client-secret
-  authorization_url: https://auth.usebruno.com/oauth/authorize
-  access_token_url: https://auth.usebruno.com/oauth/token
+  authorization_url: https://auth.usedaffy.com/oauth/authorize
+  access_token_url: https://auth.usedaffy.com/oauth/token
 }
 
 auth:oauth2:additional_params:auth_req:headers {

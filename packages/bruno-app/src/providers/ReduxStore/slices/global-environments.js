@@ -1,6 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
 import { uuid } from 'utils/common/index';
-import { environmentSchema } from '@usebruno/schema';
+import { environmentSchema } from '@usedaffy/schema';
 import { cloneDeep, has } from 'lodash';
 
 const initialState = {

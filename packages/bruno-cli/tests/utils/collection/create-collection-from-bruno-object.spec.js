@@ -2,7 +2,7 @@ const fs = require('node:fs');
 const os = require('node:os');
 const path = require('node:path');
 const { describe, it, expect, afterEach } = require('@jest/globals');
-const { parseRequest, parseFolder } = require('@usebruno/filestore');
+const { parseRequest, parseFolder } = require('@usedaffy/filestore');
 const { createCollectionFromBrunoObject } = require('../../../src/utils/collection');
 
 describe('createCollectionFromBrunoObject', () => {

@@ -1,4 +1,4 @@
-import type { BrunoCollection, BrunoItem, BrunoEnvironment } from '@usebruno/schema-types';
+import type { BrunoCollection, BrunoItem, BrunoEnvironment } from '@usedaffy/schema-types';
 
 import {
   parseBruRequest,
@@ -18,7 +18,7 @@ import {
   stringifyYmlCollection,
   stringifyYmlEnvironment
 } from './formats/yml';
-import { dotenvToJson } from '@usebruno/lang';
+import { dotenvToJson } from '@usedaffy/lang';
 import BruParserWorker from './workers';
 import {
   ParseOptions,

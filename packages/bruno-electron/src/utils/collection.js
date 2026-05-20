@@ -6,7 +6,7 @@ const { posixifyPath } = require('./filesystem');
 const os = require('os');
 const { preferencesUtil } = require('../store/preferences');
 const path = require('path');
-const { DEFAULT_COLLECTION_FORMAT } = require('@usebruno/filestore');
+const { DEFAULT_COLLECTION_FORMAT } = require('@usedaffy/filestore');
 
 const FORMAT_CONFIG = {
   yml: { ext: '.yml', collectionFile: 'opencollection.yml', folderFile: 'folder.yml' },

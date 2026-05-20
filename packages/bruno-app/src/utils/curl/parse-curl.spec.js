@@ -551,13 +551,13 @@ describe('parseCurlCommand', () => {
   describe('handling URLs without protocols', () => {
     it('should parse URL without protocol and default to https', () => {
       const result = parseCurlCommand(`
-        curl echo.usebruno.com
+        curl echo.usedaffy.com
       `);
 
       expect(result).toEqual({
         method: 'get',
-        url: 'https://echo.usebruno.com',
-        urlWithoutQuery: 'https://echo.usebruno.com'
+        url: 'https://echo.usedaffy.com',
+        urlWithoutQuery: 'https://echo.usedaffy.com'
       });
     });
 

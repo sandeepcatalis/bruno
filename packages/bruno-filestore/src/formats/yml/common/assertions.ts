@@ -1,4 +1,4 @@
-import type { KeyValue as BrunoKeyValue } from '@usebruno/schema-types/common/key-value';
+import type { KeyValue as BrunoKeyValue } from '@usedaffy/schema-types/common/key-value';
 import type { Assertion } from '@opencollection/types/common/assertions';
 import { uuid, ensureString } from '../../../utils';
 

@@ -2,7 +2,7 @@ require('dotenv').config();
 const fs = require('fs');
 const path = require('path');
 const { ipcMain } = require('electron');
-const { utils: { jsonToDotenv } } = require('@usebruno/common');
+const { utils: { jsonToDotenv } } = require('@usedaffy/common');
 const { globalEnvironmentsStore } = require('../store/global-environments');
 const { generateUniqueName, sanitizeName, writeFile, isValidDotEnvFilename } = require('../utils/filesystem');
 const { readWorkspaceConfig, writeWorkspaceConfig } = require('../utils/workspace-config');

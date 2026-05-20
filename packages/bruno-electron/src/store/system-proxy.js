@@ -1,4 +1,4 @@
-const { getSystemProxy } = require('@usebruno/requests');
+const { getSystemProxy } = require('@usedaffy/requests');
 
 let cachedSystemProxy;
 let systemProxyPromise;

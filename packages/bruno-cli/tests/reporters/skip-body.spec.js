@@ -1,5 +1,5 @@
 const { describe, it, expect } = require('@jest/globals');
-const { generateHtmlReport } = require('@usebruno/common/runner');
+const { generateHtmlReport } = require('@usedaffy/common/runner');
 
 const { sanitizeResultsForReporter } = require('../../src/utils/sanitize-results');
 
@@ -10,7 +10,7 @@ const createMockResult = () => ({
   test: { filename: 'echo/echo-post.bru' },
   request: {
     method: 'POST',
-    url: 'https://echo.usebruno.com',
+    url: 'https://echo.usedaffy.com',
     headers: { 'content-type': 'application/json' },
     data: { ...REQUEST_DATA }
   },
@@ -19,7 +19,7 @@ const createMockResult = () => ({
     statusText: 'OK',
     headers: { 'content-type': 'application/json' },
     data: { ...RESPONSE_DATA },
-    url: 'https://echo.usebruno.com',
+    url: 'https://echo.usedaffy.com',
     responseTime: 150
   },
   error: null,

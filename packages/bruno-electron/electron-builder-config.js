@@ -1,8 +1,8 @@
 require('dotenv').config({ path: process.env.DOTENV_PATH });
 
 const config = {
-  appId: 'com.usebruno.app',
-  productName: 'Bruno',
+  appId: 'com.usedaffy.app',
+  productName: 'Daffy',
   electronVersion: '37.6.1',
   directories: {
     buildResources: 'resources',
@@ -41,9 +41,9 @@ const config = {
     notarize: false,
     protocols: [
       {
-        name: 'Bruno',
+        name: 'Daffy',
         schemes: [
-          'bruno'
+          'daffy'
         ]
       }
     ]
@@ -67,13 +67,13 @@ const config = {
     ],
     protocols: [
       {
-        name: 'Bruno',
-        schemes: ['bruno']
+        name: 'Daffy',
+        schemes: ['daffy']
       }
     ],
     category: 'Development',
     desktop: {
-      MimeType: 'x-scheme-handler/bruno;'
+      MimeType: 'x-scheme-handler/daffy;'
     }
   },
   deb: {

@@ -1,6 +1,6 @@
 import get from 'lodash/get';
-import { mockDataFunctions } from '@usebruno/common';
-import { PROMPT_VARIABLE_TEXT_PATTERN } from '@usebruno/common/utils';
+import { mockDataFunctions } from '@usedaffy/common';
+import { PROMPT_VARIABLE_TEXT_PATTERN } from '@usedaffy/common/utils';
 
 const CodeMirror = require('codemirror');
 
@@ -10,7 +10,7 @@ const pathFoundInVariables = (path, obj) => {
 };
 
 /**
- * Defines a custom CodeMirror mode for Bruno variables highlighting.
+ * Defines a custom CodeMirror mode for Daffy variables highlighting.
  * This function creates a specialized mode that can highlight both Bruno template
  * variables (in the format {{variable}}) and URL path parameters (in the format /:param).
  *

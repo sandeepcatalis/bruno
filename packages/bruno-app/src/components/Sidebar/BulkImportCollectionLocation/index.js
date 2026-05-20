@@ -16,7 +16,7 @@ import { postmanToBruno } from 'utils/importers/postman-collection';
 import { convertInsomniaToBruno } from 'utils/importers/insomnia-collection';
 import { convertOpenapiToBruno } from 'utils/importers/openapi-collection';
 import { processBrunoCollection } from 'utils/importers/bruno-collection';
-import { wsdlToBruno } from '@usebruno/converters';
+import { wsdlToBruno } from '@usedaffy/converters';
 import StyledWrapper from './StyledWrapper';
 import toast from 'react-hot-toast';
 import get from 'lodash/get';
@@ -57,7 +57,7 @@ const getCollectionName = (format, rawData) => {
       // Fallback to root name property
       return rawData.name || 'Insomnia Collection';
     case 'bruno':
-      return rawData.name || 'Bruno Collection';
+      return rawData.name || 'Daffy Collection';
     case 'wsdl':
       return 'WSDL Collection';
     default:
@@ -774,7 +774,7 @@ export const BulkImportCollectionLocation = ({
                         <strong>OpenCollection (YAML):</strong> Industry-standard YAML format (.yml files)
                       </p>
                       <p className="mt-1">
-                        <strong>BRU:</strong> Bruno's native file format (.bru files)
+                        <strong>BRU:</strong> Daffy's native file format (.bru files)
                       </p>
                     </Help>
                   </label>

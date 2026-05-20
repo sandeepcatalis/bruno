@@ -1,6 +1,6 @@
 import get from 'lodash/get';
 import { validateSchema, transformItemsInCollection, hydrateSeqInCollection, uuid } from '../common';
-import { transformExampleStatusInCollection } from '@usebruno/common';
+import { transformExampleStatusInCollection } from '@usedaffy/common';
 import each from 'lodash/each';
 import postmanTranslation from './postman-translations';
 import { invalidVariableCharacterRegex } from '../constants/index';

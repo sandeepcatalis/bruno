@@ -93,7 +93,7 @@ const CloneGitRepository = ({ onClose, onFinish, collectionRepositoryUrl = null 
       ...prev,
       {
         step: 'scan',
-        title: 'Scanning for Bruno files',
+        title: 'Scanning for Daffy files',
         completed: false
       }
     ]);
@@ -339,7 +339,7 @@ const CloneGitRepository = ({ onClose, onFinish, collectionRepositoryUrl = null 
                   {collectionPaths.length === 0 && (
                     <div className="flex">
                       <IconAlertCircle className="text-yellow-500" size={18} strokeWidth={1.5} />
-                      <h3 className="text-sm ml-2">No bruno collections found in this repository.</h3>
+                      <h3 className="text-sm ml-2">No daffy collections found in this repository.</h3>
                     </div>
                   )}
                   {collectionPaths.length > 0 && (

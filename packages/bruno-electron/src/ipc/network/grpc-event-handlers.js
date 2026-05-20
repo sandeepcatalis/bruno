@@ -1,6 +1,6 @@
 // To implement grpc event handlers
 const { ipcMain, app } = require('electron');
-const { GrpcClient } = require('@usebruno/requests');
+const { GrpcClient } = require('@usedaffy/requests');
 const { safeParseJSON, safeStringifyJSON } = require('../../utils/common');
 const { cloneDeep, get } = require('lodash');
 const { preferencesUtil } = require('../../store/preferences');
@@ -11,7 +11,7 @@ const prepareGrpcRequest = require('./prepare-grpc-request');
 const { normalizeAndResolvePath } = require('../../utils/filesystem');
 const { configureRequest } = require('./prepare-grpc-request');
 const { shouldUseProxy } = require('../../utils/proxy-util');
-const { getPacResolver } = require('@usebruno/requests');
+const { getPacResolver } = require('@usedaffy/requests');
 
 // Creating grpcClient at module level so it can be accessed from window-all-closed event
 let grpcClient;

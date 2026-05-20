@@ -5,7 +5,7 @@ describe('Send Request Translation', () => {
     it('should transform raw JSON string body', () => {
       const code = `
         pm.sendRequest({
-            url: 'https://echo.usebruno.com',
+            url: 'https://echo.usedaffy.com',
             method: 'POST',
             header: {
                 'Accept': 'application/json',
@@ -32,7 +32,7 @@ describe('Send Request Translation', () => {
       const translatedCode = translateCode(code);
       expect(translatedCode).toBe(`
         await bru.sendRequest({
-            url: 'https://echo.usebruno.com',
+            url: 'https://echo.usedaffy.com',
             method: 'POST',
             headers: {
                 'Accept': 'application/json',
@@ -58,7 +58,7 @@ describe('Send Request Translation', () => {
     it('should transform raw JSON object body', () => {
       const code = `
         pm.sendRequest({
-            url: 'https://echo.usebruno.com',
+            url: 'https://echo.usedaffy.com',
             method: 'POST',
             header: {
                 'Accept': 'application/json',
@@ -85,7 +85,7 @@ describe('Send Request Translation', () => {
       const translatedCode = translateCode(code);
       expect(translatedCode).toBe(`
         await bru.sendRequest({
-            url: 'https://echo.usebruno.com',
+            url: 'https://echo.usedaffy.com',
             method: 'POST',
             headers: {
                 'Accept': 'application/json',
@@ -111,7 +111,7 @@ describe('Send Request Translation', () => {
     it('should transform raw text body', () => {
       const code = `
         pm.sendRequest({
-            url: 'https://echo.usebruno.com',
+            url: 'https://echo.usedaffy.com',
             method: 'POST',
             header: {
                 'Content-Type': 'text/plain',
@@ -127,7 +127,7 @@ describe('Send Request Translation', () => {
       const translatedCode = translateCode(code);
       expect(translatedCode).toBe(`
         await bru.sendRequest({
-            url: 'https://echo.usebruno.com',
+            url: 'https://echo.usedaffy.com',
             method: 'POST',
             headers: {
                 'Content-Type': 'text/plain',
@@ -144,7 +144,7 @@ describe('Send Request Translation', () => {
     it('should transform urlencoded body with single key-value pair', () => {
       const code = `
         pm.sendRequest({
-            url: 'https://echo.usebruno.com',
+            url: 'https://echo.usedaffy.com',
             method: 'POST',
             header: {
                 'Accept': 'application/json',
@@ -171,7 +171,7 @@ describe('Send Request Translation', () => {
       const translatedCode = translateCode(code);
       expect(translatedCode).toBe(`
         await bru.sendRequest({
-            url: 'https://echo.usebruno.com',
+            url: 'https://echo.usedaffy.com',
             method: 'POST',
             headers: {
                 'Accept': 'application/json',
@@ -197,7 +197,7 @@ describe('Send Request Translation', () => {
     it('should transform urlencoded body with multiple key-value pairs', () => {
       const code = `
         pm.sendRequest({
-            url: 'https://echo.usebruno.com',
+            url: 'https://echo.usedaffy.com',
             method: 'POST',
             header: {},
             body: {
@@ -215,7 +215,7 @@ describe('Send Request Translation', () => {
       const translatedCode = translateCode(code);
       expect(translatedCode).toBe(`
         await bru.sendRequest({
-            url: 'https://echo.usebruno.com',
+            url: 'https://echo.usedaffy.com',
             method: 'POST',
             headers: {
                 "Content-Type": "application/x-www-form-urlencoded"
@@ -234,7 +234,7 @@ describe('Send Request Translation', () => {
     it('should transform urlencoded body when no Content-Type header exists', () => {
       const code = `
         pm.sendRequest({
-            url: 'https://echo.usebruno.com',
+            url: 'https://echo.usedaffy.com',
             method: 'POST',
             body: {
                 mode: 'urlencoded',
@@ -248,7 +248,7 @@ describe('Send Request Translation', () => {
       const translatedCode = translateCode(code);
       expect(translatedCode).toBe(`
         await bru.sendRequest({
-            url: 'https://echo.usebruno.com',
+            url: 'https://echo.usedaffy.com',
             method: 'POST',
 
             data: {
@@ -266,7 +266,7 @@ describe('Send Request Translation', () => {
     it('should transform urlencoded body with incorrect Content-Type header', () => {
       const code = `
         pm.sendRequest({
-            url: 'https://echo.usebruno.com',
+            url: 'https://echo.usedaffy.com',
             method: 'POST',
             headers: {
                 "Content-Type": "text/plain"
@@ -283,7 +283,7 @@ describe('Send Request Translation', () => {
       const translatedCode = translateCode(code);
       expect(translatedCode).toBe(`
         await bru.sendRequest({
-            url: 'https://echo.usebruno.com',
+            url: 'https://echo.usedaffy.com',
             method: 'POST',
             headers: {
                 "Content-Type": "application/x-www-form-urlencoded"
@@ -301,7 +301,7 @@ describe('Send Request Translation', () => {
     it('should transform formdata body with single key-value pair', () => {
       const code = `
         pm.sendRequest({
-            url: 'https://echo.usebruno.com',
+            url: 'https://echo.usedaffy.com',
             method: 'POST',
             header: {
                 'Content-Type': 'multipart/form-data',
@@ -327,7 +327,7 @@ describe('Send Request Translation', () => {
       const translatedCode = translateCode(code);
       expect(translatedCode).toBe(`
         await bru.sendRequest({
-            url: 'https://echo.usebruno.com',
+            url: 'https://echo.usedaffy.com',
             method: 'POST',
             headers: {
                 "Content-Type": "multipart/form-data",
@@ -352,7 +352,7 @@ describe('Send Request Translation', () => {
     it('should transform formdata body with multiple key-value pair', () => {
       const code = `
         pm.sendRequest({
-            url: 'https://echo.usebruno.com',
+            url: 'https://echo.usedaffy.com',
             method: 'POST',
             header: {
                 'Content-Type': 'multipart/form-data',
@@ -380,7 +380,7 @@ describe('Send Request Translation', () => {
       const translatedCode = translateCode(code);
       expect(translatedCode).toBe(`
         await bru.sendRequest({
-            url: 'https://echo.usebruno.com',
+            url: 'https://echo.usedaffy.com',
             method: 'POST',
             headers: {
                 "Content-Type": "multipart/form-data",
@@ -407,7 +407,7 @@ describe('Send Request Translation', () => {
     it('should transform formdata body when no Content-Type header exists', () => {
       const code = `
         pm.sendRequest({
-            url: 'https://echo.usebruno.com',
+            url: 'https://echo.usedaffy.com',
             method: 'POST',
             body: {
                 mode: 'formdata',
@@ -432,7 +432,7 @@ describe('Send Request Translation', () => {
       const translatedCode = translateCode(code);
       expect(translatedCode).toBe(`
         await bru.sendRequest({
-            url: 'https://echo.usebruno.com',
+            url: 'https://echo.usedaffy.com',
             method: 'POST',
 
             data: {
@@ -461,7 +461,7 @@ describe('Send Request Translation', () => {
     it('should transform formdata body with incorrect Content-Type header', () => {
       const code = `
         pm.sendRequest({
-            url: 'https://echo.usebruno.com',
+            url: 'https://echo.usedaffy.com',
             method: 'POST',
             headers: {
                 "Content-Type": "text/plain"
@@ -489,7 +489,7 @@ describe('Send Request Translation', () => {
       const translatedCode = translateCode(code);
       expect(translatedCode).toBe(`
         await bru.sendRequest({
-            url: 'https://echo.usebruno.com',
+            url: 'https://echo.usedaffy.com',
             method: 'POST',
             headers: {
                 "Content-Type": "multipart/form-data"
@@ -518,7 +518,7 @@ describe('Send Request Translation', () => {
     it('should rename header property to headers', () => {
       const code = `
         pm.sendRequest({
-            url: 'https://echo.usebruno.com',
+            url: 'https://echo.usedaffy.com',
             method: 'GET',
             header: {
                 'X-Custom-Header': 'custom-value',
@@ -529,7 +529,7 @@ describe('Send Request Translation', () => {
       const translatedCode = translateCode(code);
       expect(translatedCode).toBe(`
         await bru.sendRequest({
-            url: 'https://echo.usebruno.com',
+            url: 'https://echo.usedaffy.com',
             method: 'GET',
             headers: {
                 'X-Custom-Header': 'custom-value',
@@ -542,7 +542,7 @@ describe('Send Request Translation', () => {
     it('should handle header array format', () => {
       const code = `
         pm.sendRequest({
-            url: 'https://echo.usebruno.com',
+            url: 'https://echo.usedaffy.com',
             method: 'GET',
             header: [
                 { key: 'X-Custom-Header', value: 'custom-value' },
@@ -553,7 +553,7 @@ describe('Send Request Translation', () => {
       const translatedCode = translateCode(code);
       expect(translatedCode).toBe(`
         await bru.sendRequest({
-            url: 'https://echo.usebruno.com',
+            url: 'https://echo.usedaffy.com',
             method: 'GET',
             headers: {
                 "X-Custom-Header": 'custom-value',
@@ -567,7 +567,7 @@ describe('Send Request Translation', () => {
   describe('Response Handling', () => {
     it('should transform response property access', () => {
       const code = `
-        pm.sendRequest('https://echo.usebruno.com', function (error, response) {
+        pm.sendRequest('https://echo.usedaffy.com', function (error, response) {
             const status = response.code;
             const statusText = response.status;
             const headers = response.headers;
@@ -595,7 +595,7 @@ describe('Send Request Translation', () => {
       const code = `
         try {
             const response = await pm.sendRequest({
-                url: "https://echo.usebruno.com",
+                url: "https://echo.usedaffy.com",
                 method: "GET"
             });
 
@@ -608,7 +608,7 @@ describe('Send Request Translation', () => {
       expect(translatedCode).toBe(`
         try {
             const response = await bru.sendRequest({
-                url: "https://echo.usebruno.com",
+                url: "https://echo.usedaffy.com",
                 method: "GET"
             });
 
@@ -623,7 +623,7 @@ describe('Send Request Translation', () => {
       const code = `
         try {
             pm.sendRequest({
-                url: "https://echo.usebruno.com",
+                url: "https://echo.usedaffy.com",
                 method: "GET"
             }, (error, response) => {
                 console.log(response.json());
@@ -636,7 +636,7 @@ describe('Send Request Translation', () => {
       expect(translatedCode).toBe(`
         try {
             await bru.sendRequest({
-                url: "https://echo.usebruno.com",
+                url: "https://echo.usedaffy.com",
                 method: "GET"
             }, async function(error, response) {
                 console.log(response.data);
@@ -651,7 +651,7 @@ describe('Send Request Translation', () => {
       const code = `
         try {
             pm.sendRequest({
-                url: "https://echo.usebruno.com",
+                url: "https://echo.usedaffy.com",
                 method: "GET"
             }, async (error, response) => {
                 await new Promise(resolve => {
@@ -669,7 +669,7 @@ describe('Send Request Translation', () => {
       expect(translatedCode).toBe(`
         try {
             await bru.sendRequest({
-                url: "https://echo.usebruno.com",
+                url: "https://echo.usedaffy.com",
                 method: "GET"
             }, async function(error, response) {
                 await new Promise(resolve => {
@@ -690,7 +690,7 @@ describe('Send Request Translation', () => {
     it('requestConfig passed as a variable', () => {
       const code = `
         const requestConfig = {
-            url: 'https://echo.usebruno.com',
+            url: 'https://echo.usedaffy.com',
             method: 'POST',
             header: {
                 'Accept': 'application/json',
@@ -718,7 +718,7 @@ describe('Send Request Translation', () => {
       const translatedCode = translateCode(code);
       expect(translatedCode).toBe(`
         const requestConfig = {
-            url: 'https://echo.usebruno.com',
+            url: 'https://echo.usedaffy.com',
             method: 'POST',
             headers: {
                 'Accept': 'application/json',
@@ -745,7 +745,7 @@ describe('Send Request Translation', () => {
     it('requestConfig passed as a variable with multi-level references', () => {
       const code = `
         const requestConfig = {
-            url: 'https://echo.usebruno.com',
+            url: 'https://echo.usedaffy.com',
             method: 'POST',
             header: {
                 'Accept': 'application/json',
@@ -776,7 +776,7 @@ describe('Send Request Translation', () => {
       const translatedCode = translateCode(code);
       expect(translatedCode).toBe(`
         const requestConfig = {
-            url: 'https://echo.usebruno.com',
+            url: 'https://echo.usedaffy.com',
             method: 'POST',
             headers: {
                 'Accept': 'application/json',

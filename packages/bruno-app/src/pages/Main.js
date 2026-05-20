@@ -13,7 +13,7 @@ import '../styles/globals.css';
 import 'codemirror/lib/codemirror.css';
 import 'graphiql/graphiql.min.css';
 import 'react-tooltip/dist/react-tooltip.css';
-import '@usebruno/graphql-docs/dist/esm/index.css';
+import '@usedaffy/graphql-docs/dist/esm/index.css';
 import '@fontsource/inter/100.css';
 import '@fontsource/inter/200.css';
 import '@fontsource/inter/300.css';
@@ -33,7 +33,7 @@ function Main({ children }) {
         <strong class="font-bold">ERROR:</strong>
         <span className="block inline ml-1">"ipcRenderer" not found in window object.</span>
         <div>
-          You most likely opened Bruno inside your web browser. Bruno only works within Electron, you can start Electron
+          You most likely opened Daffy inside your web browser. Daffy only works within Electron, you can start Electron
           in an adjacent terminal using "npm run dev:electron".
         </div>
       </div>

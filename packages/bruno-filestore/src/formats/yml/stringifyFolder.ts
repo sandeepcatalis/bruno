@@ -1,4 +1,4 @@
-import type { FolderRoot } from '@usebruno/schema-types/collection/folder';
+import type { FolderRoot } from '@usedaffy/schema-types/collection/folder';
 import type { Folder, FolderInfo } from '@opencollection/types/collection/item';
 import type { Variable } from '@opencollection/types/common/variables';
 import type { Action } from '@opencollection/types/common/actions';

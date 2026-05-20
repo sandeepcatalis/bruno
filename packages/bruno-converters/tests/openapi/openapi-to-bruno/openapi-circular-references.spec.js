@@ -84,7 +84,7 @@ const circularRefsData = {
       }
     }
   },
-  servers: [{ url: 'https://echo.usebruno.com' }]
+  servers: [{ url: 'https://echo.usedaffy.com' }]
 };
 
 // More complex circular reference test with a longer chain
@@ -207,7 +207,7 @@ const complexCircularRefsData = {
       }
     }
   },
-  servers: [{ url: 'https://echo.usebruno.com' }]
+  servers: [{ url: 'https://echo.usedaffy.com' }]
 };
 
 const circularRefsOutput = {
@@ -220,7 +220,7 @@ const circularRefsOutput = {
           name: 'baseUrl',
           secret: false,
           type: 'text',
-          value: 'https://echo.usebruno.com'
+          value: 'https://echo.usedaffy.com'
         }
       ]
     }

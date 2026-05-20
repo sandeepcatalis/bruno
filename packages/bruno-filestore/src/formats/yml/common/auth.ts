@@ -9,7 +9,7 @@ import type {
   AuthOAuth1,
   AuthWsse
 } from '@opencollection/types/common/auth';
-import type { Auth as BrunoAuth, AuthOauth1 as BrunoAuthOauth1 } from '@usebruno/schema-types/common/auth';
+import type { Auth as BrunoAuth, AuthOauth1 as BrunoAuthOauth1 } from '@usedaffy/schema-types/common/auth';
 import { isString } from '../../../utils';
 import { toOpenCollectionOAuth2, toBrunoOAuth2 } from './auth-oauth2';
 

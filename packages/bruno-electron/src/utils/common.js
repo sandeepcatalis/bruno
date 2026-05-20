@@ -2,7 +2,7 @@ const { customAlphabet } = require('nanoid');
 const iconv = require('iconv-lite');
 const { cloneDeep } = require('lodash');
 const { formatMultipartData } = require('./form-data');
-const { isFormData } = require('@usebruno/common').utils;
+const { isFormData } = require('@usedaffy/common').utils;
 
 // a customized version of nanoid without using _ and -
 const uuid = () => {

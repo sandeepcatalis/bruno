@@ -19,10 +19,10 @@ const {
   stringifyEnvironment,
   parseEnvironment,
   DEFAULT_COLLECTION_FORMAT
-} = require('@usebruno/filestore');
-const { dotenvToJson } = require('@usebruno/lang');
-const { utils } = require('@usebruno/common');
-const brunoConverters = require('@usebruno/converters');
+} = require('@usedaffy/filestore');
+const { dotenvToJson } = require('@usedaffy/lang');
+const { utils } = require('@usedaffy/common');
+const brunoConverters = require('@usedaffy/converters');
 const { postmanToBruno } = brunoConverters;
 const { cookiesStore } = require('../store/cookies');
 const { parseLargeRequestWithRedaction } = require('../utils/parse');
@@ -451,7 +451,7 @@ const registerRendererEventHandlers = (mainWindow, watcher) => {
 
       let finalContent;
       if (needsConversion) {
-        const { parseRequest, stringifyRequest } = require('@usebruno/filestore');
+        const { parseRequest, stringifyRequest } = require('@usedaffy/filestore');
         const sourceContent = await fs.promises.readFile(sourcePathname, 'utf8');
         const parsedRequest = parseRequest(sourceContent, { format: actualSourceFormat });
         const mergedRequest = { ...parsedRequest, ...request };
@@ -777,7 +777,7 @@ const registerRendererEventHandlers = (mainWindow, watcher) => {
         info: {
           type: 'bruno-environment',
           exportedAt: new Date().toISOString(),
-          exportedUsing: `Bruno/v${appVersion}`
+          exportedUsing: `Daffy/v${appVersion}`
         }
       });
 
@@ -808,7 +808,7 @@ const registerRendererEventHandlers = (mainWindow, watcher) => {
           info: {
             type: 'bruno-environment',
             exportedAt: new Date().toISOString(),
-            exportedUsing: `Bruno/v${appVersion}`
+            exportedUsing: `Daffy/v${appVersion}`
           },
           environments
         };
@@ -2451,7 +2451,7 @@ const registerMainEventHandlers = (mainWindow, watcher) => {
   });
 
   ipcMain.on('main:open-docs', () => {
-    const docsURL = 'https://docs.usebruno.com';
+    const docsURL = 'https://docs.usedaffy.com';
     shell.openExternal(docsURL);
   });
 

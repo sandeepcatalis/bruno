@@ -1,5 +1,5 @@
 const { get, each } = require('lodash');
-const { interpolate } = require('@usebruno/common');
+const { interpolate } = require('@usedaffy/common');
 const { getIntrospectionQuery } = require('graphql');
 const interpolateVars = require('./interpolate-vars');
 const { setAuthHeaders } = require('./prepare-request');

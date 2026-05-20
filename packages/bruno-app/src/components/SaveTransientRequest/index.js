@@ -20,7 +20,7 @@ import { resolveRequestFilename } from 'utils/common/platform';
 import path, { normalizePath } from 'utils/common/path';
 import { transformRequestToSaveToFilesystem, findCollectionByUid, findItemInCollection, areItemsLoading } from 'utils/collections';
 import { DEFAULT_COLLECTION_FORMAT } from 'utils/common/constants';
-import { itemSchema } from '@usebruno/schema';
+import { itemSchema } from '@usedaffy/schema';
 import { uuid } from 'utils/common';
 import { formatIpcError } from 'utils/common/error';
 import get from 'lodash/get';
@@ -471,7 +471,7 @@ const SaveTransientRequest = ({ item: itemProp, collection: collectionProp, isOp
                             Location
                             <Help width={250} placement="top">
                               <p>
-                                Bruno stores your collections on your computer's filesystem.
+                                Daffy stores your collections on your computer's filesystem.
                               </p>
                               <p className="mt-2">
                                 Choose the location where you want to store this collection.
@@ -511,7 +511,7 @@ const SaveTransientRequest = ({ item: itemProp, collection: collectionProp, isOp
                                 <strong>OpenCollection (YAML):</strong> Industry-standard YAML format (.yml files)
                               </p>
                               <p className="mt-1">
-                                <strong>BRU:</strong> Bruno's native file format (.bru files)
+                                <strong>BRU:</strong> Daffy's native file format (.bru files)
                               </p>
                             </Help>
                           </label>

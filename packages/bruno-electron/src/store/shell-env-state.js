@@ -1,4 +1,4 @@
-const { initializeShellEnv: _initializeShellEnv } = require('@usebruno/requests');
+const { initializeShellEnv: _initializeShellEnv } = require('@usedaffy/requests');
 
 const TIMEOUT_MS = 60_000;
 

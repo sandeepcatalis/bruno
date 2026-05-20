@@ -83,7 +83,7 @@ const importBrunoEnvironment = (parsedFiles) => {
     return environments;
   } catch (err) {
     console.error(err);
-    throw err instanceof BrunoError ? err : new BrunoError('Import Bruno environment failed');
+    throw err instanceof BrunoError ? err : new BrunoError('Import Daffy environment failed');
   }
 };
 

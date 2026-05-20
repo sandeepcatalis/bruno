@@ -5,7 +5,7 @@ const { isEmpty, get, isUndefined, isNull } = require('lodash');
 const { HttpsProxyAgent } = require('https-proxy-agent');
 const { HttpProxyAgent } = require('http-proxy-agent');
 const { SocksProxyAgent } = require('socks-proxy-agent');
-const { getOrCreateHttpsAgent, getOrCreateHttpAgent } = require('@usebruno/requests');
+const { getOrCreateHttpsAgent, getOrCreateHttpAgent } = require('@usedaffy/requests');
 const { interpolateString } = require('../runner/interpolate-string');
 
 const DEFAULT_PORTS = {
