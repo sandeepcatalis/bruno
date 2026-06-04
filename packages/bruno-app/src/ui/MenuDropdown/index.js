@@ -344,13 +344,18 @@ const MenuDropdown = forwardRef(({
   const renderSection = (section) => {
     if (!section) return null;
 
-    // If it's a React component (function), render it with default icon props
-    if (typeof section === 'function') {
+    // If it's already a rendered React element, return as-is
+    if (React.isValidElement(section)) {
+      return section;
+    }
+
+    // If it's a React component (function or forwardRef), render it with default icon props
+    if (typeof section === 'function' || (section && section.$$typeof)) {
       const SectionComponent = section;
       return <SectionComponent size={16} strokeWidth={1.5} className="dropdown-icon" aria-hidden="true" />;
     }
 
-    // If it's already a React element, render it as-is
+    // Fallback
     return section;
   };
 

@@ -6,6 +6,14 @@ const os = require('os');
 const { initializeShellEnv, waitForShellEnv } = require('./store/shell-env-state');
 const { percentageToZoomLevel } = require('@usedaffy/common');
 
+// Handle EPIPE errors gracefully (occurs when dev server pipe closes)
+process.stdout.on('error', (err) => { if (err.code === 'EPIPE') process.exit(0); });
+process.stderr.on('error', (err) => { if (err.code === 'EPIPE') process.exit(0); });
+process.on('uncaughtException', (err) => {
+  if (err.code === 'EPIPE') process.exit(0);
+  console.error('Uncaught exception:', err);
+});
+
 if (isDev) {
   if (!fs.existsSync(path.join(__dirname, '../../bruno-js/src/sandbox/bundle-browser-rollup.js'))) {
     console.log('JS Sandbox libraries have not been bundled yet');
