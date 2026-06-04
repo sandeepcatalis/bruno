@@ -95,6 +95,11 @@ const StyledWrapper = styled.div`
     min-width: 0;
     flex-shrink: 1;
     flex-grow: 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.75rem;
+    font-weight: 600;
   }
 
   .response-pane-actions {
@@ -114,26 +119,37 @@ const StyledWrapper = styled.div`
   .result-view-tabs {
     display: flex;
     align-items: center;
-    gap: 2px;
-    padding: 3px;
-    border-radius: 8px;
+    gap: 0;
+    padding: 0;
+    border-radius: 0;
+    border: 1px solid ${(props) => props.theme.border?.border1 || '#E0E0E0'};
+    border-radius: 4px;
+    overflow: hidden;
 
     .button-dropdown-button {
-      border: 1px solid transparent !important;
+      border: none !important;
+      border-right: 1px solid ${(props) => props.theme.border?.border1 || '#E0E0E0'} !important;
       background-color: transparent;
-      border-radius: 5px;
+      border-radius: 0;
       font-size: ${(props) => props.theme.font.size.sm};
+      font-weight: 500;
+      padding: 4px 10px;
+
+      &:last-child {
+        border-right: none !important;
+      }
 
       &:hover {
-        border-color: ${(props) => props.theme.app.collection.toolbar.environmentSelector.border} !important;
+        background-color: ${(props) => props.theme.background?.surface0 || 'rgba(0,0,0,0.03)'};
       }
     }
 
     .tab-active .button-dropdown-button {
-      border-color: ${(props) => props.theme.app.collection.toolbar.environmentSelector.border} !important;
+      background-color: ${(props) => props.theme.brand || '#FF6C37'} !important;
+      color: #FFFFFF !important;
 
       &:hover {
-        border-color: ${(props) => props.theme.app.collection.toolbar.environmentSelector.hoverBorder} !important;
+        background-color: ${(props) => props.theme.brand || '#FF6C37'} !important;
       }
     }
   }

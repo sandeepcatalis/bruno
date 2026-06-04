@@ -1,9 +1,12 @@
 import styled from 'styled-components';
 
 const Wrapper = styled.div`
-  font-size: ${(props) => props.theme.font.size.sm};
-  font-weight: 500;
+  font-size: 0.6875rem;
+  font-weight: 600;
   color: ${(props) => props.theme.requestTabPanel.responseStatus};
+  padding: 2px 8px;
+  border-radius: 3px;
+  background: ${(props) => props.theme.requestTabPanel.responseStatus}12;
 `;
 
 export default Wrapper;

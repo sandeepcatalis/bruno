@@ -5,8 +5,8 @@ const Wrapper = styled.div`
   height: 100%;
   display: flex;
   align-items: stretch;
-  border-radius: 4px;
-  transition: background-color 0.15s ease;
+  border-right: 1px solid ${(props) => props.theme.border?.border1 || '#E0E0E0'};
+  transition: background-color 0.1s ease-out;
 
   .dropdown {
     width: 100%;
@@ -17,8 +17,9 @@ const Wrapper = styled.div`
   .method-selector {
     display: flex;
     align-items: center;
-    margin: 2px;
-    border-radius: ${(props) => props.theme.border.radius.sm};
+    margin: 0;
+    padding: 0 10px;
+    border-radius: 0;
 
     &:not(.custom-input-mode):hover,
     &:has(button[aria-expanded="true"]) {
@@ -58,9 +59,10 @@ const Wrapper = styled.div`
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
-    font-size: ${(props) => props.theme.font.size.sm};
-    font-weight: 500;
+    font-size: 0.8125rem;
+    font-weight: 700;
     line-height: 1.5;
+    letter-spacing: 0.02em;
   }
 
   .caret {

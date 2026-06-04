@@ -52,9 +52,10 @@ const Wrapper = styled.div`
       background: transparent;
       border: none;
       border-bottom: 3px solid transparent;
+      border-right: 1px solid ${(props) => props.theme.requestTabs.bottomBorder};
       padding: 10px 16px;
       flex-shrink: 0;
-      transition: all 0.15s ease;
+      transition: all 0.1s ease-out;
 
       .tab-container {
         width: 100%;
@@ -107,6 +108,11 @@ const Wrapper = styled.div`
         border-bottom: 3px solid ${(props) => props.theme.brand};
         background: ${(props) => props.theme.bg};
         opacity: 1;
+        border-right: 1px solid ${(props) => props.theme.requestTabs.bottomBorder};
+      }
+
+      &:last-child {
+        border-right: none;
       }
 
       &.short-tab {
@@ -121,6 +127,7 @@ const Wrapper = styled.div`
         background-color: transparent;
         border: none;
         border-bottom: 3px solid transparent;
+        border-right: 1px solid ${(props) => props.theme.requestTabs.bottomBorder};
         flex-shrink: 0;
 
         > div {
