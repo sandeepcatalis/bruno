@@ -20,7 +20,8 @@ import {
   IconSettings,
   IconTerminal2,
   IconFolder,
-  IconBook
+  IconBook,
+  IconServer
 } from 'utils/iconAdapter';
 import OpenAPISyncIcon from 'components/Icons/OpenAPISync';
 import { toggleCollection, collapseFullCollection } from 'providers/ReduxStore/slices/collections';
@@ -43,6 +44,7 @@ import CloneCollection from './CloneCollection';
 import { scrollToTheActiveTab } from 'utils/tabs';
 import ShareCollection from 'components/ShareCollection/index';
 import GenerateDocumentation from './GenerateDocumentation';
+import MockServer from 'components/MockServer';
 import { CollectionItemDragPreview } from './CollectionItem/CollectionItemDragPreview/index';
 import { sortByNameThenSequence } from 'utils/common/index';
 import { getRevealInFolderLabel } from 'utils/common/platform';
@@ -68,6 +70,7 @@ const Collection = ({ collection, searchText }) => {
   const [showCloneCollectionModalOpen, setShowCloneCollectionModalOpen] = useState(false);
   const [showShareCollectionModal, setShowShareCollectionModal] = useState(false);
   const [showGenerateDocumentationModal, setShowGenerateDocumentationModal] = useState(false);
+  const [showMockServerModal, setShowMockServerModal] = useState(false);
   const [showRemoveCollectionModal, setShowRemoveCollectionModal] = useState(false);
   const [dropType, setDropType] = useState(null);
   const [isKeyboardFocused, setIsKeyboardFocused] = useState(false);
@@ -409,6 +412,15 @@ const Collection = ({ collection, searchText }) => {
       }
     },
     {
+      id: 'mock-server',
+      leftSection: IconServer,
+      label: 'Mock Server',
+      onClick: () => {
+        ensureCollectionIsMounted();
+        setShowMockServerModal(true);
+      }
+    },
+    {
       id: 'collapse',
       leftSection: IconFoldDown,
       label: 'Collapse',
@@ -464,6 +476,9 @@ const Collection = ({ collection, searchText }) => {
       )}
       {showGenerateDocumentationModal && (
         <GenerateDocumentation collectionUid={collection.uid} onClose={() => setShowGenerateDocumentationModal(false)} />
+      )}
+      {showMockServerModal && (
+        <MockServer collectionUid={collection.uid} onClose={() => setShowMockServerModal(false)} />
       )}
       {showCloneCollectionModalOpen && (
         <CloneCollection collectionUid={collection.uid} onClose={() => setShowCloneCollectionModalOpen(false)} />

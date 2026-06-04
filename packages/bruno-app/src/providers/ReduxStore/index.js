@@ -12,6 +12,7 @@ import workspacesReducer from './slices/workspaces';
 import apiSpecReducer from './slices/apiSpec';
 import openapiSyncReducer from './slices/openapi-sync';
 import responseSnapshotsReducer from './slices/responseSnapshots';
+import mockServersReducer from './slices/mockServers';
 import { draftDetectMiddleware } from './middlewares/draft/middleware';
 import { autosaveMiddleware } from './middlewares/autosave/middleware';
 import { snapshotMiddleware } from './middlewares/snapshot/middleware';
@@ -37,7 +38,8 @@ export const store = configureStore({
     workspaces: workspacesReducer,
     apiSpec: apiSpecReducer,
     openapiSync: openapiSyncReducer,
-    responseSnapshots: responseSnapshotsReducer
+    responseSnapshots: responseSnapshotsReducer,
+    mockServers: mockServersReducer
   },
   middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(middleware)
 });

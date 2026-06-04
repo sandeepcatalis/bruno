@@ -62,6 +62,7 @@ const { globalEnvironmentsManager } = require('./store/workspace-environments');
 const registerNotificationsIpc = require('./ipc/notifications');
 const registerGlobalEnvironmentsIpc = require('./ipc/global-environments');
 const TerminalManager = require('./ipc/terminal');
+const MockServerManager = require('./ipc/mock-server');
 const { safeParseJSON, safeStringifyJSON } = require('./utils/common');
 const { getDomainsWithCookies } = require('./utils/cookies');
 const { cookiesStore } = require('./store/cookies');
@@ -71,6 +72,7 @@ const { handleAppProtocolUrl, getAppProtocolUrlFromArgv } = require('./utils/dee
 
 const systemMonitor = new SystemMonitor();
 const terminalManager = new TerminalManager();
+const mockServerManager = new MockServerManager();
 
 const workspaceWatcher = new WorkspaceWatcher();
 const apiSpecWatcher = new ApiSpecWatcher();
@@ -527,6 +529,12 @@ app.on('before-quit', (event) => {
       terminalManager.killAll();
     } catch (err) {
       console.error('Failed to kill all terminals on quit', err);
+    }
+
+    try {
+      mockServerManager.cleanup();
+    } catch (err) {
+      console.error('Failed to cleanup mock servers on quit', err);
     }
 
     app.exit(0);
