@@ -2,7 +2,7 @@ import { useMemo, useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import toast from 'react-hot-toast';
 import { cloneDeep, find, get } from 'lodash';
-import { IconLoader2, IconX } from '@tabler/icons';
+import { IconLoader2, IconX } from 'utils/iconAdapter';
 import { interpolate } from '@usedaffy/common';
 import { fetchOauth2Credentials, clearOauth2Cache, refreshOauth2Credentials, cancelOauth2AuthorizationRequest, isOauth2AuthorizationRequestInProgress } from 'providers/ReduxStore/slices/collections/actions';
 import { getAllVariables } from 'utils/collections/index';

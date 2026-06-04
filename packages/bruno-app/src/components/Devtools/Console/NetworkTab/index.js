@@ -2,7 +2,7 @@ import React, { useMemo } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import {
   IconNetwork
-} from '@tabler/icons';
+} from 'utils/iconAdapter';
 import {
   setSelectedRequest
 } from 'providers/ReduxStore/slices/logs';

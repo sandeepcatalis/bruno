@@ -11,10 +11,12 @@ const StyledWrapper = styled.div`
 
   .request-pane {
     flex-shrink: 0;
+    padding: 0 4px;
   }
 
   .response-pane {
     min-width: 0;
+    padding: 0 4px;
   }
 
   .main {

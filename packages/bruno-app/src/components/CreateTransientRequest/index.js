@@ -1,5 +1,5 @@
 import React, { useState, useRef, useCallback, useMemo } from 'react';
-import { IconPlus, IconApi, IconBrandGraphql, IconPlugConnected, IconCode } from '@tabler/icons';
+import { IconPlus, IconApi, IconBrandGraphql, IconPlugConnected, IconCode } from 'utils/iconAdapter';
 import ActionIcon from 'ui/ActionIcon/index';
 import Dropdown from 'components/Dropdown';
 import { newHttpRequest, newGrpcRequest, newWsRequest } from 'providers/ReduxStore/slices/collections/actions';

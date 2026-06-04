@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect, useCallback, memo } from 'react';
 import classnames from 'classnames';
 import StyledWrapper from './StyledWrapper';
-import { IconExclamationCircle, IconChevronRight, IconInfoCircle, IconChevronDown, IconArrowUpRight, IconArrowDownLeft } from '@tabler/icons';
+import { IconExclamationCircle, IconChevronRight, IconInfoCircle, IconChevronDown, IconArrowUpRight, IconArrowDownLeft } from 'utils/iconAdapter';
 import CodeEditor from 'components/CodeEditor/index';
 import { useTheme } from 'providers/Theme';
 import { useSelector } from 'react-redux';

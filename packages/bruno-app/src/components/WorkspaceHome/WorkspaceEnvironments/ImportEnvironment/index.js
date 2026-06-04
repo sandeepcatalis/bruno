@@ -5,7 +5,7 @@ import toast from 'react-hot-toast';
 import { useDispatch } from 'react-redux';
 import importPostmanEnvironment from 'utils/importers/postman-environment';
 import { toastError } from 'utils/common/error';
-import { IconDatabaseImport } from '@tabler/icons';
+import { IconDatabaseImport } from 'utils/iconAdapter';
 import { addGlobalEnvironment } from 'providers/ReduxStore/slices/global-environments';
 
 const ImportEnvironment = ({ onClose, onEnvironmentCreated }) => {

@@ -16,7 +16,7 @@ import { saveRequest, cancelRequest } from 'providers/ReduxStore/slices/collecti
 import { getRequestFromCurlCommand } from 'utils/curl';
 import HttpMethodSelector from './HttpMethodSelector';
 import { useTheme } from 'providers/Theme';
-import { IconDeviceFloppy, IconCode } from '@tabler/icons';
+import { IconDeviceFloppy, IconCode } from 'utils/iconAdapter';
 import SingleLineEditor from 'components/SingleLineEditor';
 import SendButton from 'components/RequestPane/SendButton';
 import { isMacOS } from 'utils/common/platform';

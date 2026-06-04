@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { pluralizeWord } from 'utils/common';
-import { IconAlertTriangle, IconDeviceFloppy } from '@tabler/icons';
+import { IconAlertTriangle, IconDeviceFloppy } from 'utils/iconAdapter';
 import { clearAllSaveTransientRequestModals } from 'providers/ReduxStore/slices/collections';
 import { closeTabs } from 'providers/ReduxStore/slices/collections/actions';
 import toast from 'react-hot-toast';

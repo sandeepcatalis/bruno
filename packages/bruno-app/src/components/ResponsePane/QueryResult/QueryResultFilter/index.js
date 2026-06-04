@@ -1,4 +1,4 @@
-import { IconFilter, IconX } from '@tabler/icons';
+import { IconFilter, IconX } from 'utils/iconAdapter';
 import React, { useMemo, useRef, useState } from 'react';
 import { Tooltip as ReactInfotip } from 'react-tooltip';
 

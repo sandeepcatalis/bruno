@@ -1,6 +1,6 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { IconChevronRight } from '@tabler/icons';
+import { IconChevronRight } from 'utils/iconAdapter';
 import { toggleSectionExpanded } from 'providers/ReduxStore/slices/openapi-sync';
 
 /**

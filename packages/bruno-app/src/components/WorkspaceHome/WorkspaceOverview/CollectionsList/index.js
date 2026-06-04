@@ -11,7 +11,7 @@ import {
   IconBrandGit,
   IconUnlink,
   IconCopy
-} from '@tabler/icons';
+} from 'utils/iconAdapter';
 import { addTab } from 'providers/ReduxStore/slices/tabs';
 import { mountCollection, showInFolder } from 'providers/ReduxStore/slices/collections/actions';
 import { getRevealInFolderLabel } from 'utils/common/platform';

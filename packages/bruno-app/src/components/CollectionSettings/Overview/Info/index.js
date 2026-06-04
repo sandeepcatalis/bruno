@@ -1,6 +1,6 @@
 import React from 'react';
 import { getTotalRequestCountInCollection } from 'utils/collections/';
-import { IconFolder, IconWorld, IconApi, IconShare, IconBook } from '@tabler/icons';
+import { IconFolder, IconWorld, IconApi, IconShare, IconBook } from 'utils/iconAdapter';
 import { areItemsLoading, getItemsLoadStats } from 'utils/collections/index';
 import { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
@@ -34,7 +34,7 @@ const Info = ({ collection }) => {
           {/* Location Row */}
           <div className="flex items-start">
             <div className="icon-box location flex-shrink-0 p-3 rounded-lg">
-              <IconFolder className="w-5 h-5" stroke={1.5} />
+              <IconFolder className="w-5 h-5" strokeWidth={1.5} />
             </div>
             <div className="ml-4">
               <div className="font-medium">Location</div>
@@ -47,7 +47,7 @@ const Info = ({ collection }) => {
           {/* Environments Row */}
           <div className="flex items-start">
             <div className="icon-box environments flex-shrink-0 p-3 rounded-lg">
-              <IconWorld className="w-5 h-5" stroke={1.5} />
+              <IconWorld className="w-5 h-5" strokeWidth={1.5} />
             </div>
             <div className="ml-4">
               <div className="font-medium">Environments</div>
@@ -89,7 +89,7 @@ const Info = ({ collection }) => {
           {/* Requests Row */}
           <div className="flex items-start">
             <div className="icon-box requests flex-shrink-0 p-3 rounded-lg">
-              <IconApi className="w-5 h-5" stroke={1.5} />
+              <IconApi className="w-5 h-5" strokeWidth={1.5} />
             </div>
             <div className="ml-4">
               <div className="font-medium">Requests</div>
@@ -103,7 +103,7 @@ const Info = ({ collection }) => {
 
           <div className="flex items-start group cursor-pointer" onClick={handleToggleShowShareCollectionModal(true)}>
             <div className="icon-box share flex-shrink-0 p-3 rounded-lg">
-              <IconShare className="w-5 h-5" stroke={1.5} />
+              <IconShare className="w-5 h-5" strokeWidth={1.5} />
             </div>
             <div className="ml-4 h-full flex flex-col justify-start">
               <div className="font-medium h-fit my-auto">Share</div>
@@ -116,7 +116,7 @@ const Info = ({ collection }) => {
 
           <div className="flex items-start group cursor-pointer" onClick={() => setShowGenerateDocumentationModal(true)}>
             <div className="icon-box generate-docs flex-shrink-0 p-3 rounded-lg">
-              <IconBook className="w-5 h-5" stroke={1.5} />
+              <IconBook className="w-5 h-5" strokeWidth={1.5} />
             </div>
             <div className="ml-4 h-full flex flex-col justify-start">
               <div className="font-medium h-fit my-auto">Documentation</div>

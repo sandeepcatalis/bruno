@@ -1,5 +1,5 @@
 import React, { useRef, useCallback } from 'react';
-import { IconChevronDown, IconChevronUp } from '@tabler/icons';
+import { IconChevronDown, IconChevronUp } from 'utils/iconAdapter';
 import StyledWrapper from './StyledWrapper';
 
 const CollapsedPanelIndicator = ({

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Modal from 'components/Modal/index';
 import { PostHog } from 'posthog-node';
 import { uuid } from 'utils/common';
-import { IconHeart, IconUser, IconUsers, IconPlus } from '@tabler/icons';
+import { IconHeart, IconUser, IconUsers, IconPlus } from 'utils/iconAdapter';
 import platformLib from 'platform';
 import StyledWrapper from './StyledWrapper';
 import { useTheme } from 'providers/Theme/index';

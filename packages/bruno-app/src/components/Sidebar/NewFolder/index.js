@@ -6,12 +6,12 @@ import Portal from 'components/Portal';
 import Modal from 'components/Modal';
 import { useDispatch } from 'react-redux';
 import { newFolder } from 'providers/ReduxStore/slices/collections/actions';
-import { IconArrowBackUp, IconEdit } from '@tabler/icons';
+import { IconArrowBackUp, IconEdit } from 'utils/iconAdapter';
 import { sanitizeName, validateName, validateNameError } from 'utils/common/regex';
 import PathDisplay from 'components/PathDisplay/index';
 import Help from 'components/Help';
 import Dropdown from 'components/Dropdown';
-import { IconCaretDown } from '@tabler/icons';
+import { IconCaretDown } from 'utils/iconAdapter';
 import StyledWrapper from './StyledWrapper';
 import Button from 'ui/Button';
 

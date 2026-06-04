@@ -1,7 +1,7 @@
 import React, { useRef, forwardRef, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import get from 'lodash/get';
-import { IconCaretDown } from '@tabler/icons';
+import { IconCaretDown } from 'utils/iconAdapter';
 import Dropdown from 'components/Dropdown';
 import { useTheme } from 'providers/Theme';
 import SingleLineEditor from 'components/SingleLineEditor';

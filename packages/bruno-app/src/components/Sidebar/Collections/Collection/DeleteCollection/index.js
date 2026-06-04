@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import toast from 'react-hot-toast';
 import Modal from 'components/Modal';
 import { useDispatch, useSelector } from 'react-redux';
-import { IconAlertTriangle } from '@tabler/icons';
+import { IconAlertTriangle } from 'utils/iconAdapter';
 import { removeCollectionFromWorkspaceAction } from 'providers/ReduxStore/slices/workspaces/actions';
 import { findCollectionByUid } from 'utils/collections/index';
 import StyledWrapper from './StyledWrapper';

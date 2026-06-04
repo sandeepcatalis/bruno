@@ -6,11 +6,8 @@ const Wrapper = styled.div`
   font-size: ${(props) => props.theme.font.size.sm};
   color: ${(props) => props.theme.dropdown.color};
   background-color: ${(props) => props.theme.dropdown.bg};
-  ${(props) =>
-    props.theme.dropdown.shadow && props.theme.dropdown.shadow !== 'none'
-      ? `box-shadow: ${props.theme.dropdown.shadow};`
-      : ''}
-  border-radius: ${(props) => props.theme.border.radius.base};
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12), 0 2px 8px rgba(0, 0, 0, 0.06);
+  border-radius: 12px;
   ${(props) =>
     props.theme.dropdown.border && props.theme.dropdown.border !== 'none'
       ? `border: 1px solid ${props.theme.dropdown.border};`
@@ -18,7 +15,7 @@ const Wrapper = styled.div`
   max-height: 90vh;
   overflow-y: auto;
   max-width: unset !important;
-  padding: 0.25rem;
+  padding: 0.375rem;
 
   [role="menu"] {
     outline: none;

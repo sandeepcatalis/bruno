@@ -1,5 +1,5 @@
 import React, { useRef, useState } from 'react';
-import { IconBrandGit, IconCopy, IconDots, IconUnlink } from '@tabler/icons';
+import { IconBrandGit, IconCopy, IconDots, IconUnlink } from 'utils/iconAdapter';
 import toast from 'react-hot-toast';
 import ActionIcon from 'ui/ActionIcon';
 import MenuDropdown from 'ui/MenuDropdown';

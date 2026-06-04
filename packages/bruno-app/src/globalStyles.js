@@ -3,8 +3,16 @@ import { rgba } from 'polished';
 
 const GlobalStyle = createGlobalStyle`
 
+  * {
+    transition-property: background-color, border-color, box-shadow;
+    transition-duration: 0.15s;
+    transition-timing-function: ease;
+  }
+
   body {
     font-size: ${(props) => props.theme.font.size.base};
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 
   .CodeMirror-gutters {
@@ -37,7 +45,8 @@ const GlobalStyle = createGlobalStyle`
     white-space: nowrap;
     outline: none;
     box-shadow: none;
-    border-radius: 3px;
+    border-radius: 8px;
+    font-weight: 500;
   }
 
   .btn-sm {
@@ -122,6 +131,15 @@ const GlobalStyle = createGlobalStyle`
   input::placeholder {
     color: ${(props) => props.theme.input.placeholder.color};
     opacity:  ${(props) => props.theme.input.placeholder.opacity};
+  }
+
+  input[type="text"],
+  input[type="url"],
+  input[type="number"],
+  input[type="password"],
+  input[type="email"],
+  textarea {
+    border-radius: 8px;
   }
 
   @keyframes fade-in {

@@ -4,7 +4,7 @@ import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import toast from 'react-hot-toast';
 import get from 'lodash/get';
-import { IconFileZip } from '@tabler/icons';
+import { IconFileZip } from 'utils/iconAdapter';
 import Modal from 'components/Modal';
 import { browseDirectory } from 'providers/ReduxStore/slices/collections/actions';
 import { importWorkspaceAction } from 'providers/ReduxStore/slices/workspaces/actions';

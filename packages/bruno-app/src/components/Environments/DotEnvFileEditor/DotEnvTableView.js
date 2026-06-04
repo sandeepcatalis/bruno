@@ -1,6 +1,6 @@
 import React, { useCallback, useRef } from 'react';
 import { TableVirtuoso } from 'react-virtuoso';
-import { IconTrash } from '@tabler/icons';
+import { IconTrash } from 'utils/iconAdapter';
 import MultiLineEditor from 'components/MultiLineEditor/index';
 import DotEnvErrorMessage from './DotEnvErrorMessage';
 import { MIN_TABLE_HEIGHT } from './utils';

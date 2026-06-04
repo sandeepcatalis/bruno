@@ -12,7 +12,7 @@ import {
   IconX,
   IconSend,
   IconArrowsRightLeft
-} from '@tabler/icons';
+} from 'utils/iconAdapter';
 import StyledWrapper from './StyledWrapper';
 import { usePersistedState } from 'hooks/usePersistedState/index';
 

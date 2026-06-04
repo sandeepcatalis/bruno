@@ -7,7 +7,7 @@ import {
   IconChevronRight,
   IconCircleCheck,
   IconCircleX
-} from '@tabler/icons';
+} from 'utils/iconAdapter';
 
 const ResultIcon = ({ status }) => (
   <span className={`inline-flex items-center ${status === 'pass' ? 'test-success' : 'test-failure'}`}>
@@ -60,8 +60,8 @@ const TestSection = ({
       >
         <span className="dropdown-icon mr-2 flex items-center">
           {isExpanded
-            ? <IconChevronDown size={18} stroke={1.5} />
-            : <IconChevronRight size={18} stroke={1.5} />}
+            ? <IconChevronDown size={18} strokeWidth={1.5} />
+            : <IconChevronRight size={18} strokeWidth={1.5} />}
         </span>
         <span className="flex-grow">
           {title} ({results.length}), Passed: {passedResults.length}, Failed: {failedResults.length}

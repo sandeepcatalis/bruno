@@ -6,7 +6,7 @@ import { modifyCookie, addCookie, getParsedCookie, createCookieString } from 'pr
 import { useDispatch } from 'react-redux';
 import toast from 'react-hot-toast';
 import ToggleSwitch from 'components/ToggleSwitch/index';
-import { IconInfoCircle } from '@tabler/icons';
+import { IconInfoCircle } from 'utils/iconAdapter';
 import moment from 'moment';
 import 'moment-timezone';
 import { Tooltip } from 'react-tooltip';

@@ -7,7 +7,7 @@ import { savePreferences } from 'providers/ReduxStore/slices/app';
 
 import StyledWrapper from './StyledWrapper';
 import { useDispatch, useSelector } from 'react-redux';
-import { IconEye, IconEyeOff } from '@tabler/icons';
+import { IconEye, IconEyeOff } from 'utils/iconAdapter';
 import { useState } from 'react';
 import SystemProxy from './SystemProxy';
 

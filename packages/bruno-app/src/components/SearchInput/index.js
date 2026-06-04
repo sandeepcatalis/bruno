@@ -1,5 +1,5 @@
 import React from 'react';
-import { IconSearch, IconX } from '@tabler/icons';
+import { IconSearch, IconX } from 'utils/iconAdapter';
 import StyledWrapper from './StyledWrapper';
 
 const SearchInput = ({

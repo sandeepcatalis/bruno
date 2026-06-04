@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useRef, useCallback, useMemo } from 'react';
 import classnames from 'classnames';
 import MenuDropdown from 'ui/MenuDropdown';
-import { IconChevronsRight } from '@tabler/icons';
+import { IconChevronsRight } from 'utils/iconAdapter';
 import StyledWrapper from './StyledWrapper';
 
 const DROPDOWN_WIDTH = 60;

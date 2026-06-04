@@ -1,4 +1,4 @@
-import { IconCopy, IconEdit, IconTrash, IconCheck, IconX, IconSearch } from '@tabler/icons';
+import { IconCopy, IconEdit, IconTrash, IconCheck, IconX, IconSearch } from 'utils/iconAdapter';
 import { useState, useRef } from 'react';
 import { useDispatch } from 'react-redux';
 import { renameEnvironment, updateEnvironmentColor } from 'providers/ReduxStore/slices/collections/actions';

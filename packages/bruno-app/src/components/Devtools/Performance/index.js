@@ -8,7 +8,7 @@ import {
   IconServer,
   IconChevronDown,
   IconChartLine
-} from '@tabler/icons';
+} from 'utils/iconAdapter';
 
 const getProcessOptions = (processes) => {
   return [

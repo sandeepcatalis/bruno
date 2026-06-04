@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState, useMemo } from 'react';
-import { IconGripVertical, IconMinusVertical } from '@tabler/icons';
+import { IconGripVertical, IconMinusVertical } from 'utils/iconAdapter';
 
 /**
  * ReorderTable Component

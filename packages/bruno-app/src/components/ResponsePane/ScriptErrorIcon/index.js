@@ -1,6 +1,6 @@
 import React from 'react';
 import classnames from 'classnames';
-import { IconAlertCircle } from '@tabler/icons';
+import { IconAlertCircle } from 'utils/iconAdapter';
 import ToolHint from 'components/ToolHint';
 
 const ScriptErrorIcon = ({ itemUid, onClick, className }) => {

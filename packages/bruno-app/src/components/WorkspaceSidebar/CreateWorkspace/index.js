@@ -3,7 +3,7 @@ import { useFormik } from 'formik';
 import { useDispatch, useSelector } from 'react-redux';
 import * as Yup from 'yup';
 import toast from 'react-hot-toast';
-import { IconArrowBackUp, IconEdit } from '@tabler/icons';
+import { IconArrowBackUp, IconEdit } from 'utils/iconAdapter';
 import Modal from 'components/Modal';
 import Help from 'components/Help';
 import PathDisplay from 'components/PathDisplay/index';

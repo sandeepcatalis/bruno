@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { IconChevronRight } from '@tabler/icons';
+import { IconChevronRight } from 'utils/iconAdapter';
 import Modal from 'components/Modal';
 import Button from 'ui/Button';
 import MethodBadge from 'ui/MethodBadge';

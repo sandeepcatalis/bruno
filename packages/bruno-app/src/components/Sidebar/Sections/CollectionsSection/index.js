@@ -14,7 +14,7 @@ import {
   IconSquareX,
   IconBox,
   IconTerminal2
-} from '@tabler/icons';
+} from 'utils/iconAdapter';
 
 import { importCollection, openCollection, importCollectionFromZip, newHttpRequest } from 'providers/ReduxStore/slices/collections/actions';
 import { sortCollections } from 'providers/ReduxStore/slices/collections/index';
@@ -300,7 +300,7 @@ const CollectionsSection = () => {
         onClick={handleToggleSearch}
         label="Search requests"
       >
-        <IconSearch size={14} stroke={1.5} aria-hidden="true" />
+        <IconSearch size={14} strokeWidth={1.5} aria-hidden="true" />
       </ActionIcon>
 
       <MenuDropdown
@@ -311,7 +311,7 @@ const CollectionsSection = () => {
         <ActionIcon
           label="Add new collection"
         >
-          <IconPlus size={14} stroke={1.5} aria-hidden="true" />
+          <IconPlus size={14} strokeWidth={1.5} aria-hidden="true" />
         </ActionIcon>
       </MenuDropdown>
 
@@ -323,7 +323,7 @@ const CollectionsSection = () => {
         <ActionIcon
           label="More actions"
         >
-          <IconDotsVertical size={14} stroke={1.5} aria-hidden="true" />
+          <IconDotsVertical size={14} strokeWidth={1.5} aria-hidden="true" />
         </ActionIcon>
       </MenuDropdown>
 

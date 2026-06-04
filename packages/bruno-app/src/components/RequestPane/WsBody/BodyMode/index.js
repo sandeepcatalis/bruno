@@ -1,5 +1,5 @@
 import React, { useRef, forwardRef } from 'react';
-import { IconCaretDown } from '@tabler/icons';
+import { IconCaretDown } from 'utils/iconAdapter';
 import Dropdown from 'components/Dropdown';
 import { humanizeRequestBodyMode } from 'utils/collections';
 import StyledWrapper from './StyledWrapper';

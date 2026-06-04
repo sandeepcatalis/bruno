@@ -1,4 +1,4 @@
-import { IconChevronDown } from '@tabler/icons';
+import { IconChevronDown } from 'utils/iconAdapter';
 import Dropdown from 'components/Dropdown/index';
 import {
   IconGrpcBidiStreaming,

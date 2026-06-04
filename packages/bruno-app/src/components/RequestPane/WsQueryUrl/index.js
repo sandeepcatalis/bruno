@@ -1,4 +1,4 @@
-import { IconDeviceFloppy, IconPlugConnected, IconPlugConnectedX } from '@tabler/icons';
+import { IconDeviceFloppy, IconPlugConnected, IconPlugConnectedX } from 'utils/iconAdapter';
 import SendButton from 'components/RequestPane/SendButton';
 import classnames from 'classnames';
 import SingleLineEditor from 'components/SingleLineEditor/index';

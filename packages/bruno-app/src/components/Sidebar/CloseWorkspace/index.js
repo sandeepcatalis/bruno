@@ -2,7 +2,7 @@ import React from 'react';
 import toast from 'react-hot-toast';
 import Modal from 'components/Modal';
 import { useDispatch, useSelector } from 'react-redux';
-import { IconFolder } from '@tabler/icons';
+import { IconFolder } from 'utils/iconAdapter';
 import { closeWorkspaceAction } from 'providers/ReduxStore/slices/workspaces/actions';
 
 const CloseWorkspace = ({ workspaceUid, onClose }) => {

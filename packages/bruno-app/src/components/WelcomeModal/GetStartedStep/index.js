@@ -1,5 +1,5 @@
 import React from 'react';
-import { IconPlus, IconDownload, IconFileImport, IconSend } from '@tabler/icons';
+import { IconPlus, IconDownload, IconFileImport, IconSend } from 'utils/iconAdapter';
 import StyledWrapper from './StyledWrapper';
 
 const GetStartedStep = ({ onCreateCollection, onImportCollection, onOpenCollection, onStartRequest }) => (
@@ -13,7 +13,7 @@ const GetStartedStep = ({ onCreateCollection, onImportCollection, onOpenCollecti
     <div className="primary-actions">
       <button className="primary-action-card" onClick={onCreateCollection}>
         <div className="card-icon">
-          <IconPlus size={20} stroke={1.5} />
+          <IconPlus size={20} strokeWidth={1.5} />
         </div>
         <div className="card-title">Create Collection</div>
         <div className="card-desc">Start fresh with a new API collection</div>
@@ -21,7 +21,7 @@ const GetStartedStep = ({ onCreateCollection, onImportCollection, onOpenCollecti
 
       <button className="primary-action-card" onClick={onImportCollection}>
         <div className="card-icon">
-          <IconDownload size={20} stroke={1.5} />
+          <IconDownload size={20} strokeWidth={1.5} />
         </div>
         <div className="card-title">Import Collection</div>
         <div className="card-desc">Bring in Postman, OpenAPI/Swagger, or Insomnia</div>
@@ -31,7 +31,7 @@ const GetStartedStep = ({ onCreateCollection, onImportCollection, onOpenCollecti
     <div className="secondary-actions">
       <button className="secondary-action" onClick={onOpenCollection}>
         <span className="secondary-icon">
-          <IconFileImport size={16} stroke={1.5} />
+          <IconFileImport size={16} strokeWidth={1.5} />
         </span>
         <div>
           <div className="secondary-label">Open existing collection</div>
@@ -40,7 +40,7 @@ const GetStartedStep = ({ onCreateCollection, onImportCollection, onOpenCollecti
       </button>
       <button className="secondary-action" onClick={onStartRequest}>
         <span className="secondary-icon">
-          <IconSend size={16} stroke={1.5} />
+          <IconSend size={16} strokeWidth={1.5} />
         </span>
         <div>
           <div className="secondary-label">Get started with a request</div>

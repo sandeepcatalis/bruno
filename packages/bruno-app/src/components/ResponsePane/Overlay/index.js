@@ -1,5 +1,5 @@
 import React from 'react';
-import { IconRefresh } from '@tabler/icons';
+import { IconRefresh } from 'utils/iconAdapter';
 import { useDispatch, useSelector } from 'react-redux';
 import { cancelRequest } from 'providers/ReduxStore/slices/collections/actions';
 import StopWatch from '../../StopWatch';

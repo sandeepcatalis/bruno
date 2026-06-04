@@ -1,6 +1,6 @@
 import React from 'react';
 import { rgba } from 'polished';
-import { IconBrightnessUp, IconMoon, IconDeviceDesktop } from '@tabler/icons';
+import { IconBrightnessUp, IconMoon, IconDeviceDesktop } from 'utils/iconAdapter';
 import themes, { getLightThemes, getDarkThemes } from 'themes/index';
 import StyledWrapper from './StyledWrapper';
 
@@ -52,7 +52,7 @@ const ThemeStep = ({ storedTheme, setStoredTheme, themeVariantLight, setThemeVar
               className={`theme-mode-btn ${storedTheme === mode.key ? 'active' : ''}`}
               onClick={() => setStoredTheme(mode.key)}
             >
-              <Icon size={16} stroke={1.5} />
+              <Icon size={16} strokeWidth={1.5} />
               {mode.label}
             </button>
           );

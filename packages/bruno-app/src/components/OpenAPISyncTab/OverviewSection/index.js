@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux';
 import { getTotalRequestCountInCollection } from 'utils/collections/';
 import { countEndpoints } from '../utils';
 import moment from 'moment';
-import { IconCheck } from '@tabler/icons';
+import { IconCheck } from 'utils/iconAdapter';
 import Button from 'ui/Button';
 import Help from 'components/Help';
 

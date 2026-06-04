@@ -7,6 +7,7 @@ const Wrapper = styled.div`
   aside {
     background-color: ${(props) => props.theme.sidebar.bg};
     overflow: hidden;
+    padding: 4px 0;
 
     .sidebar-sections-container {
       display: flex;

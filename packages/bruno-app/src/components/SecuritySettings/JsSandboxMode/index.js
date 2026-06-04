@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { useDispatch } from 'react-redux';
 import toast from 'react-hot-toast';
-import { IconShieldCheck, IconCode } from '@tabler/icons';
+import { IconShieldCheck, IconCode } from 'utils/iconAdapter';
 import Dropdown from 'components/Dropdown';
 import { saveCollectionSecurityConfig } from 'providers/ReduxStore/slices/collections/actions';
 import StyledWrapper from './StyledWrapper';

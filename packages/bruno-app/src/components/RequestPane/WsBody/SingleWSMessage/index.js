@@ -1,4 +1,4 @@
-import { IconTrash, IconWand } from '@tabler/icons';
+import { IconTrash, IconWand } from 'utils/iconAdapter';
 import CodeEditor from 'components/CodeEditor/index';
 import ToolHint from 'components/ToolHint/index';
 import { get } from 'lodash';

@@ -1,5 +1,5 @@
 import React from 'react';
-import { IconChevronDown, IconChevronRight } from '@tabler/icons';
+import { IconChevronDown, IconChevronRight } from 'utils/iconAdapter';
 
 const CollapsibleDiffRow = ({ title, isCollapsed, onToggle, oldContent, newContent, hasOldContent, hasNewContent }) => {
   if (!hasOldContent && !hasNewContent) {

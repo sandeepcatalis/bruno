@@ -8,7 +8,7 @@ import {
   IconAlertTriangle,
   IconInfoCircle,
   IconLoader2
-} from '@tabler/icons';
+} from 'utils/iconAdapter';
 import moment from 'moment';
 import Button from 'ui/Button';
 import StatusBadge from 'ui/StatusBadge';

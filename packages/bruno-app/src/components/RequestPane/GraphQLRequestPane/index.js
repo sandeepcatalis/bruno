@@ -2,7 +2,7 @@ import React, { useEffect, useCallback, useMemo, useRef } from 'react';
 import find from 'lodash/find';
 import get from 'lodash/get';
 import classnames from 'classnames';
-import { IconWand, IconDots, IconBook, IconDownload, IconRefresh, IconFile, IconChevronDown, IconChevronRight } from '@tabler/icons';
+import { IconWand, IconDots, IconBook, IconDownload, IconRefresh, IconFile, IconChevronDown, IconChevronRight } from 'utils/iconAdapter';
 import IconSidebarToggle from 'components/Icons/IconSidebarToggle';
 import ActionIcon from 'ui/ActionIcon';
 import { useSelector, useDispatch } from 'react-redux';

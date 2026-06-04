@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
 import { useTheme } from 'providers/Theme';
-import { IconCheck, IconCopy } from '@tabler/icons';
+import { IconCheck, IconCopy } from 'utils/iconAdapter';
 import toast from 'react-hot-toast';
 import get from 'lodash/get';
 import Modal from 'components/Modal/index';

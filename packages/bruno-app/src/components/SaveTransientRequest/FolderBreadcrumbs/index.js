@@ -1,5 +1,5 @@
 import React from 'react';
-import { IconChevronRight, IconDots } from '@tabler/icons';
+import { IconChevronRight, IconDots } from 'utils/iconAdapter';
 import Dropdown from 'components/Dropdown';
 
 const FolderBreadcrumbs = ({

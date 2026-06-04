@@ -347,7 +347,7 @@ const MenuDropdown = forwardRef(({
     // If it's a React component (function), render it with default icon props
     if (typeof section === 'function') {
       const SectionComponent = section;
-      return <SectionComponent size={16} stroke={1.5} className="dropdown-icon" aria-hidden="true" />;
+      return <SectionComponent size={16} strokeWidth={1.5} className="dropdown-icon" aria-hidden="true" />;
     }
 
     // If it's already a React element, render it as-is

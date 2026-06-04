@@ -1,4 +1,4 @@
-import { IconChevronDown } from '@tabler/icons';
+import { IconChevronDown } from 'utils/iconAdapter';
 import { useSelector, useDispatch } from 'react-redux';
 import { useMemo } from 'react';
 import { getLanguages } from 'utils/codegenerator/targets';

@@ -8,7 +8,7 @@ import {
   IconRefresh,
   IconCircleCheck,
   IconAlertTriangle
-} from '@tabler/icons';
+} from 'utils/iconAdapter';
 import toast from 'react-hot-toast';
 import Button from 'ui/Button';
 import ActionIcon from 'ui/ActionIcon/index';

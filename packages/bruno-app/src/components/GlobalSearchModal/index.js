@@ -7,7 +7,7 @@ import {
   IconBox,
   IconFileText,
   IconBook
-} from '@tabler/icons';
+} from 'utils/iconAdapter';
 import { flattenItems, isItemARequest, isItemAFolder, findParentItemInCollection } from 'utils/collections';
 import { addTab, focusTab } from 'providers/ReduxStore/slices/tabs';
 import { toggleCollectionItem, toggleCollection } from 'providers/ReduxStore/slices/collections';
@@ -356,7 +356,7 @@ const GlobalSearchModal = ({ isOpen, onClose }) => {
       [SEARCH_TYPES.REQUEST]: IconFileText
     };
     const IconComponent = iconMap[type] || IconFileText;
-    return <IconComponent size={18} stroke={1.5} />;
+    return <IconComponent size={18} strokeWidth={1.5} />;
   };
 
   if (!isOpen) return null;

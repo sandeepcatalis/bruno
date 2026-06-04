@@ -2,7 +2,7 @@ import React, { useMemo, useCallback } from 'react';
 import get from 'lodash/get';
 import { useDispatch, useSelector } from 'react-redux';
 import { useTheme } from 'providers/Theme';
-import { IconUpload, IconX, IconFile } from '@tabler/icons';
+import { IconUpload, IconX, IconFile } from 'utils/iconAdapter';
 import { updateResponseExampleMultipartFormParams } from 'providers/ReduxStore/slices/collections';
 import { browseFiles } from 'providers/ReduxStore/slices/collections/actions';
 import { updateTableColumnWidths } from 'providers/ReduxStore/slices/tabs';

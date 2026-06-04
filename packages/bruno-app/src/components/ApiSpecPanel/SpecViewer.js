@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef, useCallback } from 'react';
 import get from 'lodash/get';
 import { useTheme } from 'providers/Theme';
 import { useSelector } from 'react-redux';
-import { IconDeviceFloppy, IconLoader2 } from '@tabler/icons';
+import { IconDeviceFloppy, IconLoader2 } from 'utils/iconAdapter';
 import CodeEditor from './FileEditor/CodeEditor/index';
 import Swagger from './Renderers/Swagger';
 import { useDragResize } from 'hooks/useDragResize';

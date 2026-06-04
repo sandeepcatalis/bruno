@@ -1,7 +1,7 @@
 import React from 'react';
 import InfoTip from 'components/InfoTip';
 import StyledWrapper from './StyledWrapper';
-import { IconEye, IconEyeOff } from '@tabler/icons';
+import { IconEye, IconEyeOff } from 'utils/iconAdapter';
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { updateCollectionProxy } from 'providers/ReduxStore/slices/collections';

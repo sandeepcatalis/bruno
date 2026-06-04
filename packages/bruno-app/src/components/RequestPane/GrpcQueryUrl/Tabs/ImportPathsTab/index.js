@@ -1,5 +1,5 @@
 import React from 'react';
-import { IconFolder, IconSettings, IconAlertCircle, IconFileImport } from '@tabler/icons';
+import { IconFolder, IconSettings, IconAlertCircle, IconFileImport } from 'utils/iconAdapter';
 import StyledWrapper from './StyledWrapper';
 
 const ImportPathsTab = ({

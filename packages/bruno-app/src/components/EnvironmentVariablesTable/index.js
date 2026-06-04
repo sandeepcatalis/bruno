@@ -1,7 +1,7 @@
 import React, { useCallback, useRef, useState, useEffect, useMemo } from 'react';
 import { TableVirtuoso } from 'react-virtuoso';
 import cloneDeep from 'lodash/cloneDeep';
-import { IconTrash, IconAlertCircle, IconInfoCircle } from '@tabler/icons';
+import { IconTrash, IconAlertCircle, IconInfoCircle } from 'utils/iconAdapter';
 import { useTheme } from 'providers/Theme';
 import { useSelector, useDispatch } from 'react-redux';
 import { updateTableColumnWidths } from 'providers/ReduxStore/slices/tabs';

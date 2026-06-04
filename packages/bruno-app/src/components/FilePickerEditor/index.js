@@ -2,7 +2,7 @@ import React from 'react';
 import { getRelativePathWithinBasePath } from 'utils/common/path';
 import { useDispatch } from 'react-redux';
 import { browseFiles } from 'providers/ReduxStore/slices/collections/actions';
-import { IconX, IconUpload, IconFile } from '@tabler/icons';
+import { IconX, IconUpload, IconFile } from 'utils/iconAdapter';
 import { isWindowsOS } from 'utils/common/platform';
 import StyledWrapper from './StyledWrapper';
 

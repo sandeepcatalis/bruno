@@ -2,7 +2,7 @@ import React, { forwardRef, useImperativeHandle, useRef } from 'react';
 import StyledWrapper from './StyledWrapper';
 import toast from 'react-hot-toast';
 import get from 'lodash/get';
-import { IconDownload } from '@tabler/icons';
+import { IconDownload } from 'utils/iconAdapter';
 import classnames from 'classnames';
 import ActionIcon from 'ui/ActionIcon/index';
 

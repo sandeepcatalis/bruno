@@ -3,7 +3,7 @@ import { useDetectSensitiveField } from 'hooks/useDetectSensitiveField';
 import get from 'lodash/get';
 import { useTheme } from 'providers/Theme';
 import { useDispatch } from 'react-redux';
-import { IconCaretDown, IconSettings, IconKey, IconAdjustmentsHorizontal, IconHelp } from '@tabler/icons';
+import { IconCaretDown, IconSettings, IconKey, IconAdjustmentsHorizontal, IconHelp } from 'utils/iconAdapter';
 import SingleLineEditor from 'components/SingleLineEditor';
 import StyledWrapper from './StyledWrapper';
 import { inputsConfig } from './inputsConfig';

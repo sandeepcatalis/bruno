@@ -1,6 +1,6 @@
 import { get } from 'lodash';
 import { updateRequestBody } from 'providers/ReduxStore/slices/collections';
-import { IconPlus } from '@tabler/icons';
+import { IconPlus } from 'utils/iconAdapter';
 import React, { useEffect, useRef } from 'react';
 import { useDispatch } from 'react-redux';
 import Button from 'ui/Button';

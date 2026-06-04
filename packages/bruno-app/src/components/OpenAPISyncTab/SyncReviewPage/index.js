@@ -7,7 +7,7 @@ import {
   IconArrowsDiff,
   IconInfoCircle,
   IconLoader2
-} from '@tabler/icons';
+} from 'utils/iconAdapter';
 import Button from 'ui/Button';
 import StatusBadge from 'ui/StatusBadge';
 import EndpointChangeSection from '../EndpointChangeSection';

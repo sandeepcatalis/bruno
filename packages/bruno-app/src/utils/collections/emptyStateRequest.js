@@ -1,5 +1,5 @@
 import React from 'react';
-import { IconApi, IconBrandGraphql, IconPlugConnected, IconCode } from '@tabler/icons';
+import { IconApi, IconBrandGraphql, IconPlugConnected, IconCode } from 'utils/iconAdapter';
 import { newHttpRequest, newWsRequest, newGrpcRequest } from 'providers/ReduxStore/slices/collections/actions';
 import { generateUniqueRequestName } from 'utils/collections';
 import { sanitizeName } from 'utils/common/regex';

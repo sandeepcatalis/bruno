@@ -6,7 +6,7 @@ import { setupAutoComplete } from 'utils/codemirror/autocomplete';
 import { MaskedEditor } from 'utils/common/masked-editor';
 import StyledWrapper from './StyledWrapper';
 import { setupLinkAware } from 'utils/codemirror/linkAware';
-import { IconEye, IconEyeOff } from '@tabler/icons';
+import { IconEye, IconEyeOff } from 'utils/iconAdapter';
 
 const CodeMirror = require('codemirror');
 

@@ -1,7 +1,7 @@
 import { useState, useEffect, useMemo } from 'react';
 import { find } from 'lodash';
 import StyledWrapper from './StyledWrapper';
-import { IconChevronDown, IconChevronRight, IconCopy, IconCheck } from '@tabler/icons';
+import { IconChevronDown, IconChevronRight, IconCopy, IconCheck } from 'utils/iconAdapter';
 import { getAllVariables } from 'utils/collections/index';
 import { interpolate } from '@usedaffy/common';
 

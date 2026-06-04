@@ -1,4 +1,4 @@
-import { IconLoader2, IconFile } from '@tabler/icons';
+import { IconLoader2, IconFile } from 'utils/iconAdapter';
 import StyledWrapper from './StyledWrapper';
 
 const RequestIsLoading = ({ item }) => {

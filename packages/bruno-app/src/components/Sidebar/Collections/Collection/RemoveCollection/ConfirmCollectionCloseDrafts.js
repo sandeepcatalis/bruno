@@ -6,7 +6,7 @@ import { pluralizeWord } from 'utils/common';
 import { saveRequest, saveMultipleRequests } from 'providers/ReduxStore/slices/collections/actions';
 import { deleteRequestDraft } from 'providers/ReduxStore/slices/collections';
 import { removeCollection } from 'providers/ReduxStore/slices/collections/actions';
-import { IconAlertTriangle, IconDeviceFloppy } from '@tabler/icons';
+import { IconAlertTriangle, IconDeviceFloppy } from 'utils/iconAdapter';
 import Modal from 'components/Modal';
 import toast from 'react-hot-toast';
 import Button from 'ui/Button';

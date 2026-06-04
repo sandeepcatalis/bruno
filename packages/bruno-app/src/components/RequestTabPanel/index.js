@@ -43,7 +43,7 @@ import GlobalEnvironmentSettings from 'components/Environments/GlobalEnvironment
 import OpenAPISyncTab from 'components/OpenAPISyncTab';
 import OpenAPISpecTab from 'components/OpenAPISpecTab';
 import CollapsedPanelIndicator from './CollapsedPanelIndicator';
-import { IconLoader2 } from '@tabler/icons';
+import { IconLoader2 } from 'utils/iconAdapter';
 
 const MIN_LEFT_PANE_WIDTH = 300;
 const MIN_RIGHT_PANE_WIDTH = 490;

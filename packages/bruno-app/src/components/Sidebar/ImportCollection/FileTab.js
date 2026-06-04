@@ -1,5 +1,5 @@
 import React, { useState, useRef } from 'react';
-import { IconFileImport } from '@tabler/icons';
+import { IconFileImport } from 'utils/iconAdapter';
 import { toastError } from 'utils/common/error';
 import jsyaml from 'js-yaml';
 import { isPostmanCollection } from 'utils/importers/postman-collection';

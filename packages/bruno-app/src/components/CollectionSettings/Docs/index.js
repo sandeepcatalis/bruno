@@ -10,7 +10,7 @@ import { saveCollectionSettings } from 'providers/ReduxStore/slices/collections/
 import Markdown from 'components/MarkDown';
 import CodeEditor from 'components/CodeEditor';
 import StyledWrapper from './StyledWrapper';
-import { IconEdit, IconX, IconFileText } from '@tabler/icons';
+import { IconEdit, IconX, IconFileText } from 'utils/iconAdapter';
 import Button from 'ui/Button/index';
 import ActionIcon from 'ui/ActionIcon/index';
 import { usePersistedState } from 'hooks/usePersistedState';

@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect, useMemo } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import Modal from 'components/Modal';
 import Accordion from 'components/Accordion/index';
-import { IconTrash, IconEdit, IconCirclePlus, IconCookieOff, IconAlertTriangle, IconSearch } from '@tabler/icons';
+import { IconTrash, IconEdit, IconCirclePlus, IconCookieOff, IconAlertTriangle, IconSearch } from 'utils/iconAdapter';
 import { deleteCookiesForDomain, deleteCookie } from 'providers/ReduxStore/slices/app';
 import toast from 'react-hot-toast';
 import ModifyCookieModal from 'components/Cookies/ModifyCookieModal/index';

@@ -1,5 +1,5 @@
 import React from 'react';
-import { IconAlertCircle } from '@tabler/icons';
+import { IconAlertCircle } from 'utils/iconAdapter';
 import { Tooltip } from 'react-tooltip';
 
 const DotEnvErrorMessage = React.memo(({ formik, name, index }) => {

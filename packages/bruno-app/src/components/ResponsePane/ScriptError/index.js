@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { IconX, IconChevronDown, IconChevronRight, IconExternalLink } from '@tabler/icons';
+import { IconX, IconChevronDown, IconChevronRight, IconExternalLink } from 'utils/iconAdapter';
 import ErrorBanner from 'ui/ErrorBanner';
 import CodeSnippet from 'components/CodeSnippet';
 import { getTreePathFromCollectionToItem } from 'utils/collections';

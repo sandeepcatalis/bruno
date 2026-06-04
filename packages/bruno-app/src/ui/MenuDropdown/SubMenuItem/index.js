@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { IconChevronRight, IconChevronLeft } from '@tabler/icons';
+import { IconChevronRight, IconChevronLeft } from 'utils/iconAdapter';
 
 const SubMenuItem = ({
   item,

@@ -9,7 +9,7 @@ import { readMultipleFiles } from 'utils/importers/file-reader';
 import { importEnvironment } from 'providers/ReduxStore/slices/collections/actions';
 import { addGlobalEnvironment } from 'providers/ReduxStore/slices/global-environments';
 import { toastError } from 'utils/common/error';
-import { IconFileImport } from '@tabler/icons';
+import { IconFileImport } from 'utils/iconAdapter';
 
 const ImportEnvironmentModal = ({ type = 'collection', collection, onClose, onEnvironmentCreated }) => {
   const dispatch = useDispatch();

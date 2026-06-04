@@ -2,7 +2,7 @@ import React from 'react';
 import { rgba } from 'polished';
 import { useTheme } from 'providers/Theme';
 import themes, { getLightThemes, getDarkThemes } from 'themes/index';
-import { IconBrightnessUp, IconMoon, IconDeviceDesktop } from '@tabler/icons';
+import { IconBrightnessUp, IconMoon, IconDeviceDesktop } from 'utils/iconAdapter';
 import StyledWrapper from './StyledWrapper';
 
 const ThemePreview = ({ themeId, isDark }) => {

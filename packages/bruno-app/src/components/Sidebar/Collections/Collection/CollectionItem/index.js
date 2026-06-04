@@ -19,7 +19,7 @@ import {
   IconSettings,
   IconInfoCircle,
   IconTerminal2
-} from '@tabler/icons';
+} from 'utils/iconAdapter';
 import { useSelector, useDispatch } from 'react-redux';
 import { addTab, focusTab, makeTabPermanent } from 'providers/ReduxStore/slices/tabs';
 import { handleCollectionItemDrop, sendRequest, showInFolder, pasteItem, saveRequest } from 'providers/ReduxStore/slices/collections/actions';

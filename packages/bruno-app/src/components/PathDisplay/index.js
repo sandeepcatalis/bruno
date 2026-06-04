@@ -1,5 +1,5 @@
 import React from 'react';
-import { IconFolder, IconFile } from '@tabler/icons';
+import { IconFolder, IconFile } from 'utils/iconAdapter';
 import path from 'utils/common/path';
 import StyledWrapper from './StyledWrapper';
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import { flattenItems } from 'utils/collections';
-import { IconAlertTriangle } from '@tabler/icons';
+import { IconAlertTriangle } from 'utils/iconAdapter';
 import StyledWrapper from './StyledWrapper';
 import { useDispatch, useSelector } from 'react-redux';
 import { isItemARequest, itemIsOpenedInTabs } from 'utils/tabs/index';

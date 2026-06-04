@@ -11,7 +11,7 @@ import { completeQuitFlow } from 'providers/ReduxStore/slices/app';
 import { saveRequest, saveMultipleRequests, saveMultipleCollections, saveMultipleFolders, saveEnvironment, closeTabs } from 'providers/ReduxStore/slices/collections/actions';
 import { saveGlobalEnvironment, clearGlobalEnvironmentDraft } from 'providers/ReduxStore/slices/global-environments';
 import { deleteRequestDraft, deleteCollectionDraft, deleteFolderDraft, clearEnvironmentsDraft } from 'providers/ReduxStore/slices/collections';
-import { IconAlertTriangle } from '@tabler/icons';
+import { IconAlertTriangle } from 'utils/iconAdapter';
 import Modal from 'components/Modal';
 import Button from 'ui/Button';
 import toast from 'react-hot-toast';

@@ -2,7 +2,7 @@ import { useDispatch } from 'react-redux';
 import React, { useState } from 'react';
 import get from 'lodash/get';
 import { useTheme } from 'providers/Theme';
-import { IconPlus, IconTrash, IconAdjustmentsHorizontal } from '@tabler/icons';
+import { IconPlus, IconTrash, IconAdjustmentsHorizontal } from 'utils/iconAdapter';
 import { cloneDeep } from 'lodash';
 import SingleLineEditor from 'components/SingleLineEditor/index';
 import MultiLineEditor from 'components/MultiLineEditor/index';

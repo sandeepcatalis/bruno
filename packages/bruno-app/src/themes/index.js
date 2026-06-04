@@ -1,14 +1,14 @@
 import light from './light/light';
 import lightMonochrome from './light/light-monochrome';
 import lightPastel from './light/light-pastel';
-import catppuccinLatte from './light/catppuccin-latte';
+import daffyMint from './light/daffy-mint';
+import daffySlate from './light/daffy-slate';
 import vscodeLight from './light/vscode';
 import dark from './dark/dark';
 import darkMonochrome from './dark/dark-monochrome';
 import darkPastel from './dark/dark-pastel';
-import catppuccinFrappe from './dark/catppuccin-frappe';
-import catppuccinMacchiato from './dark/catppuccin-macchiato';
-import catppuccinMocha from './dark/catppuccin-mocha';
+import daffyOcean from './dark/daffy-ocean';
+import daffySunset from './dark/daffy-sunset';
 import nord from './dark/nord';
 import vscodeDark from './dark/vscode';
 
@@ -19,10 +19,10 @@ const themes = {
   'light-pastel': lightPastel,
   'dark-monochrome': darkMonochrome,
   'dark-pastel': darkPastel,
-  'catppuccin-latte': catppuccinLatte,
-  'catppuccin-frappe': catppuccinFrappe,
-  'catppuccin-macchiato': catppuccinMacchiato,
-  'catppuccin-mocha': catppuccinMocha,
+  'daffy-mint': daffyMint,
+  'daffy-slate': daffySlate,
+  'daffy-ocean': daffyOcean,
+  'daffy-sunset': daffySunset,
   nord,
   'vscode-light': vscodeLight,
   'vscode-dark': vscodeDark
@@ -45,9 +45,14 @@ export const themeRegistry = {
     name: 'Light Pastel',
     mode: 'light'
   },
-  'catppuccin-latte': {
-    id: 'catppuccin-latte',
-    name: 'Catppuccin Latte',
+  'daffy-mint': {
+    id: 'daffy-mint',
+    name: 'Daffy Mint',
+    mode: 'light'
+  },
+  'daffy-slate': {
+    id: 'daffy-slate',
+    name: 'Daffy Slate',
     mode: 'light'
   },
   'dark': {
@@ -65,19 +70,14 @@ export const themeRegistry = {
     name: 'Dark Pastel',
     mode: 'dark'
   },
-  'catppuccin-frappe': {
-    id: 'catppuccin-frappe',
-    name: 'Catppuccin Frappé',
+  'daffy-ocean': {
+    id: 'daffy-ocean',
+    name: 'Daffy Ocean',
     mode: 'dark'
   },
-  'catppuccin-macchiato': {
-    id: 'catppuccin-macchiato',
-    name: 'Catppuccin Macchiato',
-    mode: 'dark'
-  },
-  'catppuccin-mocha': {
-    id: 'catppuccin-mocha',
-    name: 'Catppuccin Mocha',
+  'daffy-sunset': {
+    id: 'daffy-sunset',
+    name: 'Daffy Sunset',
     mode: 'dark'
   },
   'nord': {

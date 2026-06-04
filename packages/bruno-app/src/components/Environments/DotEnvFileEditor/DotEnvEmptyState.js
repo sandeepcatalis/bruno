@@ -1,5 +1,5 @@
 import React from 'react';
-import { IconFileOff } from '@tabler/icons';
+import { IconFileOff } from 'utils/iconAdapter';
 
 const DotEnvEmptyState = () => {
   return (

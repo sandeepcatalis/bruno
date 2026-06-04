@@ -1,5 +1,5 @@
 import React, { forwardRef, useState } from 'react';
-import { IconEye, IconCaretDown, IconBraces, IconCode, IconFileCode, IconBrandJavascript, IconFileText, IconHexagons, IconBinaryTree } from '@tabler/icons';
+import { IconEye, IconCaretDown, IconBraces, IconCode, IconFileCode, IconBrandJavascript, IconFileText, IconHexagons, IconBinaryTree } from 'utils/iconAdapter';
 import classnames from 'classnames';
 import MenuDropdown from 'ui/MenuDropdown';
 import ToggleSwitch from 'components/ToggleSwitch';

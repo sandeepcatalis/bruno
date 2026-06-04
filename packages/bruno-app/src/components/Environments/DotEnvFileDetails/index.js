@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { IconTrash } from '@tabler/icons';
+import { IconTrash } from 'utils/iconAdapter';
 import DeleteDotEnvFile from 'components/Environments/EnvironmentSettings/DeleteDotEnvFile';
 import StyledWrapper from './StyledWrapper';
 

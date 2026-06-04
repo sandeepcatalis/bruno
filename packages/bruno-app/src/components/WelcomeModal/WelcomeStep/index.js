@@ -4,7 +4,7 @@ import {
   IconGitFork,
   IconLock,
   IconRocket
-} from '@tabler/icons';
+} from 'utils/iconAdapter';
 import StyledWrapper from './StyledWrapper';
 
 const highlights = [
@@ -38,7 +38,7 @@ const WelcomeStep = () => (
         return (
           <div key={item.title} className="highlight-item">
             <div className="highlight-icon">
-              <Icon size={18} stroke={1.5} />
+              <Icon size={18} strokeWidth={1.5} />
             </div>
             <div>
               <div className="highlight-title">{item.title}</div>

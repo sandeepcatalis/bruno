@@ -1,5 +1,5 @@
 import React from 'react';
-import { IconX } from '@tabler/icons';
+import { IconX } from 'utils/iconAdapter';
 import StyledWrapper from './StyledWrapper';
 
 const GrpcError = ({ error, onClose }) => {

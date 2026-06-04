@@ -1,7 +1,7 @@
 import React, { useState, useEffect, forwardRef, useImperativeHandle, useRef, useCallback } from 'react';
 import StyledWrapper from './StyledWrapper';
 import toast from 'react-hot-toast';
-import { IconCopy, IconCheck } from '@tabler/icons';
+import { IconCopy, IconCheck } from 'utils/iconAdapter';
 import classnames from 'classnames';
 import ActionIcon from 'ui/ActionIcon/index';
 import { formatResponse } from 'utils/common';

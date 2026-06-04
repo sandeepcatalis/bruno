@@ -1,5 +1,5 @@
 import React from 'react';
-import { IconSpeakerphone, IconBrandTwitter, IconBrandGithub, IconBrandDiscord, IconBook } from '@tabler/icons';
+import { IconSpeakerphone, IconBrandTwitter, IconBrandGithub, IconBrandDiscord, IconBook } from 'utils/iconAdapter';
 import StyledWrapper from './StyledWrapper';
 import { useTranslation } from 'react-i18next';
 

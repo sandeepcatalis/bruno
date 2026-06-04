@@ -3,7 +3,7 @@ import get from 'lodash/get';
 import { useTheme } from 'providers/Theme';
 import { useDispatch } from 'react-redux';
 import path from 'utils/common/path';
-import { IconSettings, IconShieldLock, IconAdjustmentsHorizontal, IconCaretDown, IconChevronRight, IconFile, IconX, IconUpload } from '@tabler/icons';
+import { IconSettings, IconShieldLock, IconAdjustmentsHorizontal, IconCaretDown, IconChevronRight, IconFile, IconX, IconUpload } from 'utils/iconAdapter';
 import MenuDropdown from 'ui/MenuDropdown';
 import SingleLineEditor from 'components/SingleLineEditor';
 import MultiLineEditor from 'components/MultiLineEditor';

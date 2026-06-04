@@ -5,7 +5,7 @@ import { get, cloneDeep } from 'lodash';
 import { runCollectionFolder, cancelRunnerExecution, mountCollection, updateRunnerConfiguration } from 'providers/ReduxStore/slices/collections/actions';
 import { resetCollectionRunner } from 'providers/ReduxStore/slices/collections';
 import { findItemInCollection, getTotalRequestCountInCollection, areItemsLoading } from 'utils/collections';
-import { IconRefresh, IconCircleCheck, IconCircleX, IconCircleOff, IconCheck, IconX, IconRun, IconExternalLink } from '@tabler/icons';
+import { IconRefresh, IconCircleCheck, IconCircleX, IconCircleOff, IconCheck, IconX, IconRun, IconExternalLink } from 'utils/iconAdapter';
 import ResponsePane from './ResponsePane';
 import StyledWrapper from './StyledWrapper';
 import RunnerTags from './RunnerTags/index';

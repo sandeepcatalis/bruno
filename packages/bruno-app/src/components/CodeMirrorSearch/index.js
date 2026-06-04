@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef, useCallback, useMemo, forwardRef, useImperativeHandle } from 'react';
-import { IconRegex, IconArrowUp, IconArrowDown, IconX, IconLetterCase, IconLetterW } from '@tabler/icons';
+import { IconRegex, IconArrowUp, IconArrowDown, IconX, IconLetterCase, IconLetterW } from 'utils/iconAdapter';
 import ToolHint from 'components/ToolHint';
 import StyledWrapper from './StyledWrapper';
 import useDebounce from 'hooks/useDebounce';

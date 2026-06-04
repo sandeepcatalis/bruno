@@ -6,7 +6,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { isItemAFolder } from 'utils/tabs';
 import { renameItem, saveRequest, closeTabs } from 'providers/ReduxStore/slices/collections/actions';
 import path from 'utils/common/path';
-import { IconArrowBackUp, IconEdit, IconCaretDown } from '@tabler/icons';
+import { IconArrowBackUp, IconEdit, IconCaretDown } from 'utils/iconAdapter';
 import { sanitizeName, validateName, validateNameError } from 'utils/common/regex';
 import toast from 'react-hot-toast';
 import Help from 'components/Help';

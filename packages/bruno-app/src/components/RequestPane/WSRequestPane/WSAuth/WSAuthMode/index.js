@@ -1,6 +1,6 @@
 import React, { useMemo, useCallback } from 'react';
 import get from 'lodash/get';
-import { IconCaretDown } from '@tabler/icons';
+import { IconCaretDown } from 'utils/iconAdapter';
 import MenuDropdown from 'ui/MenuDropdown';
 import { useDispatch } from 'react-redux';
 import { updateRequestAuthMode } from 'providers/ReduxStore/slices/collections';

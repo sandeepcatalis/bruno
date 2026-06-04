@@ -14,7 +14,7 @@ import {
   IconTerminal2,
   IconNetwork,
   IconDashboard
-} from '@tabler/icons';
+} from 'utils/iconAdapter';
 import {
   closeConsole,
   clearLogs,

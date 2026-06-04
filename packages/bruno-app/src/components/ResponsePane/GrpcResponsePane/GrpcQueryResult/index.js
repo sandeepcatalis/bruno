@@ -5,7 +5,7 @@ import { useSelector } from 'react-redux';
 import { useTheme } from 'providers/Theme/index';
 import StyledWrapper from './StyledWrapper';
 import GrpcError from '../GrpcError';
-import { IconChevronDown, IconChevronUp } from '@tabler/icons';
+import { IconChevronDown, IconChevronUp } from 'utils/iconAdapter';
 
 const GrpcQueryResult = ({ item, collection }) => {
   const { displayedTheme } = useTheme();

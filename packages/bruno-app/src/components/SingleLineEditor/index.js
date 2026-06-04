@@ -5,7 +5,7 @@ import { defineCodeMirrorBrunoVariablesMode } from 'utils/common/codemirror';
 import { MaskedEditor } from 'utils/common/masked-editor';
 import { setupAutoComplete } from 'utils/codemirror/autocomplete';
 import StyledWrapper from './StyledWrapper';
-import { IconEye, IconEyeOff } from '@tabler/icons';
+import { IconEye, IconEyeOff } from 'utils/iconAdapter';
 import { setupLinkAware } from 'utils/codemirror/linkAware';
 
 const CodeMirror = require('codemirror');

@@ -7,7 +7,7 @@ import { saveWorkspaceDocs } from 'providers/ReduxStore/slices/workspaces/action
 import Markdown from 'components/MarkDown';
 import CodeEditor from 'components/CodeEditor';
 import StyledWrapper from './StyledWrapper';
-import { IconFileText, IconEdit, IconX, IconPlus } from '@tabler/icons';
+import { IconFileText, IconEdit, IconX, IconPlus } from 'utils/iconAdapter';
 import Button from 'ui/Button';
 import toast from 'react-hot-toast';
 import ActionIcon from 'ui/ActionIcon/index';

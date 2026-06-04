@@ -5,7 +5,7 @@ import {
   IconFileText,
   IconArrowRight,
   IconNetwork
-} from '@tabler/icons';
+} from 'utils/iconAdapter';
 import { clearSelectedRequest } from 'providers/ReduxStore/slices/logs';
 import QueryResponse from 'components/ResponsePane/QueryResponse/index';
 import Network from 'components/ResponsePane/Timeline/TimelineItem/Network';

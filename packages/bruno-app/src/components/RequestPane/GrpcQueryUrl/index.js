@@ -13,7 +13,7 @@ import {
   IconDeviceFloppy,
   IconArrowRight,
   IconCode
-} from '@tabler/icons';
+} from 'utils/iconAdapter';
 import toast from 'react-hot-toast';
 import {
   cancelGrpcConnection,

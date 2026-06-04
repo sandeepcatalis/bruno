@@ -9,7 +9,7 @@ import StyledWrapper from './StyledWrapper';
 import * as Yup from 'yup';
 import toast from 'react-hot-toast';
 import path from 'utils/common/path';
-import { IconTrash } from '@tabler/icons';
+import { IconTrash } from 'utils/iconAdapter';
 
 const General = () => {
   const preferences = useSelector((state) => state.app.preferences);

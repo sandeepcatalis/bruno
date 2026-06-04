@@ -1,5 +1,5 @@
 import React, { createContext, useContext, useState } from 'react';
-import { IconChevronDown } from '@tabler/icons';
+import { IconChevronDown } from 'utils/iconAdapter';
 import { AccordionItem, AccordionHeader, AccordionContent } from './styledWrapper';
 
 const AccordionContext = createContext();

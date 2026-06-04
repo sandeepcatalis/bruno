@@ -1,5 +1,5 @@
 import React, { useMemo } from 'react';
-import { IconCaretDown, IconForms, IconBraces, IconCode, IconFileText, IconDatabase, IconFile, IconX } from '@tabler/icons';
+import { IconCaretDown, IconForms, IconBraces, IconCode, IconFileText, IconDatabase, IconFile, IconX } from 'utils/iconAdapter';
 import MenuDropdown from 'ui/MenuDropdown';
 import { humanizeRequestBodyMode } from 'utils/collections';
 import StyledWrapper from './StyledWrapper';

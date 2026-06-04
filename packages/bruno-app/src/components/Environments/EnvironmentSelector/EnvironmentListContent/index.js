@@ -1,5 +1,5 @@
 import React from 'react';
-import { IconPlus, IconDownload, IconSettings } from '@tabler/icons';
+import { IconPlus, IconDownload, IconSettings } from 'utils/iconAdapter';
 import ToolHint from 'components/ToolHint';
 import ColorBadge from 'components/ColorBadge';
 

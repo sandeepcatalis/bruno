@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import toast from 'react-hot-toast';
 import { useDispatch } from 'react-redux';
-import { IconFileCode, IconPlus } from '@tabler/icons';
+import { IconFileCode, IconPlus } from 'utils/iconAdapter';
 
 import { openApiSpec } from 'providers/ReduxStore/slices/apiSpec';
 import MenuDropdown from 'ui/MenuDropdown';
@@ -50,7 +50,7 @@ const ApiSpecsSection = () => {
         <ActionIcon
           label="Add new API Spec"
         >
-          <IconPlus size={14} stroke={1.5} aria-hidden="true" />
+          <IconPlus size={14} strokeWidth={1.5} aria-hidden="true" />
         </ActionIcon>
       </MenuDropdown>
     </>

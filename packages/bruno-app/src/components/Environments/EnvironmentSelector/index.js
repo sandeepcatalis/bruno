@@ -1,7 +1,7 @@
 import React, { useMemo, useState, useRef, forwardRef } from 'react';
 import find from 'lodash/find';
 import Dropdown from 'components/Dropdown';
-import { IconWorld, IconDatabase, IconCaretDown } from '@tabler/icons';
+import { IconWorld, IconDatabase, IconCaretDown } from 'utils/iconAdapter';
 import { useSelector, useDispatch } from 'react-redux';
 import { addTab } from 'providers/ReduxStore/slices/tabs';
 import { selectEnvironment } from 'providers/ReduxStore/slices/collections/actions';

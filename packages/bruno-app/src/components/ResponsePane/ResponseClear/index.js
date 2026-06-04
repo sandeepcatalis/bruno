@@ -1,5 +1,5 @@
 import React, { forwardRef, useImperativeHandle, useRef } from 'react';
-import { IconEraser } from '@tabler/icons';
+import { IconEraser } from 'utils/iconAdapter';
 import { useDispatch } from 'react-redux';
 import StyledWrapper from './StyledWrapper';
 import { responseCleared } from 'providers/ReduxStore/slices/collections/index';

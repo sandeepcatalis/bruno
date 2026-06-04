@@ -6,7 +6,7 @@ import StyledWrapper from './StyledWrapper';
 import * as Yup from 'yup';
 import debounce from 'lodash/debounce';
 import toast from 'react-hot-toast';
-import { IconFlask } from '@tabler/icons';
+import { IconFlask } from 'utils/iconAdapter';
 import get from 'lodash/get';
 import { BETA_FEATURES as BETA_FEATURE_IDS } from 'utils/beta-features';
 

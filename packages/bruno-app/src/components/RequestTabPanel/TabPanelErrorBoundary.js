@@ -1,5 +1,5 @@
 import React from 'react';
-import { IconAlertTriangle } from '@tabler/icons';
+import { IconAlertTriangle } from 'utils/iconAdapter';
 import { useDispatch, useSelector } from 'react-redux';
 import find from 'lodash/find';
 import { closeTabs } from 'providers/ReduxStore/slices/collections/actions';

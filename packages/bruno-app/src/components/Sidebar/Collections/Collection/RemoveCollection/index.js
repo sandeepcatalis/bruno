@@ -2,7 +2,7 @@ import React, { useMemo } from 'react';
 import toast from 'react-hot-toast';
 import Modal from 'components/Modal';
 import { useDispatch, useSelector } from 'react-redux';
-import { IconAlertCircle } from '@tabler/icons';
+import { IconAlertCircle } from 'utils/iconAdapter';
 import { removeCollection } from 'providers/ReduxStore/slices/collections/actions';
 import { findCollectionByUid, flattenItems, isItemARequest, hasRequestChanges } from 'utils/collections/index';
 import filter from 'lodash/filter';

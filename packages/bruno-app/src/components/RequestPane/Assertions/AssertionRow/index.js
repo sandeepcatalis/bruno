@@ -1,5 +1,5 @@
 import React from 'react';
-import { IconTrash } from '@tabler/icons';
+import { IconTrash } from 'utils/iconAdapter';
 import SingleLineEditor from 'components/SingleLineEditor';
 import AssertionOperator from '../AssertionOperator';
 import { useTheme } from 'providers/Theme';

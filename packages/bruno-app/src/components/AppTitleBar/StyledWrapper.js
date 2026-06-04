@@ -1,12 +1,14 @@
 import styled from 'styled-components';
 
 const Wrapper = styled.div`
-  height: 36px;
+  height: 42px;
   display: flex;
   align-items: center;
   background: ${(props) => props.theme.sidebar.bg};
   -webkit-app-region: drag;
   user-select: none;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+  z-index: 10;
 
   .titlebar-content {
     display: flex;
@@ -14,8 +16,8 @@ const Wrapper = styled.div`
     justify-content: space-between;
     width: 100%;
     height: 100%;
-    padding: 0 12px;
-    padding-left: 70px; /* Space for macOS window controls */
+    padding: 0 16px;
+    padding-left: 74px; /* Space for macOS window controls */
     transition: padding-left 0.15s ease;
   }
 

@@ -1,7 +1,7 @@
 import React, { useMemo } from 'react';
 import { useDispatch } from 'react-redux';
 import IconEdit from 'components/Icons/IconEdit';
-import { IconCode, IconDeviceFloppy } from '@tabler/icons';
+import { IconCode, IconDeviceFloppy } from 'utils/iconAdapter';
 import StyledWrapper from './StyledWrapper';
 import { useTheme } from 'providers/Theme';
 import TruncatedText from 'components/TruncatedText';

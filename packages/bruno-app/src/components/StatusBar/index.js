@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import find from 'lodash/find';
-import { IconSettings, IconCookie, IconTool, IconSearch, IconPalette, IconBrandGithub } from '@tabler/icons';
+import { IconSettings, IconCookie, IconTool, IconSearch, IconPalette, IconBrandGithub } from 'utils/iconAdapter';
 import Mousetrap from 'mousetrap';
 import { getKeyBindingsForActionAllOS } from 'providers/Hotkeys/keyMappings';
 import ToolHint from 'components/ToolHint';

@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { IconX, IconTag } from '@tabler/icons';
+import { IconX, IconTag } from 'utils/iconAdapter';
 import StyledWrapper from './StyledWrapper';
 import SingleLineEditor from 'components/SingleLineEditor/index';
 import { useTheme } from 'providers/Theme/index';

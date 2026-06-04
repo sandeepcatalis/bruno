@@ -1,5 +1,5 @@
 import React from 'react';
-import { IconCheck, IconChevronDown, IconFolder, IconHome, IconPin, IconPinned, IconPlus, IconDownload, IconSettings, IconMinus, IconSquare, IconX, IconCopy } from '@tabler/icons';
+import { IconCheck, IconChevronDown, IconFolder, IconHome, IconPin, IconPinned, IconPlus, IconDownload, IconSettings, IconMinus, IconSquare, IconX, IconCopy } from 'utils/iconAdapter';
 import { forwardRef, useCallback, useEffect, useMemo, useState } from 'react';
 import toast from 'react-hot-toast';
 import { useDispatch, useSelector } from 'react-redux';
@@ -133,7 +133,7 @@ const AppTitleBar = () => {
     return (
       <div ref={ref} className="workspace-name-container" {...props}>
         <span data-testid="workspace-name" className={classNames('workspace-name', { 'italic text-muted': !activeWorkspace?.name })}>{getWorkspaceDisplayName(activeWorkspace?.name)}</span>
-        <IconChevronDown size={14} stroke={1.5} className="chevron-icon" />
+        <IconChevronDown size={14} strokeWidth={1.5} className="chevron-icon" />
       </div>
     );
   });
@@ -220,10 +220,10 @@ const AppTitleBar = () => {
                 label={isPinned ? 'Unpin workspace' : 'Pin workspace'}
                 size="sm"
               >
-                {isPinned ? <IconPinned size={14} stroke={1.5} /> : <IconPin size={14} stroke={1.5} />}
+                {isPinned ? <IconPinned size={14} strokeWidth={1.5} /> : <IconPin size={14} strokeWidth={1.5} />}
               </ActionIcon>
             )}
-            {isActive && <IconCheck size={16} stroke={1.5} className="check-icon" />}
+            {isActive && <IconCheck size={16} strokeWidth={1.5} className="check-icon" />}
           </div>
         )
       };
@@ -275,7 +275,7 @@ const AppTitleBar = () => {
           {showWindowControls && <AppMenu />}
 
           <ActionIcon onClick={handleHomeClick} label="Home" size="lg" className="home-button">
-            <IconHome size={16} stroke={1.5} />
+            <IconHome size={16} strokeWidth={1.5} />
           </ActionIcon>
 
           {/* Workspace Dropdown */}
@@ -328,21 +328,21 @@ const AppTitleBar = () => {
                 onClick={handleMinimize}
                 aria-label="Minimize"
               >
-                <IconMinus size={16} stroke={1} />
+                <IconMinus size={16} strokeWidth={1} />
               </button>
               <button
                 className="window-control-btn maximize"
                 onClick={handleMaximize}
                 aria-label={isMaximized ? 'Restore' : 'Maximize'}
               >
-                {isMaximized ? <IconCopy size={14} stroke={1} /> : <IconSquare size={14} stroke={1} />}
+                {isMaximized ? <IconCopy size={14} strokeWidth={1} /> : <IconSquare size={14} strokeWidth={1} />}
               </button>
               <button
                 className="window-control-btn close"
                 onClick={handleClose}
                 aria-label="Close"
               >
-                <IconX size={16} stroke={1} />
+                <IconX size={16} strokeWidth={1} />
               </button>
             </div>
           )}

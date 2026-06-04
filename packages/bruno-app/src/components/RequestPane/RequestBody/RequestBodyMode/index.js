@@ -9,7 +9,7 @@ import {
   IconDatabase,
   IconFile,
   IconX
-} from '@tabler/icons';
+} from 'utils/iconAdapter';
 import MenuDropdown from 'ui/MenuDropdown';
 import { useDispatch } from 'react-redux';
 import { updateRequestBodyMode } from 'providers/ReduxStore/slices/collections';

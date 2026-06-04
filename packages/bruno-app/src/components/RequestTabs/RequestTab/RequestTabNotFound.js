@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { IconAlertTriangle } from '@tabler/icons';
+import { IconAlertTriangle } from 'utils/iconAdapter';
 import GradientCloseButton from './GradientCloseButton';
 
 const RequestTabNotFound = ({ handleCloseClick }) => {

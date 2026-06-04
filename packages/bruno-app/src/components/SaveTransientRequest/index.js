@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import Modal from 'components/Modal';
 import SearchInput from 'components/SearchInput';
 import Button from 'ui/Button';
-import { IconFolder, IconChevronRight, IconCheck, IconX, IconEye, IconEyeOff, IconEdit, IconArrowBackUp } from '@tabler/icons';
+import { IconFolder, IconChevronRight, IconCheck, IconX, IconEye, IconEyeOff, IconEdit, IconArrowBackUp } from 'utils/iconAdapter';
 import PathDisplay from 'components/PathDisplay/index';
 import Help from 'components/Help';
 import filter from 'lodash/filter';

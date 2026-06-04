@@ -1,5 +1,5 @@
 import React from 'react';
-import { IconSortDescending2, IconSortAscending2 } from '@tabler/icons';
+import { IconSortDescending2, IconSortAscending2 } from 'utils/iconAdapter';
 import { useDispatch } from 'react-redux';
 import StyledWrapper from './StyledWrapper';
 import { wsUpdateResponseSortOrder } from 'providers/ReduxStore/slices/collections/index';

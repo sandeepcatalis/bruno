@@ -1,5 +1,5 @@
 import React, { useCallback, useState, useMemo, useRef } from 'react';
-import { IconChevronRight, IconChevronDown, IconTrash, IconInfoCircle } from '@tabler/icons';
+import { IconChevronRight, IconChevronDown, IconTrash, IconInfoCircle } from 'utils/iconAdapter';
 import { nanoid } from 'nanoid';
 import { getInputObjectFields } from 'utils/graphql/queryBuilder';
 

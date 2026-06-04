@@ -21,7 +21,7 @@ import {
   IconTerminal2,
   IconFolder,
   IconBook
-} from '@tabler/icons';
+} from 'utils/iconAdapter';
 import OpenAPISyncIcon from 'components/Icons/OpenAPISync';
 import { toggleCollection, collapseFullCollection } from 'providers/ReduxStore/slices/collections';
 import { mountCollection, moveCollectionAndPersist, handleCollectionItemDrop, pasteItem, showInFolder, saveCollectionSecurityConfig } from 'providers/ReduxStore/slices/collections/actions';

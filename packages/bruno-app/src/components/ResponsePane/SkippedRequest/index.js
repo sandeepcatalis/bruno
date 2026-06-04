@@ -1,5 +1,5 @@
 import React from 'react';
-import { IconCircleOff } from '@tabler/icons';
+import { IconCircleOff } from 'utils/iconAdapter';
 import StyledWrapper from './StyledWrapper';
 
 const SkippedRequest = () => {

@@ -9,7 +9,7 @@ import Portal from 'components/Portal';
 import Modal from 'components/Modal';
 import { sanitizeName, validateName, validateNameError } from 'utils/common/regex';
 import PathDisplay from 'components/PathDisplay/index';
-import { IconArrowBackUp, IconEdit, IconCaretDown } from '@tabler/icons';
+import { IconArrowBackUp, IconEdit, IconCaretDown } from 'utils/iconAdapter';
 import Help from 'components/Help';
 import Dropdown from 'components/Dropdown';
 import { multiLineMsg } from 'utils/common';

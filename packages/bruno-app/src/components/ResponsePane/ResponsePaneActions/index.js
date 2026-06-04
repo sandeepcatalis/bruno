@@ -1,6 +1,6 @@
 import React, { forwardRef, useRef } from 'react';
 import styled from 'styled-components';
-import { IconDots, IconDownload, IconEraser, IconBookmark, IconCopy, IconLayoutColumns, IconLayoutRows } from '@tabler/icons';
+import { IconDots, IconDownload, IconEraser, IconBookmark, IconCopy, IconLayoutColumns, IconLayoutRows } from 'utils/iconAdapter';
 import MenuDropdown from 'ui/MenuDropdown';
 import ResponseDownload from '../ResponseDownload';
 import ResponseBookmark from '../ResponseBookmark';

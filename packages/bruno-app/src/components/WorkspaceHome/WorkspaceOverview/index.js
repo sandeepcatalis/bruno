@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { IconPlus, IconFolder, IconDownload } from '@tabler/icons';
+import { IconPlus, IconFolder, IconDownload } from 'utils/iconAdapter';
 import { importCollection, openCollection, importCollectionFromZip } from 'providers/ReduxStore/slices/collections/actions';
 import { setIsCreatingCollection, toggleSidebarCollapse } from 'providers/ReduxStore/slices/app';
 import toast from 'react-hot-toast';

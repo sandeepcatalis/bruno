@@ -1,4 +1,4 @@
-import { IconLoader2, IconFile, IconAlertTriangle } from '@tabler/icons';
+import { IconLoader2, IconFile, IconAlertTriangle } from 'utils/iconAdapter';
 import { loadLargeRequest } from 'providers/ReduxStore/slices/collections/actions';
 import { useDispatch } from 'react-redux';
 import StyledWrapper from './StyledWrapper';

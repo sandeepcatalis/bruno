@@ -11,7 +11,7 @@ import { sanitizeName, validateName, validateNameError } from 'utils/common/rege
 import Help from 'components/Help';
 import PathDisplay from 'components/PathDisplay';
 import { useState } from 'react';
-import { IconArrowBackUp, IconEdit } from '@tabler/icons';
+import { IconArrowBackUp, IconEdit } from 'utils/iconAdapter';
 import { findCollectionByUid } from 'utils/collections/index';
 import get from 'lodash/get';
 

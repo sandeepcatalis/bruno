@@ -1,6 +1,6 @@
 import { useRef, useEffect, useState, useCallback } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { IconCheck, IconX, IconSettings } from '@tabler/icons';
+import { IconCheck, IconX, IconSettings } from 'utils/iconAdapter';
 import get from 'lodash/get';
 import path from 'utils/common/path';
 import toast from 'react-hot-toast';

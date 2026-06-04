@@ -11,7 +11,7 @@ import CodeEditor from 'components/CodeEditor/index';
 import Button from 'ui/Button';
 import StyledWrapper from './StyledWrapper';
 import { usePersistedState } from 'hooks/usePersistedState';
-import { IconSend, IconRefresh, IconWand, IconPlus, IconTrash } from '@tabler/icons';
+import { IconSend, IconRefresh, IconWand, IconPlus, IconTrash } from 'utils/iconAdapter';
 import ToolHint from 'components/ToolHint/index';
 import { toastError } from 'utils/common/error';
 import toast from 'react-hot-toast';

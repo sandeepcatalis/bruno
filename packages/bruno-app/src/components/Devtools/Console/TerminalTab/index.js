@@ -1,7 +1,7 @@
 import React, { useRef, useEffect, useState, useCallback } from 'react';
 import { Terminal } from '@xterm/xterm';
 import { FitAddon } from '@xterm/addon-fit';
-import { IconTerminal2, IconPlus } from '@tabler/icons';
+import { IconTerminal2, IconPlus } from 'utils/iconAdapter';
 import { useTheme } from 'providers/Theme';
 import StyledWrapper from './StyledWrapper';
 import SessionList from './SessionList';

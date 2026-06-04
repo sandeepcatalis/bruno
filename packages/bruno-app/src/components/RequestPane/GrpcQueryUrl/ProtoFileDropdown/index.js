@@ -1,5 +1,5 @@
 import React, { forwardRef, useState } from 'react';
-import { IconFile, IconChevronDown } from '@tabler/icons';
+import { IconFile, IconChevronDown } from 'utils/iconAdapter';
 import { getBasename } from 'utils/common/path';
 import { useTheme } from 'providers/Theme';
 import { useDispatch } from 'react-redux';

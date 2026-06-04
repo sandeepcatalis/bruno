@@ -1,5 +1,5 @@
 import React, { useState, useMemo, useCallback, useEffect } from 'react';
-import { IconCloudDownload, IconFileUpload, IconAlertTriangle, IconChevronRight, IconChevronDown } from '@tabler/icons';
+import { IconCloudDownload, IconFileUpload, IconAlertTriangle, IconChevronRight, IconChevronDown } from 'utils/iconAdapter';
 import { getRootFields } from 'utils/graphql/queryBuilder';
 import useQueryBuilder from 'hooks/useQueryBuilder';
 import QueryBuilderTree from './QueryBuilderTree';

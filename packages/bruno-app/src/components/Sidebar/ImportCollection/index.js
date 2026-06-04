@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { IconFileImport, IconBrandGit, IconUnlink, IconX } from '@tabler/icons';
+import { IconFileImport, IconBrandGit, IconUnlink, IconX } from 'utils/iconAdapter';
 import Modal from 'components/Modal';
 import classnames from 'classnames';
 import StyledWrapper from './StyledWrapper';

@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useCallback, useRef } from 'react';
 import { useDrag, useDrop } from 'react-dnd';
 import { getEmptyImage } from 'react-dnd-html5-backend';
-import { IconGripVertical, IconCheck } from '@tabler/icons';
+import { IconGripVertical, IconCheck } from 'utils/iconAdapter';
 import { useDispatch } from 'react-redux';
 import { updateRunnerConfiguration } from 'providers/ReduxStore/slices/collections/actions';
 import StyledWrapper from './StyledWrapper';

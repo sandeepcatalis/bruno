@@ -1,5 +1,5 @@
 import React from 'react';
-import { IconSend } from '@tabler/icons';
+import { IconSend } from 'utils/iconAdapter';
 import { useSelector } from 'react-redux';
 import StyledWrapper from './StyledWrapper';
 import { isMacOS } from 'utils/common/platform';

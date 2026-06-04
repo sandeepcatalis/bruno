@@ -5,7 +5,7 @@ import { Inspector, chromeDark, chromeLight } from 'react-inspector';
 import { useTheme } from 'providers/Theme';
 import { findEnvironmentInCollection, maskInputValue } from 'utils/collections';
 import StyledWrapper from './StyledWrapper';
-import { IconEye, IconEyeOff } from '@tabler/icons';
+import { IconEye, IconEyeOff } from 'utils/iconAdapter';
 
 const KeyValueExplorer = ({ data = [], theme }) => {
   const [showSecret, setShowSecret] = useState(false);

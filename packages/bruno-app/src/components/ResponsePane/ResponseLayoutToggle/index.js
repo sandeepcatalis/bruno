@@ -2,7 +2,7 @@ import React, { forwardRef, useImperativeHandle, useRef } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { savePreferences } from 'providers/ReduxStore/slices/app';
 import StyledWrapper from './StyledWrapper';
-import { IconLayoutColumns, IconLayoutRows } from '@tabler/icons';
+import { IconLayoutColumns, IconLayoutRows } from 'utils/iconAdapter';
 import ActionIcon from 'ui/ActionIcon/index';
 
 export const IconDockToBottom = () => {
@@ -13,10 +13,10 @@ export const IconDockToBottom = () => {
       height="16"
       viewBox="0 0 24 24"
       strokeWidth="2"
-      stroke="currentColor"
+      strokeWidth="currentColor"
       fill="none"
     >
-      <path stroke="none" fill="none" d="M0 0h24v24H0z" />
+      <path strokeWidth="none" fill="none" d="M0 0h24v24H0z" />
       <path d="M4 4m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z" />
       <path d="M4 15l16 0" />
       <path
@@ -35,15 +35,15 @@ export const IconDockToRight = () => {
       height="16"
       viewBox="0 0 24 24"
       strokeWidth="2"
-      stroke="currentColor"
+      strokeWidth="currentColor"
       fill="none"
     >
-      <path fill="none" stroke="none" d="M 0,24 V 0 h 24 v 24 z" />
+      <path fill="none" strokeWidth="none" d="M 0,24 V 0 h 24 v 24 z" />
       <path d="m 4,20 m 2,0 A 2,2 0 0 1 4,18 V 6 A 2,2 0 0 1 6,4 h 12 a 2,2 0 0 1 2,2 v 12 a 2,2 0 0 1 -2,2 z" />
       <path d="M 15,20 V 4" />
       <path
         fill="currentColor"
-        stroke="currentColor"
+        strokeWidth="currentColor"
         d="m 19.111502,18.486486 c -0.115516,0.259266 -0.354643,0.491338 -0.639512,0.620643 -0.221702,0.100633 -0.393081,0.114019 -1.474447,0.115163 l -1.223586,0.0013 V 12 4.7764125 h 1.22675 c 1.194609,0 1.234605,0.0039 1.526503,0.14937 0.187285,0.09333 0.363095,0.2407725 0.46858,0.3929775 l 0.168829,0.243606 0.0129,6.373606 c 0.0105,5.212942 -0.0015,6.405822 -0.06597,6.550511 z"
       />
     </svg>

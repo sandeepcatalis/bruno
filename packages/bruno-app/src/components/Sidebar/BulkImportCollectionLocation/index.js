@@ -6,7 +6,7 @@ import path from 'utils/common/path';
 import { browseDirectory, importCollection } from 'providers/ReduxStore/slices/collections/actions';
 import Modal from 'components/Modal';
 import { isElectron } from 'utils/common/platform';
-import { IconX, IconLoader2, IconCheck, IconCaretDown } from '@tabler/icons';
+import { IconX, IconLoader2, IconCheck, IconCaretDown } from 'utils/iconAdapter';
 import InfoTip from 'components/InfoTip/index';
 import Help from 'components/Help';
 import { addGlobalEnvironment } from 'providers/ReduxStore/slices/global-environments';

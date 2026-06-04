@@ -1,5 +1,5 @@
 import React from 'react';
-import { IconCircleCheck, IconCircleX } from '@tabler/icons';
+import { IconCircleCheck, IconCircleX } from 'utils/iconAdapter';
 
 const TestResultsLabel = ({ results, assertionResults, preRequestTestResults, postResponseTestResults }) => {
   results = results || [];

@@ -3,7 +3,7 @@ import get from 'lodash/get';
 import MenuDropdown from 'ui/MenuDropdown';
 import { useDispatch } from 'react-redux';
 import StyledWrapper from './StyledWrapper';
-import { IconCaretDown, IconKey } from '@tabler/icons';
+import { IconCaretDown, IconKey } from 'utils/iconAdapter';
 import { humanizeGrantType } from 'utils/collections';
 import { useEffect } from 'react';
 import { useState } from 'react';

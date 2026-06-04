@@ -2,7 +2,7 @@ import React from 'react';
 import toast from 'react-hot-toast';
 import Modal from 'components/Modal';
 import { useDispatch } from 'react-redux';
-import { IconFileCode } from '@tabler/icons';
+import { IconFileCode } from 'utils/iconAdapter';
 import { closeApiSpecFile } from 'providers/ReduxStore/slices/apiSpec';
 
 const CloseApiSpec = ({ onClose, apiSpec }) => {

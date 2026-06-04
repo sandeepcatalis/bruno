@@ -5,7 +5,7 @@ import StyledWrapper from './StyledWrapper';
 import { useSelector } from 'react-redux';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 import toast from 'react-hot-toast';
-import { IconCopy } from '@tabler/icons';
+import { IconCopy } from 'utils/iconAdapter';
 import { findCollectionByItemUid, getGlobalEnvironmentVariables } from 'utils/collections/index';
 import { cloneDeep } from 'lodash';
 import { useMemo } from 'react';

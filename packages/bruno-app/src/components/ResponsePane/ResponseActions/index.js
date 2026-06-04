@@ -1,5 +1,5 @@
 import React, { useRef, forwardRef } from 'react';
-import { IconDots } from '@tabler/icons';
+import { IconDots } from 'utils/iconAdapter';
 import Dropdown from 'components/Dropdown';
 import StyledWrapper from './StyledWrapper';
 import ResponseClear from 'src/components/ResponsePane/ResponseClear';

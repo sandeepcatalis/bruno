@@ -3,7 +3,7 @@ import usePrevious from 'hooks/usePrevious';
 import useOnClickOutside from 'hooks/useOnClickOutside';
 import useDebounce from 'hooks/useDebounce';
 import EnvironmentDetails from './EnvironmentDetails';
-import { IconDownload, IconUpload, IconSearch, IconPlus, IconCheck, IconX, IconFileAlert } from '@tabler/icons';
+import { IconDownload, IconUpload, IconSearch, IconPlus, IconCheck, IconX, IconFileAlert } from 'utils/iconAdapter';
 import Button from 'ui/Button';
 import StyledWrapper from './StyledWrapper';
 import ConfirmSwitchEnv from 'components/WorkspaceHome/WorkspaceEnvironments/EnvironmentList/ConfirmSwitchEnv';

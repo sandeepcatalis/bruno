@@ -1,7 +1,7 @@
 import React, { forwardRef, useRef, useCallback } from 'react';
 import find from 'lodash/find';
 import { useSelector, useDispatch } from 'react-redux';
-import { IconFileCode, IconDots } from '@tabler/icons';
+import { IconFileCode, IconDots } from 'utils/iconAdapter';
 import StyledWrapper from './StyledWrapper';
 import SpecViewer from './SpecViewer';
 import Dropdown from 'components/Dropdown';

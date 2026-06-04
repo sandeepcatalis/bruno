@@ -6,7 +6,7 @@ import {
   IconCheck,
   IconX,
   IconLoader2
-} from '@tabler/icons';
+} from 'utils/iconAdapter';
 import { toggleRowExpanded } from 'providers/ReduxStore/slices/openapi-sync';
 import MethodBadge from 'ui/MethodBadge';
 import { formatIpcError } from 'utils/common/error';

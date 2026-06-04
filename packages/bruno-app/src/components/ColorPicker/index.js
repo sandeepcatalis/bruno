@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { IconBan, IconBrush } from '@tabler/icons';
+import { IconBan, IconBrush } from 'utils/iconAdapter';
 import Dropdown from 'components/Dropdown';
 import ColorBadge from 'components/ColorBadge';
 import StyledWrapper from './StyledWrapper';

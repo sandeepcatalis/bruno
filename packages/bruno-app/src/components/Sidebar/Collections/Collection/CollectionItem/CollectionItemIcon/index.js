@@ -1,5 +1,5 @@
 import RequestMethod from '../RequestMethod';
-import { IconLoader2, IconAlertTriangle, IconAlertCircle } from '@tabler/icons';
+import { IconLoader2, IconAlertTriangle, IconAlertCircle } from 'utils/iconAdapter';
 import StyledWrapper from './StyledWrapper';
 
 const CollectionItemIcon = ({ item }) => {

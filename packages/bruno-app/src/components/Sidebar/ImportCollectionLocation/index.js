@@ -4,7 +4,7 @@ import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import get from 'lodash/get';
 import path from 'utils/common/path';
-import { IconCaretDown } from '@tabler/icons';
+import { IconCaretDown } from 'utils/iconAdapter';
 import { browseDirectory } from 'providers/ReduxStore/slices/collections/actions';
 import { postmanToBruno } from 'utils/importers/postman-collection';
 import { convertInsomniaToBruno } from 'utils/importers/insomnia-collection';

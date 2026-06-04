@@ -1,5 +1,5 @@
 import React from 'react';
-import { IconFile, IconSettings, IconAlertCircle } from '@tabler/icons';
+import { IconFile, IconSettings, IconAlertCircle } from 'utils/iconAdapter';
 import { getBasename } from 'utils/common/path';
 import StyledWrapper from './StyledWrapper';
 

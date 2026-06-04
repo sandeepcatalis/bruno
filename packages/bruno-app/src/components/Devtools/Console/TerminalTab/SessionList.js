@@ -1,5 +1,5 @@
 import React from 'react';
-import { IconTerminal, IconX } from '@tabler/icons';
+import { IconTerminal, IconX } from 'utils/iconAdapter';
 import styled from 'styled-components';
 import ToolHint from 'components/ToolHint/index';
 

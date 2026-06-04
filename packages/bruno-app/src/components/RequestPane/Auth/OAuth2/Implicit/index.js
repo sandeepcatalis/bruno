@@ -2,7 +2,7 @@ import React, { useMemo } from 'react';
 import get from 'lodash/get';
 import { useTheme } from 'providers/Theme';
 import { useDispatch, useSelector } from 'react-redux';
-import { IconCaretDown, IconSettings, IconKey, IconHelp, IconAdjustmentsHorizontal } from '@tabler/icons';
+import { IconCaretDown, IconSettings, IconKey, IconHelp, IconAdjustmentsHorizontal } from 'utils/iconAdapter';
 import MenuDropdown from 'ui/MenuDropdown';
 import SingleLineEditor from 'components/SingleLineEditor';
 import Wrapper from './StyledWrapper';

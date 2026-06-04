@@ -13,7 +13,7 @@ import {
   IconCheck,
   IconFolder,
   IconUpload
-} from '@tabler/icons';
+} from 'utils/iconAdapter';
 import OpenAPISyncIcon from 'components/Icons/OpenAPISync';
 import { switchWorkspace, renameWorkspaceAction, exportWorkspaceAction, confirmWorkspaceCreation, cancelWorkspaceCreation } from 'providers/ReduxStore/slices/workspaces/actions';
 import { updateWorkspace } from 'providers/ReduxStore/slices/workspaces';

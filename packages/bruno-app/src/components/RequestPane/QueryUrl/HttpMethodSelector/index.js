@@ -1,5 +1,5 @@
 import React, { useState, useRef, useMemo, useCallback } from 'react';
-import { IconCaretDown } from '@tabler/icons';
+import { IconCaretDown } from 'utils/iconAdapter';
 import MenuDropdown from 'ui/MenuDropdown';
 import StyledWrapper from './StyledWrapper';
 import { useTheme } from 'providers/Theme';

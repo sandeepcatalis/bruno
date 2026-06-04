@@ -1,6 +1,6 @@
 import React, { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react';
 import { TableVirtuoso } from 'react-virtuoso';
-import { IconTrash, IconAlertCircle, IconGripVertical, IconMinusVertical } from '@tabler/icons';
+import { IconTrash, IconAlertCircle, IconGripVertical, IconMinusVertical } from 'utils/iconAdapter';
 import { Tooltip } from 'react-tooltip';
 import { uuid } from 'utils/common';
 import StyledWrapper from './StyledWrapper';

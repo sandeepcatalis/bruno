@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useTheme } from 'providers/Theme';
 
 import StyledWrapper from './StyledWrapper';
-import { IconReload, IconPencil, IconLock, IconCircleCheck, IconAlertCircle } from '@tabler/icons';
+import { IconReload, IconPencil, IconLock, IconCircleCheck, IconAlertCircle } from 'utils/iconAdapter';
 import { isMacOS } from 'utils/common/platform';
 
 import { savePreferences } from 'providers/ReduxStore/slices/app';
@@ -896,7 +896,7 @@ const Keybindings = () => {
                                   {renderValue(action)}
                                   {hasError && errorByAction[action]?.code !== ERROR.EMPTY && (
                                     <span className="input-error-icon">
-                                      <IconAlertCircle size={14} stroke={1.5} />
+                                      <IconAlertCircle size={14} strokeWidth={1.5} />
                                     </span>
                                   )}
                                 </div>
@@ -918,7 +918,7 @@ const Keybindings = () => {
                                 <div className="button-placeholder">
                                   {isSuccess && !hasError && (
                                     <span className="success-icon">
-                                      <IconCircleCheck size={14} stroke={1.5} />
+                                      <IconCircleCheck size={14} strokeWidth={1.5} />
                                     </span>
                                   )}
 
@@ -931,7 +931,7 @@ const Keybindings = () => {
                                       }}
                                       title="Reset to default"
                                     >
-                                      <IconReload size={14} stroke={1.5} />
+                                      <IconReload size={14} strokeWidth={1.5} />
                                     </button>
                                   )}
 
@@ -941,7 +941,7 @@ const Keybindings = () => {
                                       data-testid={`keybinding-edit-${action}`}
                                       title="Customize keys"
                                     >
-                                      <IconPencil size={14} stroke={1.5} />
+                                      <IconPencil size={14} strokeWidth={1.5} />
                                     </span>
                                   )}
 
@@ -952,7 +952,7 @@ const Keybindings = () => {
                                       data-testid={`keybinding-locked-${action}`}
                                       title="Reserved shortcut"
                                     >
-                                      <IconLock size={14} stroke={1.5} />
+                                      <IconLock size={14} strokeWidth={1.5} />
                                     </button>
                                   )}
                                 </div>

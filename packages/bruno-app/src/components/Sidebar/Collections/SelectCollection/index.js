@@ -1,6 +1,6 @@
 import React from 'react';
 import Modal from 'components/Modal/index';
-import { IconFiles } from '@tabler/icons';
+import { IconFiles } from 'utils/iconAdapter';
 import { useSelector } from 'react-redux';
 import StyledWrapper from './StyledWrapper';
 

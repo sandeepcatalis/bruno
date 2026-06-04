@@ -1,5 +1,5 @@
 import { useState, useRef } from 'react';
-import { IconCheck } from '@tabler/icons';
+import { IconCheck } from 'utils/iconAdapter';
 import Button from 'ui/Button';
 import { isHttpUrl } from 'utils/url/index';
 import { isOpenApiSpec } from 'utils/importers/openapi-collection';

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { get, cloneDeep, isArray } from 'lodash';
-import { IconTrash } from '@tabler/icons';
+import { IconTrash } from 'utils/iconAdapter';
 import { useDispatch } from 'react-redux';
 import { useTheme } from 'providers/Theme';
 import { addFile as _addFile, updateFile, deleteFile } from 'providers/ReduxStore/slices/collections/index';

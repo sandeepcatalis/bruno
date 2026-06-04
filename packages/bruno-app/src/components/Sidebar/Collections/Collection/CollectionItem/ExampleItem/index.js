@@ -8,7 +8,7 @@ import {
 import { saveRequest } from 'providers/ReduxStore/slices/collections/actions';
 import { insertTaskIntoQueue } from 'providers/ReduxStore/slices/app';
 import { uuid } from 'utils/common';
-import { IconDots, IconEdit, IconCopy, IconTrash, IconCode } from '@tabler/icons';
+import { IconDots, IconEdit, IconCopy, IconTrash, IconCode } from 'utils/iconAdapter';
 import ExampleIcon from 'components/Icons/ExampleIcon';
 import range from 'lodash/range';
 import classnames from 'classnames';

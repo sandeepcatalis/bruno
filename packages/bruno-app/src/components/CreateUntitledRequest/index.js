@@ -5,7 +5,7 @@ import { newHttpRequest, newGrpcRequest, newWsRequest } from 'providers/ReduxSto
 import { generateUniqueRequestName } from 'utils/collections';
 import { sanitizeName } from 'utils/common/regex';
 import toast from 'react-hot-toast';
-import { IconApi, IconBrandGraphql, IconPlugConnected, IconCode, IconPlus } from '@tabler/icons';
+import { IconApi, IconBrandGraphql, IconPlugConnected, IconCode, IconPlus } from 'utils/iconAdapter';
 import ActionIcon from 'ui/ActionIcon';
 
 const CreateUntitledRequest = ({ collectionUid, itemUid = null, onRequestCreated, placement = 'bottom' }) => {

@@ -1,5 +1,5 @@
 import React from 'react';
-import { IconLoader2 } from '@tabler/icons';
+import { IconLoader2 } from 'utils/iconAdapter';
 
 const RequestTabPanelLoading = ({ name }) => {
   return (

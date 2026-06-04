@@ -1,6 +1,6 @@
 import React, { useState, useRef, useCallback, useEffect } from 'react';
 import Tippy from '@tippyjs/react';
-import { IconCheck, IconSun, IconMoon, IconDeviceDesktop } from '@tabler/icons';
+import { IconCheck, IconSun, IconMoon, IconDeviceDesktop } from 'utils/iconAdapter';
 import ToolHint from 'components/ToolHint';
 import { useTheme } from 'providers/Theme';
 import { getLightThemes, getDarkThemes } from 'themes/index';

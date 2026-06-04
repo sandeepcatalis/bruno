@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { IconMenu2 } from '@tabler/icons';
+import { IconMenu2 } from 'utils/iconAdapter';
 import MenuDropdown from 'ui/MenuDropdown';
 import ActionIcon from 'ui/ActionIcon';
 import StyledWrapper from './StyledWrapper';
@@ -144,7 +144,7 @@ const AppMenu = () => {
         items={menuItems}
       >
         <ActionIcon label="Menu" size="lg">
-          <IconMenu2 size={16} stroke={1.5} />
+          <IconMenu2 size={16} strokeWidth={1.5} />
         </ActionIcon>
       </MenuDropdown>
     </StyledWrapper>

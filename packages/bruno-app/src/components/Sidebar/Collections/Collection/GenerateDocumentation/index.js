@@ -5,7 +5,7 @@ import * as FileSaver from 'file-saver';
 import jsyaml from 'js-yaml';
 import jsesc from 'jsesc';
 import toast from 'react-hot-toast';
-import { IconBook, IconCheck, IconAlertTriangle, IconLoader2 } from '@tabler/icons';
+import { IconBook, IconCheck, IconAlertTriangle, IconLoader2 } from 'utils/iconAdapter';
 
 import Modal from 'components/Modal';
 import StyledWrapper from './StyledWrapper';

@@ -1,6 +1,6 @@
 import { useRef, useEffect, useState } from 'react';
 import { Virtuoso } from 'react-virtuoso';
-import { IconLoader2, IconChevronUp, IconChevronDown } from '@tabler/icons';
+import { IconLoader2, IconChevronUp, IconChevronDown } from 'utils/iconAdapter';
 import Modal from 'components/Modal';
 import StatusBadge from 'ui/StatusBadge';
 import { buildRows, wrapIndex } from './buildRows';

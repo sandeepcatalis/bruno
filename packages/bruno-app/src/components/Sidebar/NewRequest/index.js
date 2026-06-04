@@ -13,7 +13,7 @@ import { addTab } from 'providers/ReduxStore/slices/tabs';
 import HttpMethodSelector from 'components/RequestPane/QueryUrl/HttpMethodSelector';
 import { getDefaultRequestPaneTab } from 'utils/collections';
 import { getRequestFromCurlCommand } from 'utils/curl';
-import { IconArrowBackUp, IconCaretDown, IconEdit } from '@tabler/icons';
+import { IconArrowBackUp, IconCaretDown, IconEdit } from 'utils/iconAdapter';
 import { sanitizeName, validateName, validateNameError } from 'utils/common/regex';
 import Dropdown from 'components/Dropdown';
 import PathDisplay from 'components/PathDisplay';

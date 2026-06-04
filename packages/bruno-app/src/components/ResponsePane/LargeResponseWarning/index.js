@@ -1,5 +1,5 @@
 import React from 'react';
-import { IconDownload, IconCopy, IconEye, IconAlertTriangle } from '@tabler/icons';
+import { IconDownload, IconCopy, IconEye, IconAlertTriangle } from 'utils/iconAdapter';
 import toast from 'react-hot-toast';
 import get from 'lodash/get';
 import StyledWrapper from './StyledWrapper';

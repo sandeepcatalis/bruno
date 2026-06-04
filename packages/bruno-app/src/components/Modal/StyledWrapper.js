@@ -30,11 +30,11 @@ const Wrapper = styled.div`
     animation-duration: 0.85s;
     animation-delay: 0.1s;
     background: ${(props) => props.theme.modal.body.bg};
-    border-radius: ${(props) => props.theme.border.radius.base};
+    border-radius: 16px;
     position: relative;
     z-index: 11;
     max-width: calc(100% - var(--spacing-base-unit));
-    box-shadow: var(--box-shadow-base);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15), 0 4px 16px rgba(0, 0, 0, 0.08);
     display: flex;
     flex-direction: column;
     will-change: opacity, transform;
@@ -130,7 +130,7 @@ const Wrapper = styled.div`
     select.textbox {
       appearance: none;
       padding-right: 30px;
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23999' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' strokeWidth='%23999' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
       background-repeat: no-repeat;
       background-position: right 0.5rem center;
       cursor: pointer;

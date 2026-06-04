@@ -1,6 +1,6 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { IconBug } from '@tabler/icons';
+import { IconBug } from 'utils/iconAdapter';
 import {
   setSelectedError,
   clearDebugErrors

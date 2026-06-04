@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useCallback, useRef } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import find from 'lodash/find';
-import { IconLoader2, IconCloud } from '@tabler/icons';
+import { IconLoader2, IconCloud } from 'utils/iconAdapter';
 import fastJsonFormat from 'fast-json-format';
 import SpecViewer from 'components/ApiSpecPanel/SpecViewer';
 import StyledWrapper from 'components/ApiSpecPanel/StyledWrapper';

@@ -1,5 +1,5 @@
 import React from 'react';
-import { IconAlertTriangle } from '@tabler/icons';
+import { IconAlertTriangle } from 'utils/iconAdapter';
 import StyledWrapper from './StyledWrapper';
 import Button from 'ui/Button/index';
 

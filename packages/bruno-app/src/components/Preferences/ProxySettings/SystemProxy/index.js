@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { IconLoader2, IconRefresh } from '@tabler/icons';
+import { IconLoader2, IconRefresh } from 'utils/iconAdapter';
 import { getSystemProxyVariables, refreshSystemProxy } from 'providers/ReduxStore/slices/app';
 import StyledWrapper from '../StyledWrapper';
 

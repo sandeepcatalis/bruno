@@ -2,7 +2,7 @@ import { useDragLayer } from 'react-dnd';
 import {
   IconFile,
   IconFolder
-} from '@tabler/icons';
+} from 'utils/iconAdapter';
 import StyledWrapper from './StyledWrapper';
 
 function getItemStyles({ x, y }) {

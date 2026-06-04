@@ -1,6 +1,6 @@
 import React, { useState, useMemo, forwardRef, useImperativeHandle, useRef } from 'react';
 import { useDispatch } from 'react-redux';
-import { IconBookmark } from '@tabler/icons';
+import { IconBookmark } from 'utils/iconAdapter';
 import { addResponseExample } from 'providers/ReduxStore/slices/collections';
 import { saveRequest } from 'providers/ReduxStore/slices/collections/actions';
 import { insertTaskIntoQueue } from 'providers/ReduxStore/slices/app';

@@ -1,5 +1,5 @@
 import React from 'react';
-import { IconChevronRight } from '@tabler/icons';
+import { IconChevronRight } from 'utils/iconAdapter';
 import StyledWrapper from './StyledWrapper';
 
 const CollapsibleSection = ({

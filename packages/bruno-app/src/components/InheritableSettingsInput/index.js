@@ -1,5 +1,5 @@
 import React from 'react';
-import { IconChevronDown, IconX } from '@tabler/icons';
+import { IconChevronDown, IconX } from 'utils/iconAdapter';
 import { useTheme } from 'providers/Theme';
 import Dropdown from 'components/Dropdown';
 

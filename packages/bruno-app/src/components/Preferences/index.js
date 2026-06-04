@@ -11,7 +11,7 @@ import {
   IconZoomQuestion,
   IconSquareLetterB,
   IconDatabase
-} from '@tabler/icons';
+} from 'utils/iconAdapter';
 
 import Support from './Support';
 import General from './General';

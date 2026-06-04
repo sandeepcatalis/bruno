@@ -12,7 +12,7 @@ import { removeGitOperationProgress } from 'providers/ReduxStore/slices/app';
 import Modal from 'components/Modal';
 import path from 'utils/common/path';
 import Portal from 'components/Portal';
-import { IconRefresh, IconCheck, IconAlertCircle, IconBrandGit } from '@tabler/icons';
+import { IconRefresh, IconCheck, IconAlertCircle, IconBrandGit } from 'utils/iconAdapter';
 import { uuid } from 'utils/common/index';
 import StyledWrapper from './StyledWrapper';
 import SelectionList from 'components/SelectionList';
@@ -243,7 +243,7 @@ const CloneGitRepository = ({ onClose, onFinish, collectionRepositoryUrl = null 
                   ? (
                       <div className="flex items-start">
                         <div className="flex-shrink-0 p-3 bg-purple-50 dark:bg-purple-900/20 rounded-lg">
-                          <IconBrandGit className="w-6 h-6 text-purple-500" stroke={1.5} />
+                          <IconBrandGit className="w-6 h-6 text-purple-500" strokeWidth={1.5} />
                         </div>
                         <div className="ml-4">
                           <div className="font-semibold text-sm">{getRepoNameFromUrl(collectionRepositoryUrl)}</div>

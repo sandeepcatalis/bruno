@@ -3,7 +3,7 @@ import Portal from 'components/Portal/index';
 import Modal from 'components/Modal/index';
 import toast from 'react-hot-toast';
 import { useDispatch } from 'react-redux';
-import { IconFolder } from '@tabler/icons';
+import { IconFolder } from 'utils/iconAdapter';
 import { closeWorkspaceAction } from 'providers/ReduxStore/slices/workspaces/actions';
 
 const DeleteWorkspace = ({ onClose, workspace }) => {

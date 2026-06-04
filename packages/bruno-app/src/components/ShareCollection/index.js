@@ -1,7 +1,7 @@
 import React, { useState, useMemo } from 'react';
 import Modal from 'components/Modal';
 import Button from 'ui/Button';
-import { IconCheck, IconAlertTriangle, IconFileExport } from '@tabler/icons';
+import { IconCheck, IconAlertTriangle, IconFileExport } from 'utils/iconAdapter';
 import StyledWrapper from './StyledWrapper';
 import exportPostmanCollection from 'utils/exporters/postman-collection';
 import exportOpenCollection from 'utils/exporters/opencollection';

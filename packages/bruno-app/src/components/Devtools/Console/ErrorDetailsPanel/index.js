@@ -7,7 +7,7 @@ import {
   IconCode,
   IconStack,
   IconBrandGithub
-} from '@tabler/icons';
+} from 'utils/iconAdapter';
 import { clearSelectedError } from 'providers/ReduxStore/slices/logs';
 import { useApp } from 'providers/App';
 import platformLib from 'platform';

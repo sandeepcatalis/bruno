@@ -72,7 +72,7 @@ const Wrapper = styled.div`
       &:not(.active) {
         background: ${(props) => props.theme.requestTabs.bg};
         border-color: transparent;
-        border-radius: ${(props) => props.theme.border.radius.base};
+        border-radius: 8px;
 
       }
 

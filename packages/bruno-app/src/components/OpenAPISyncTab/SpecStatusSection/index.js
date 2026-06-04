@@ -5,7 +5,7 @@ import {
   IconRefresh,
   IconAlertTriangle,
   IconClock
-} from '@tabler/icons';
+} from 'utils/iconAdapter';
 import Button from 'ui/Button';
 import StatusBadge from 'ui/StatusBadge';
 import ConfirmSyncModal from '../ConfirmSyncModal';

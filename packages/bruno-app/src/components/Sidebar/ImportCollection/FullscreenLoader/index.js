@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { IconLoader2 } from '@tabler/icons';
+import { IconLoader2 } from 'utils/iconAdapter';
 
 // Messages to cycle through while loading
 const loadingMessages = [

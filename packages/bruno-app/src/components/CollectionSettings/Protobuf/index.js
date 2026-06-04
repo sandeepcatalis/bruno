@@ -7,7 +7,7 @@ import {
   IconFileImport,
   IconAlertCircle,
   IconFolder
-} from '@tabler/icons';
+} from 'utils/iconAdapter';
 import { getBasename } from 'utils/common/path';
 import { Tooltip } from 'react-tooltip';
 import useProtoFileManagement from '../../../hooks/useProtoFileManagement';
