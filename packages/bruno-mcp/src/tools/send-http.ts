@@ -6,18 +6,21 @@ import { URL } from 'node:url';
 
 const MAX_BODY_SIZE = 100 * 1024;
 
+const schema = {
+  url: z.string().describe('The request URL (must include scheme)'),
+  method: z.enum(['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'HEAD', 'OPTIONS']).optional().describe('HTTP method (default: GET)'),
+  headers: z.record(z.string()).optional().describe('Request headers as key-value pairs'),
+  body: z.string().optional().describe('Request body (string). For JSON, pass the serialized JSON string.'),
+  timeout: z.number().optional().describe('Request timeout in milliseconds (default: 30000)')
+};
+
 export function registerSendHttp(server: McpServer) {
   server.tool(
     'send_http_request',
     'Send an ad-hoc HTTP request (no .bru file needed). Returns status, headers, and body.',
-    {
-      url: z.string().describe('The request URL (must include scheme)'),
-      method: z.enum(['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'HEAD', 'OPTIONS']).optional().describe('HTTP method (default: GET)'),
-      headers: z.record(z.string()).optional().describe('Request headers as key-value pairs'),
-      body: z.string().optional().describe('Request body (string). For JSON, pass the serialized JSON string.'),
-      timeout: z.number().optional().describe('Request timeout in milliseconds (default: 30000)')
-    },
-    async ({ url, method, headers, body, timeout }) => {
+    schema,
+    async (params: any) => {
+      const { url, method, headers, body, timeout } = params;
       try {
         const result = await makeRequest(url, method || 'GET', headers || {}, body, timeout || 30000);
         return {

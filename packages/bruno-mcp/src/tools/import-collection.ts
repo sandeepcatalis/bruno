@@ -5,20 +5,23 @@ import * as path from 'node:path';
 import * as fs from 'node:fs';
 import { resolveWorkspace } from '../utils/collection-loader';
 
+const schema = {
+  source: z.string().describe('Path to source file or URL (OpenAPI spec or WSDL)'),
+  type: z.enum(['openapi', 'wsdl']).describe('Import format type'),
+  outputPath: z.string().optional().describe('Output directory for the imported collection'),
+  collectionName: z.string().optional().describe('Name for the imported collection'),
+  collectionFormat: z.enum(['bru', 'opencollection']).optional().describe('Output format (default: opencollection)'),
+  groupBy: z.enum(['tags', 'path']).optional().describe('Group requests by OpenAPI tags or URL path (default: tags)'),
+  insecure: z.boolean().optional().describe('Skip SSL verification when fetching from URLs')
+};
+
 export function registerImportCollection(server: McpServer) {
   server.tool(
     'import_collection',
     'Import an API collection from OpenAPI or WSDL into Bruno format. Creates .bru files on disk.',
-    {
-      source: z.string().describe('Path to source file or URL (OpenAPI spec or WSDL)'),
-      type: z.enum(['openapi', 'wsdl']).describe('Import format type'),
-      outputPath: z.string().optional().describe('Output directory for the imported collection'),
-      collectionName: z.string().optional().describe('Name for the imported collection'),
-      collectionFormat: z.enum(['bru', 'opencollection']).optional().describe('Output format (default: opencollection)'),
-      groupBy: z.enum(['tags', 'path']).optional().describe('Group requests by OpenAPI tags or URL path (default: tags)'),
-      insecure: z.boolean().optional().describe('Skip SSL verification when fetching from URLs')
-    },
-    async ({ source, type, outputPath, collectionName, collectionFormat, groupBy, insecure }) => {
+    schema,
+    async (params: any) => {
+      const { source, type, outputPath, collectionName, collectionFormat, groupBy, insecure } = params;
       const workspace = resolveWorkspace();
       const output = outputPath || path.join(workspace, collectionName || 'imported-collection');
 
