@@ -5,7 +5,10 @@ import { registerReadRequest } from './read-request';
 import { registerListEnvironments } from './list-environments';
 import { registerGetEnvironment } from './get-environment';
 import { registerRunRequest } from './run-request';
+import { registerRunFolder } from './run-folder';
+import { registerRunCollection } from './run-collection';
 import { registerSendHttp } from './send-http';
+import { registerImportCollection } from './import-collection';
 
 export function registerTools(server: McpServer) {
   registerListCollections(server);
@@ -14,5 +17,8 @@ export function registerTools(server: McpServer) {
   registerListEnvironments(server);
   registerGetEnvironment(server);
   registerRunRequest(server);
+  registerRunFolder(server);
+  registerRunCollection(server);
   registerSendHttp(server);
+  registerImportCollection(server);
 }
