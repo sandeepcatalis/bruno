@@ -94,9 +94,9 @@
     ]
   },
   "overrides": {
-    "axios":"1.13.6",
+    "axios": "1.13.6",
     "rollup": "3.30.0",
-    "pbkdf2":"3.1.5",
+    "pbkdf2": "3.1.5",
     "electron-store": {
       "conf": {
         "json-schema-typed": "8.0.1"
@@ -104,6 +104,7 @@
     }
   },
   "dependencies": {
+    "@rspack/binding-darwin-arm64": "^2.0.6",
     "ajv": "^8.17.1",
     "git-url-parse": "^14.1.0"
   }

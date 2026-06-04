@@ -91,7 +91,7 @@ const CloneCollectionItem = ({ collectionUid, item, onClose }) => {
           handleCancel={onClose}
           hideFooter
         >
-          <form className="bruno-form" onSubmit={formik.handleSubmit}>
+          <form className="daffy-form" onSubmit={formik.handleSubmit}>
             <div>
               <label htmlFor="name" className="block font-medium">
                 {isFolder ? 'Folder' : 'Request'} Name
@@ -184,7 +184,7 @@ const CloneCollectionItem = ({ collectionUid, item, onClose }) => {
               </div>
             )}
 
-            <div className="flex justify-between items-center mt-8 bruno-modal-footer">
+            <div className="flex justify-between items-center mt-8 daffy-modal-footer">
               <div className="flex advanced-options">
                 <Dropdown onCreate={onDropdownCreate} icon={<AdvancedOptions />} placement="bottom-start">
                   <div

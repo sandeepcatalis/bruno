@@ -43,7 +43,7 @@ const RenameCollection = ({ collectionUid, onClose }) => {
 
   return (
     <Modal size="md" title="Rename Collection" confirmText="Rename" handleConfirm={onSubmit} handleCancel={onClose}>
-      <form className="bruno-form" onSubmit={(e) => e.preventDefault()}>
+      <form className="daffy-form" onSubmit={(e) => e.preventDefault()}>
         <div>
           <label htmlFor="name" className="block font-medium">
             Name

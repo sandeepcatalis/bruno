@@ -178,7 +178,7 @@ const General = () => {
   return (
     <StyledWrapper className="w-full">
       <div className="section-header">General Settings</div>
-      <form className="bruno-form" onSubmit={formik.handleSubmit}>
+      <form className="daffy-form" onSubmit={formik.handleSubmit}>
         <div className="flex items-center mb-2">
           <input
             id="sslVerification"

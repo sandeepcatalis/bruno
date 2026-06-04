@@ -111,7 +111,7 @@ const WelcomeModal = ({ onDismiss, onImportCollection, onCreateCollection, onOpe
           </h1>
           {step === 1 && (
             <p className="welcome-tagline">
-              A fast, Git-friendly, and open-source API client.
+              A fast, Git-friendly, and open-source API client. Built different.
             </p>
           )}
         </div>

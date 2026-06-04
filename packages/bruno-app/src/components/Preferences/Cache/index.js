@@ -88,7 +88,7 @@ const Cache = () => {
 
   return (
     <StyledWrapper className="w-full">
-      <form className="bruno-form" onSubmit={formik.handleSubmit}>
+      <form className="daffy-form" onSubmit={formik.handleSubmit}>
         <div className="section-title mt-6 mb-3">Cache SSL Session</div>
 
         <div className="flex items-center my-2">

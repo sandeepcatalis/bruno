@@ -237,7 +237,7 @@ const CloneGitRepository = ({ onClose, onFinish, collectionRepositoryUrl = null 
       >
         <StyledWrapper>
           {view === 'form' && (
-            <form className="bruno-form" onSubmit={(e) => e.preventDefault()}>
+            <form className="daffy-form" onSubmit={(e) => e.preventDefault()}>
               <div>
                 {collectionRepositoryUrl
                   ? (

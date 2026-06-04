@@ -22,7 +22,7 @@ const Theme = () => {
 
   return (
     <StyledWrapper>
-      <div className="bruno-form">
+      <div className="daffy-form">
         <div className="flex items-center mt-2">
           <input
             id="light-theme"

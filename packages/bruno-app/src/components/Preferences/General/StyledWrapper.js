@@ -18,7 +18,7 @@ const StyledWrapper = styled.div`
     }
   }
 
-  form.bruno-form {
+  form.daffy-form {
     label {
       font-size: 0.8125rem;
     }

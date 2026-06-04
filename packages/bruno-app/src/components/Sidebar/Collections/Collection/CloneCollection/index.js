@@ -94,7 +94,7 @@ const CloneCollection = ({ onClose, collectionUid }) => {
 
   return (
     <Modal size="md" title="Clone Collection" confirmText="Create" handleConfirm={onSubmit} handleCancel={onClose}>
-      <form className="bruno-form" onSubmit={(e) => e.preventDefault()}>
+      <form className="daffy-form" onSubmit={(e) => e.preventDefault()}>
         <div>
           <label htmlFor="collection-name" className="flex items-center font-medium">
             Name

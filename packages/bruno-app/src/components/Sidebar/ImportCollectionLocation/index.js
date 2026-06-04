@@ -225,7 +225,7 @@ const ImportCollectionLocation = ({ onClose, handleSubmit, rawData, format, sour
         handleCancel={onClose}
         dataTestId="import-collection-location-modal"
       >
-        <form className="bruno-form" onSubmit={(e) => e.preventDefault()}>
+        <form className="daffy-form" onSubmit={(e) => e.preventDefault()}>
           <div>
             <label htmlFor="collectionName" className="block font-medium">
               Name

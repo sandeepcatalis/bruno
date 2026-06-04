@@ -101,7 +101,7 @@ const CreateWorkspace = ({ onClose }) => {
       confirmDisabled={isSubmitting}
     >
       <div>
-        <form className="bruno-form" onSubmit={formik.handleSubmit}>
+        <form className="daffy-form" onSubmit={formik.handleSubmit}>
           <div className="mb-4">
             <label htmlFor="workspaceName" className="block font-semibold mb-2">
               Name

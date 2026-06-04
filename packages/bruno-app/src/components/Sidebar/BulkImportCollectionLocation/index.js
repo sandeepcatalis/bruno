@@ -531,7 +531,7 @@ export const BulkImportCollectionLocation = ({
         disableEscapeKey={false}
         hideCancel={importStarted}
       >
-        <form className="bruno-form" onSubmit={(e) => e.preventDefault()}>
+        <form className="daffy-form" onSubmit={(e) => e.preventDefault()}>
           <div className="flex flex-col">
             {importStarted ? (
               <>

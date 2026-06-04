@@ -50,7 +50,7 @@ const ConnectGitRemote = ({ collectionPath, collectionName, initialUrl = '', onC
 
   return (
     <Modal size="md" title={title} confirmText={confirmText} handleConfirm={() => formik.handleSubmit()} handleCancel={onClose}>
-      <form className="bruno-form" onSubmit={(e) => e.preventDefault()}>
+      <form className="daffy-form" onSubmit={(e) => e.preventDefault()}>
         {collectionName ? (
           <div className="text-sm text-muted mb-3 leading-relaxed break-words space-y-2">
             <p className="m-0">

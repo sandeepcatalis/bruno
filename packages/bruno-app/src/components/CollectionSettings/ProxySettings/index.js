@@ -199,7 +199,7 @@ const ProxySettings = ({ collection }) => {
   return (
     <StyledWrapper className="h-full w-full">
       <div className="text-xs mb-4 text-muted">Configure proxy settings for this collection.</div>
-      <div className="bruno-form">
+      <div className="daffy-form">
         <div className="mb-3 flex items-center">
           <label className="settings-label flex items-center" htmlFor="enabled">
             Config

@@ -71,7 +71,7 @@ const RenameEnvironment = ({ onClose, environment }) => {
         handleConfirm={onSubmit}
         handleCancel={onClose}
       >
-        <form className="bruno-form" onSubmit={(e) => e.preventDefault()}>
+        <form className="daffy-form" onSubmit={(e) => e.preventDefault()}>
           <div>
             <label htmlFor="environment-name" className="block font-semibold">
               Environment Name

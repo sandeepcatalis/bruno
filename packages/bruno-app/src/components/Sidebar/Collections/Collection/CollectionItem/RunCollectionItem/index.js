@@ -97,7 +97,7 @@ const RunCollectionItem = ({ collectionUid, item, onClose }) => {
           {/* Tags for the collection run */}
           <RunnerTags collectionUid={collection.uid} className="mb-6" />
 
-          <div className="flex justify-end bruno-modal-footer">
+          <div className="flex justify-end daffy-modal-footer">
             <Button type="button" color="secondary" variant="ghost" onClick={onClose} className="mr-3">
               Cancel
             </Button>

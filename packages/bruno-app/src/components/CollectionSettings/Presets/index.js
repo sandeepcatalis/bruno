@@ -39,7 +39,7 @@ const PresetsSettings = ({ collection }) => {
       <div className="text-xs mb-4 text-muted">
         These presets will be used as the default values for new requests in this collection.
       </div>
-      <div className="bruno-form">
+      <div className="daffy-form">
         <div className="mb-3 flex items-center">
           <label className="settings-label flex items-center" htmlFor="http">
             Request Type

@@ -7,12 +7,12 @@ const Wrapper = styled.div`
   &.modal--animate-out {
     animation: fade-out 0.5s forwards cubic-bezier(0.19, 1, 0.22, 1);
 
-    .bruno-modal-card {
+    .daffy-modal-card {
       animation: fade-and-slide-out-from-top 0.5s forwards cubic-bezier(0.19, 1, 0.22, 1);
     }
   }
 
-  &.bruno-modal {
+  &.daffy-modal {
     position: fixed;
     top: 0;
     left: 0;
@@ -26,7 +26,7 @@ const Wrapper = styled.div`
     background-color: rgba(0, 0, 0, 0.5);
   }
 
-  .bruno-modal-card {
+  .daffy-modal-card {
     animation-duration: 0.85s;
     animation-delay: 0.1s;
     background: ${(props) => props.theme.modal.body.bg};
@@ -66,7 +66,7 @@ const Wrapper = styled.div`
     animation: fade-and-slide-in-from-top 0.5s forwards cubic-bezier(0.19, 1, 0.22, 1);
   }
 
-  .bruno-modal-header {
+  .daffy-modal-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -77,7 +77,7 @@ const Wrapper = styled.div`
     border-top-left-radius: ${(props) => props.theme.border.radius.base};
     border-top-right-radius: ${(props) => props.theme.border.radius.base};
 
-    .bruno-modal-header-title {
+    .daffy-modal-header-title {
       display: flex;
       align-items: center;
       gap: 8px;
@@ -104,7 +104,7 @@ const Wrapper = styled.div`
     }
   }
 
-  .bruno-modal-content {
+  .daffy-modal-content {
     flex-grow: 1;
     background-color: ${(props) => props.theme.modal.body.bg};
 
@@ -136,12 +136,12 @@ const Wrapper = styled.div`
       cursor: pointer;
     }
 
-    .bruno-form {
+    .daffy-form {
       color: ${(props) => props.theme.modal.body.color};
     }
   }
 
-  .bruno-modal-backdrop {
+  .daffy-modal-backdrop {
     height: 100%;
     width: 100%;
     left: 0;
@@ -164,14 +164,14 @@ const Wrapper = styled.div`
     animation: fade-in 0.1s forwards cubic-bezier(0.19, 1, 0.22, 1);
   }
 
-  .bruno-modal-footer {
+  .daffy-modal-footer {
     background-color: ${(props) => props.theme.modal.body.bg};
     border-bottom-left-radius: ${(props) => props.theme.border.radius.base};
     border-bottom-right-radius: ${(props) => props.theme.border.radius.base};
   }
 
   &.modal-footer-none {
-    .bruno-modal-content {
+    .daffy-modal-content {
       border-bottom-left-radius: ${(props) => props.theme.border.radius.base};
       border-bottom-right-radius: ${(props) => props.theme.border.radius.base};
     }

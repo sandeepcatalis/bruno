@@ -7,8 +7,8 @@ const ESC_KEY_CODE = 27;
 const ENTER_KEY_CODE = 13;
 
 const ModalHeader = ({ title, handleCancel, customHeader, hideClose }) => (
-  <div className="bruno-modal-header">
-    {customHeader ? customHeader : <>{title ? <div className="bruno-modal-header-title">{title}</div> : null}</>}
+  <div className="daffy-modal-header">
+    {customHeader ? customHeader : <>{title ? <div className="daffy-modal-header-title">{title}</div> : null}</>}
     {handleCancel && !hideClose ? (
       // TODO: Remove data-test-id and use data-testid instead across the codebase.
       <div className="close cursor-pointer" onClick={handleCancel ? () => handleCancel() : null} data-testid="modal-close-button">
@@ -18,7 +18,7 @@ const ModalHeader = ({ title, handleCancel, customHeader, hideClose }) => (
   </div>
 );
 
-const ModalContent = ({ children }) => <div className="bruno-modal-content px-4 py-4">{children}</div>;
+const ModalContent = ({ children }) => <div className="daffy-modal-content px-4 py-4">{children}</div>;
 
 const ModalFooter = ({
   confirmText,
@@ -39,7 +39,7 @@ const ModalFooter = ({
   }
 
   return (
-    <div className="flex justify-end p-4 bruno-modal-footer">
+    <div className="flex justify-end p-4 daffy-modal-footer">
       <span className={hideCancel ? 'hidden' : 'mr-2'}>
         <Button type="button" color="secondary" variant="ghost" onClick={handleCancel}>
           {cancelText}
@@ -120,7 +120,7 @@ const Modal = ({
     };
   }, [disableEscapeKey, document, handleConfirm, confirmDisabled]);
 
-  let classes = 'bruno-modal';
+  let classes = 'daffy-modal';
   if (isClosing) {
     classes += ' modal--animate-out';
   }
@@ -130,7 +130,7 @@ const Modal = ({
   return (
     <StyledWrapper className={classes} onClick={onClick ? (e) => onClick(e) : null}>
       <div
-        className={`bruno-modal-card modal-${size}`}
+        className={`daffy-modal-card modal-${size}`}
         ref={modalRef}
         role="dialog"
         aria-labelledby="modal-title"
@@ -159,7 +159,7 @@ const Modal = ({
 
       {/* Clicking on backdrop closes the modal */}
       <div
-        className="bruno-modal-backdrop"
+        className="daffy-modal-backdrop"
         onClick={
           disableCloseOnOutsideClick
             ? null

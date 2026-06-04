@@ -86,7 +86,7 @@ const NewFolder = ({ collectionUid, item, onClose }) => {
     <Portal>
       <StyledWrapper>
         <Modal size="md" title="New Folder" hideFooter={true} handleCancel={onClose}>
-          <form className="bruno-form" onSubmit={formik.handleSubmit}>
+          <form className="daffy-form" onSubmit={formik.handleSubmit}>
             <label htmlFor="folderName" className="block font-medium">
               Folder Name
             </label>
@@ -167,7 +167,7 @@ const NewFolder = ({ collectionUid, item, onClose }) => {
                 ) : null}
               </div>
             )}
-            <div className="flex justify-between items-center mt-8 bruno-modal-footer">
+            <div className="flex justify-between items-center mt-8 daffy-modal-footer">
               <div className="flex advanced-options">
                 <Dropdown onCreate={onDropdownCreate} icon={<AdvancedOptions />} placement="bottom-start">
                   <div

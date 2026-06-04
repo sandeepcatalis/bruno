@@ -65,7 +65,7 @@ const CreateEnvironment = ({ collection, onClose, onEnvironmentCreated }) => {
         handleConfirm={onSubmit}
         handleCancel={onClose}
       >
-        <form className="bruno-form" onSubmit={(e) => e.preventDefault()}>
+        <form className="daffy-form" onSubmit={(e) => e.preventDefault()}>
           <div>
             <label htmlFor="name" className="block font-medium">
               Environment Name

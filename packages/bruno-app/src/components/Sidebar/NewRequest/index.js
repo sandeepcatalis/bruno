@@ -314,7 +314,7 @@ const NewRequest = ({ collectionUid, item, isEphemeral, onClose }) => {
       <StyledWrapper>
         <Modal size="md" title="New Request" hideFooter handleCancel={onClose}>
           <form
-            className="bruno-form"
+            className="daffy-form"
             onSubmit={formik.handleSubmit}
           >
             <div>
@@ -575,7 +575,7 @@ const NewRequest = ({ collectionUid, item, isEphemeral, onClose }) => {
                 ) : null}
               </div>
             )}
-            <div className="flex justify-between items-center mt-8 bruno-modal-footer">
+            <div className="flex justify-between items-center mt-8 daffy-modal-footer">
               <div className="flex advanced-options">
                 <Dropdown onCreate={onAdvancedDropdownCreate} icon={<AdvancedOptions />} placement="bottom-start">
                   <div

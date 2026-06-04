@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 const StyledWrapper = styled.div`
-  .bruno-modal-card.modal-sm {
+  .daffy-modal-card.modal-sm {
     width: 500px;
   }
 

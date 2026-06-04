@@ -111,7 +111,7 @@ const ShareCollection = ({ onClose, collectionUid }) => {
 
         {/* Bruno Format Section */}
         <div className="section-title">Bruno Format</div>
-        <div className="bruno-format-grid mb-6">
+        <div className="daffy-format-grid mb-6">
           {/* ZIP Option */}
           <div
             className={`format-card ${selectedFormat === EXPORT_FORMATS.ZIP ? 'selected' : ''} ${isDisabled ? 'opacity-50 cursor-not-allowed' : ''}`}

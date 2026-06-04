@@ -115,7 +115,7 @@ const CreateCollection = ({ onClose, defaultLocation: propDefaultLocation, initi
     <Portal>
       <StyledWrapper>
         <Modal size="md" title="Create Collection" hideFooter={true} handleCancel={onClose}>
-          <form className="bruno-form" onSubmit={formik.handleSubmit}>
+          <form className="daffy-form" onSubmit={formik.handleSubmit}>
             <div>
               <label htmlFor="collection-name" className="flex items-center font-medium">
                 Name
@@ -275,7 +275,7 @@ const CreateCollection = ({ onClose, defaultLocation: propDefaultLocation, initi
                 </div>
               )}
             </div>
-            <div className="flex justify-between items-center mt-8 bruno-modal-footer">
+            <div className="flex justify-between items-center mt-8 daffy-modal-footer">
               <div className="flex advanced-options">
                 <Dropdown onCreate={onDropdownCreate} icon={<AdvancedOptions />} placement="bottom-start">
                   <div

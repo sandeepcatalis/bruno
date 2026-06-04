@@ -20,7 +20,7 @@ const StyledWrapper = styled.div`
     left: 0 !important;
   }
 
-  .bruno-modal-footer {
+  .daffy-modal-footer {
     padding-top: 0;
   }
 `;

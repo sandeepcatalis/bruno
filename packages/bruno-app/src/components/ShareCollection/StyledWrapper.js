@@ -44,7 +44,7 @@ const StyledWrapper = styled.div`
     }
   }
 
-  .bruno-format-grid {
+  .daffy-format-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 1rem;

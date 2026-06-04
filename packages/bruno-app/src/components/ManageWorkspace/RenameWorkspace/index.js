@@ -64,7 +64,7 @@ const RenameWorkspace = ({ onClose, workspace }) => {
         handleConfirm={onSubmit}
         handleCancel={onClose}
       >
-        <form className="bruno-form" onSubmit={(e) => e.preventDefault()}>
+        <form className="daffy-form" onSubmit={(e) => e.preventDefault()}>
           <div>
             <label htmlFor="workspace-name" className="block font-semibold">
               Workspace Name
