@@ -2,6 +2,7 @@ import React, { useState, useEffect, useMemo, useRef, useCallback } from 'react'
 import find from 'lodash/find';
 import { useDispatch, useSelector } from 'react-redux';
 import { updateResponsePaneTab, updateResponseFormat, updateResponseViewTab, updateResponseFilter, updateResponseFilterExpanded } from 'providers/ReduxStore/slices/tabs';
+import { saveSnapshot } from 'providers/ReduxStore/slices/responseSnapshots';
 import QueryResult from './QueryResult';
 import Overlay from './Overlay';
 import Placeholder from './Placeholder';
@@ -24,6 +25,8 @@ import HeightBoundContainer from 'ui/HeightBoundContainer';
 import ResponseStopWatch from 'components/ResponsePane/ResponseStopWatch';
 import WSMessagesList from './WsResponsePane/WSMessagesList';
 import ResponsiveTabs from 'ui/ResponsiveTabs';
+import ResponseCompare from './ResponseCompare';
+import toast from 'react-hot-toast';
 
 // Width threshold for expanded right-side action buttons
 const RIGHT_CONTENT_EXPANDED_WIDTH = 135;
@@ -118,6 +121,26 @@ const ResponsePane = ({ item, collection }) => {
 
   const hasScriptError = item?.preRequestScriptErrorMessage || item?.postResponseScriptErrorMessage || item?.testScriptErrorMessage;
 
+  const snapshotCount = useSelector((state) => (state.responseSnapshots.snapshots[item.uid] || []).length);
+
+  const handleSaveSnapshot = useCallback(() => {
+    if (!response || !response.status) {
+      toast.error('No response to save');
+      return;
+    }
+    dispatch(saveSnapshot({
+      itemUid: item.uid,
+      snapshot: {
+        status: response.status,
+        headers: response.headers,
+        dataBuffer: response.dataBuffer,
+        duration: response.duration,
+        size: responseSize
+      }
+    }));
+    toast.success('Response snapshot saved');
+  }, [dispatch, item.uid, response, responseSize]);
+
   const allTabs = useMemo(() => {
     return [
       {
@@ -146,9 +169,14 @@ const ResponsePane = ({ item, collection }) => {
           />
         ),
         indicator: null
+      },
+      {
+        key: 'compare',
+        label: 'Compare',
+        indicator: snapshotCount > 0 ? <sup className="ml-1 font-medium">{snapshotCount}</sup> : null
       }
     ];
-  }, [responseHeadersCount, item.testResults, item.assertionResults, item.preRequestTestResults, item.postResponseTestResults]);
+  }, [responseHeadersCount, item.testResults, item.assertionResults, item.preRequestTestResults, item.postResponseTestResults, snapshotCount]);
 
   const getTabPanel = (tab) => {
     switch (tab) {
@@ -191,6 +219,9 @@ const ResponsePane = ({ item, collection }) => {
             postResponseTestResults={item.postResponseTestResults}
           />
         );
+      }
+      case 'compare': {
+        return <ResponseCompare item={item} />;
       }
 
       default: {
@@ -265,6 +296,13 @@ const ResponsePane = ({ item, collection }) => {
           ? <ResponseStopWatch startMillis={response.duration} />
           : <ResponseTime duration={response.duration} />}
         <ResponseSize size={responseSize} />
+        <button
+          className="save-snapshot-btn"
+          onClick={handleSaveSnapshot}
+          title="Save response snapshot for comparison"
+        >
+          Save Response
+        </button>
       </div>
 
       <div className="flex items-center response-pane-actions">

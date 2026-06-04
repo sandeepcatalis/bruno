@@ -100,6 +100,25 @@ const StyledWrapper = styled.div`
     gap: 8px;
     font-size: 0.75rem;
     font-weight: 600;
+
+    .save-snapshot-btn {
+      margin-left: 4px;
+      padding: 3px 8px;
+      font-size: 0.6875rem;
+      font-weight: 600;
+      border: 1px solid ${(props) => props.theme.brand || '#FF6C37'};
+      border-radius: 3px;
+      background: transparent;
+      color: ${(props) => props.theme.brand || '#FF6C37'};
+      cursor: pointer;
+      white-space: nowrap;
+      transition: all 0.15s ease;
+
+      &:hover {
+        background: ${(props) => props.theme.brand || '#FF6C37'};
+        color: #FFFFFF;
+      }
+    }
   }
 
   .response-pane-actions {
