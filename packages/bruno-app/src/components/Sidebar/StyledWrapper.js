@@ -3,11 +3,12 @@ import styled from 'styled-components';
 const Wrapper = styled.div`
   color: ${(props) => props.theme.sidebar.color};
   max-height: 100%;
+  font-size: 0.8125rem;
 
   aside {
     background-color: ${(props) => props.theme.sidebar.bg};
     overflow: hidden;
-    padding: 4px 0;
+    padding: 0;
 
     .sidebar-sections-container {
       display: flex;

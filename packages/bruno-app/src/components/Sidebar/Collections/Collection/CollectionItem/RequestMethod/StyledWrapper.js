@@ -1,16 +1,19 @@
 import styled from 'styled-components';
 
 const Wrapper = styled.div`
-  font-size: ${(props) => props.theme.font.size.xs};
+  font-size: 0.625rem;
+  font-weight: 700;
   display: flex;
   align-self: stretch;
   align-items: center;
-  min-width: 34px;
+  min-width: 36px;
   flex-shrink: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
 
   span {
     position: relative;
-    top: 1px;
+    top: 0px;
   }
 
   .method-get {

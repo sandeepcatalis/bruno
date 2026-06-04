@@ -4,19 +4,25 @@ const StyledWrapper = styled.div`
   &.tabs {
     overflow: hidden;
     min-width: 0;
+    border-bottom: 1px solid ${(props) => props.theme.border?.border1 || '#E0E0E0'};
 
     > div:first-child {
       overflow: hidden;
       min-width: 0;
       flex-shrink: 1;
+      display: flex;
+      gap: 0;
+      padding: 0;
     }
 
     .more-tabs {
       color: ${(props) => props.theme.colors.text.subtext0} !important;
-      border-bottom: solid 2px transparent;
+      border-bottom: 3px solid transparent;
+      padding: 8px 12px;
 
       &:hover {
         color: ${(props) => props.theme.tabs.active.color} !important;
+        background: rgba(0, 0, 0, 0.03);
       }
     }
 
@@ -24,16 +30,18 @@ const StyledWrapper = styled.div`
       display: inline-flex;
       align-items: center;
       gap: 0.25rem;
-      padding: 6px 0px;
+      padding: 8px 12px;
       border: none;
-      border-bottom: solid 2px transparent;
-      margin-right: ${(props) => props.theme.tabs.marginRight};
-      color: ${(props) => props.theme.colors.text.subtext0};
+      border-bottom: 3px solid transparent;
+      margin-right: 0;
+      color: ${(props) => props.theme.colors.text.subtext1};
       cursor: pointer;
       white-space: nowrap;
       vertical-align: middle;
       flex-shrink: 0;
-      font-size: ${(props) => props.theme.font.size.sm};
+      font-size: 0.8125rem;
+      font-weight: 500;
+      transition: all 0.15s ease;
 
       &:focus,
       &:active,
@@ -44,14 +52,15 @@ const StyledWrapper = styled.div`
         box-shadow: none !important;
       }
 
-      &:hover {
+      &:hover:not(.active) {
         color: ${(props) => props.theme.tabs.active.color} !important;
+        background: rgba(0, 0, 0, 0.03);
       }
 
       &.active {
-        font-weight: ${(props) => props.theme.tabs.active.fontWeight} !important;
+        font-weight: 600 !important;
         color: ${(props) => props.theme.tabs.active.color} !important;
-        border-bottom: solid 2px ${(props) => props.theme.tabs.active.border} !important;
+        border-bottom: 3px solid ${(props) => props.theme.brand || '#FF6C37'} !important;
       }
 
       .content-indicator {

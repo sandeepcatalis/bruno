@@ -5,8 +5,8 @@ const Wrapper = styled.div`
   width: 100%;
   height: 100%;
   flex: 1;
-  gap: 1px;
-  background: ${(props) => props.theme.sidebar.collection.item.hoverBg};
+  gap: 0;
+  background: ${(props) => props.theme.bg || '#ffffff'};
 
   &.is-dragging {
     cursor: col-resize !important;
@@ -14,6 +14,9 @@ const Wrapper = styled.div`
 
   section.main {
     display: flex;
+    flex: 1;
+    border-left: 1px solid ${(props) => props.theme.border?.border1 || '#E0E0E0'};
+    background: ${(props) => props.theme.bg || '#ffffff'};
 
     section.request-pane,
     section.response-pane {
@@ -22,7 +25,7 @@ const Wrapper = styled.div`
   }
 
   .fw-600 {
-    font-weight: 500;
+    font-weight: 600;
   }
 `;
 

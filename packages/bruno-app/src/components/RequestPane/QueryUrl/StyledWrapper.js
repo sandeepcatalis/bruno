@@ -1,18 +1,20 @@
 import styled from 'styled-components';
 
 const Wrapper = styled.div`
-  height: 2.4rem;
-  padding: 0 4px;
+  height: 2.75rem;
+  padding: 6px 16px;
 
   .url-input-group {
-    border: ${(props) => props.theme.requestTabPanel.url.border};
-    border-radius: 10px;
+    border: 1px solid ${(props) => props.theme.border?.border2 || '#D0D0D0'};
+    border-radius: 4px;
     flex: 1;
     min-width: 0;
-    transition: box-shadow 0.15s ease;
+    transition: border-color 0.15s ease, box-shadow 0.15s ease;
+    background: ${(props) => props.theme.bg || '#FFFFFF'};
 
     &:focus-within {
-      box-shadow: 0 0 0 2px ${(props) => props.theme.brand}22;
+      border-color: ${(props) => props.theme.brand || '#FF6C37'};
+      box-shadow: 0 0 0 1px ${(props) => props.theme.brand || '#FF6C37'}33;
     }
   }
 

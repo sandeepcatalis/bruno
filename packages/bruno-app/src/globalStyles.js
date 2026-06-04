@@ -4,8 +4,8 @@ import { rgba } from 'polished';
 const GlobalStyle = createGlobalStyle`
 
   * {
-    transition-property: background-color, border-color, box-shadow;
-    transition-duration: 0.15s;
+    transition-property: background-color, border-color, box-shadow, opacity;
+    transition-duration: 0.12s;
     transition-timing-function: ease;
   }
 
@@ -13,6 +13,14 @@ const GlobalStyle = createGlobalStyle`
     font-size: ${(props) => props.theme.font.size.base};
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    letter-spacing: 0;
+    line-height: 1.5;
+    font-weight: 400;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    letter-spacing: -0.01em;
+    font-weight: 600;
   }
 
   .CodeMirror-gutters {
@@ -45,8 +53,8 @@ const GlobalStyle = createGlobalStyle`
     white-space: nowrap;
     outline: none;
     box-shadow: none;
-    border-radius: 8px;
-    font-weight: 500;
+    border-radius: 4px;
+    font-weight: 600;
   }
 
   .btn-sm {

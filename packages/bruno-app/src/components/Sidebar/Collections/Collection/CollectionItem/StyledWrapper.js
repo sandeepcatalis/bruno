@@ -21,12 +21,13 @@ const Wrapper = styled.div`
   }
 
   .collection-item-name {
-    height: 1.75rem;
+    height: 1.875rem;
     cursor: pointer;
     user-select: none;
     position: relative;
-    border-radius: 6px;
-    margin: 1px 6px;
+    border-radius: 0;
+    margin: 0;
+    padding: 0 8px;
 
     /* Default: menu icon hidden, shown on hover/focus states (see consolidated rule below) */
     .collection-item-menu-icon {

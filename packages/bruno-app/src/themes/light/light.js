@@ -1,53 +1,53 @@
 import { rgba } from 'polished';
 export const palette = {
   primary: {
-    SOLID: 'hsl(33, 80%, 46%)',
-    TEXT: 'hsl(33, 67%, 45%)',
-    STRONG: 'hsl(33, 67%, 50%)',
-    SUBTLE: 'hsl(33, 69%, 56%)'
+    SOLID: '#FF6C37',
+    TEXT: '#E85820',
+    STRONG: '#FF6C37',
+    SUBTLE: '#FF8C5A'
   },
   hues: {
     RED: 'hsl(8,   60%, 52%)',
     ROSE: 'hsl(352, 45%, 50%)',
     BROWN: 'hsl(28,  55%, 38%)',
-    ORANGE: 'hsl(35,  85%, 42%)',
+    ORANGE: '#FF6C37',
     YELLOW: 'hsl(45,  75%, 42%)',
     LIME: 'hsl(85,  45%, 40%)',
-    GREEN: 'hsl(145, 50%, 36%)',
+    GREEN: '#00C853',
     TEAL: 'hsl(178, 50%, 36%)',
     CYAN: 'hsl(195, 55%, 42%)',
-    BLUE: 'hsl(214, 55%, 45%)',
+    BLUE: '#2196F3',
     INDIGO: 'hsl(235, 45%, 45%)',
     VIOLET: 'hsl(258, 42%, 50%)',
-    PURPLE: 'hsl(280, 45%, 48%)',
+    PURPLE: '#A259FF',
     PINK: 'hsl(328, 50%, 48%)'
   },
   system: {
-    CONTROL_ACCENT: '#b96f1d'
+    CONTROL_ACCENT: '#FF6C37'
   },
   background: {
-    BASE: '#ffffff',
-    MANTLE: '#f8f8f8',
-    CRUST: '#f6f6f6',
-    SURFACE0: '#f1f1f1',
-    SURFACE1: '#eaeaea',
-    SURFACE2: '#e5e5e5'
+    BASE: '#FFFFFF',
+    MANTLE: '#F7F7F7',
+    CRUST: '#F0F0F0',
+    SURFACE0: '#E8E8E8',
+    SURFACE1: '#E0E0E0',
+    SURFACE2: '#D5D5D5'
   },
   text: {
-    BASE: '#343434',
-    SUBTEXT2: '#666666',
-    SUBTEXT1: '#838383',
-    SUBTEXT0: '#9B9B9B'
+    BASE: '#212121',
+    SUBTEXT2: '#424242',
+    SUBTEXT1: '#6B6B6B',
+    SUBTEXT0: '#9E9E9E'
   },
   overlay: {
-    OVERLAY2: '#8b8b8b',
-    OVERLAY1: '#B0B0B0',
-    OVERLAY0: '#C0C0C0'
+    OVERLAY2: '#757575',
+    OVERLAY1: '#BDBDBD',
+    OVERLAY0: '#E0E0E0'
   },
   border: {
-    BORDER2: '#cccccc',
-    BORDER1: '#e5e5e5',
-    BORDER0: '#efefef'
+    BORDER2: '#D0D0D0',
+    BORDER1: '#E0E0E0',
+    BORDER0: '#EEEEEE'
   },
   utility: {
     WHITE: '#ffffff',
@@ -201,31 +201,31 @@ const lightTheme = {
   },
 
   sidebar: {
-    color: palette.text.BASE,
-    muted: palette.text.SUBTEXT1,
-    bg: palette.background.MANTLE,
+    color: '#E0E0E0',
+    muted: '#9E9E9E',
+    bg: '#2C2C2C',
     dragbar: {
-      border: palette.background.SURFACE2,
-      activeBorder: palette.background.SURFACE2
+      border: '#3A3A3A',
+      activeBorder: '#555555'
     },
 
     collection: {
       item: {
-        bg: palette.background.SURFACE1,
-        hoverBg: palette.background.SURFACE1,
-        focusBorder: palette.border.BORDER2,
-        indentBorder: palette.border.BORDER1,
+        bg: '#383838',
+        hoverBg: '#383838',
+        focusBorder: '#555555',
+        indentBorder: '#444444',
         active: {
-          indentBorder: palette.border.BORDER1
+          indentBorder: '#555555'
         },
         example: {
-          iconColor: palette.text.SUBTEXT2
+          iconColor: '#9E9E9E'
         }
       }
     },
 
     dropdownIcon: {
-      color: palette.text.SUBTEXT2
+      color: '#9E9E9E'
     }
   },
 
@@ -251,18 +251,18 @@ const lightTheme = {
 
   request: {
     methods: {
-      get: palette.hues.GREEN,
-      post: palette.hues.PURPLE,
-      put: palette.hues.ORANGE,
-      delete: palette.hues.RED,
-      patch: palette.hues.PURPLE,
-      options: palette.hues.TEAL,
-      head: palette.hues.CYAN
+      get: '#00C853',
+      post: '#FFC107',
+      put: '#2196F3',
+      delete: '#F44336',
+      patch: '#A259FF',
+      options: '#607D8B',
+      head: '#00BCD4'
     },
 
-    grpc: palette.hues.INDIGO,
-    ws: palette.hues.ORANGE,
-    gql: palette.hues.PINK
+    grpc: '#7B1FA2',
+    ws: '#FF6C37',
+    gql: '#E91E63'
   },
 
   requestTabPanel: {
@@ -385,11 +385,11 @@ const lightTheme = {
     }
   },
   tabs: {
-    marginRight: '1.2rem',
+    marginRight: '0',
     active: {
-      fontWeight: 400,
-      color: palette.text.BASE,
-      border: palette.primary.STRONG
+      fontWeight: 600,
+      color: '#212121',
+      border: '#FF6C37'
     },
     secondary: {
       active: {
@@ -404,9 +404,9 @@ const lightTheme = {
   },
 
   requestTabs: {
-    color: palette.text.BASE,
-    bg: palette.background.CRUST,
-    bottomBorder: palette.border.BORDER0,
+    color: '#424242',
+    bg: '#FAFAFA',
+    bottomBorder: '#E0E0E0',
     icon: {
       color: palette.text.SUBTEXT0,
       hoverColor: palette.text.BASE,
