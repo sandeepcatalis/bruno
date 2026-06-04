@@ -2,43 +2,43 @@ import { rgba, lighten } from 'polished';
 
 export const palette = {
   primary: {
-    SOLID: 'hsl(39, 74%, 59%)',
-    TEXT: 'hsl(39, 74%, 64%)',
-    STRONG: 'hsl(39, 74%, 64%)',
-    SUBTLE: 'hsl(39, 74%, 54%)'
+    SOLID: '#FF6C37',
+    TEXT: '#FF8C5A',
+    STRONG: '#FF6C37',
+    SUBTLE: '#E85820'
   },
   hues: {
-    RED: 'hsl(8, 70%, 52%)',
+    RED: '#EF5350',
     ROSE: 'hsl(367, 84%, 70%)',
     BROWN: 'hsl(35,  65%, 72%)',
-    ORANGE: 'hsl(24,  88%, 72%)',
-    YELLOW: 'hsl(41, 93%, 72%)',
-    GREEN: 'hsl(140, 72%, 68%)',
-    GREEN_DARK: 'hsl(160, 90%, 44%)',
+    ORANGE: '#FF6C37',
+    YELLOW: '#FFC107',
+    GREEN: '#66BB6A',
+    GREEN_DARK: '#4CAF50',
     TEAL: 'hsl(170, 70%, 60%)',
     CYAN: 'hsl(190, 82%, 72%)',
-    BLUE: 'hsl(210, 90%, 76%)',
-    INDIGO: 'hsl(202, 88%, 72%)',
-    VIOLET: 'hsl(260, 75%, 78%)',
-    PURPLE: 'hsl(285, 72%, 75%)',
+    BLUE: '#42A5F5',
+    INDIGO: '#5C6BC0',
+    VIOLET: '#AB47BC',
+    PURPLE: '#CE93D8',
     PINK: 'hsl(305, 59%, 74%)'
   },
   system: {
-    CONTROL_ACCENT: '#D9A342'
+    CONTROL_ACCENT: '#FF6C37'
   },
   background: {
-    BASE: 'hsl(0deg 0% 10%)',
-    MANTLE: '#222224',
-    CRUST: '#1e1e1e',
-    SURFACE0: '#26292b',
-    SURFACE1: 'hsl(204, 4%, 23%)',
-    SURFACE2: '#666666'
+    BASE: '#1C1C1C',
+    MANTLE: '#252525',
+    CRUST: '#1A1A1A',
+    SURFACE0: '#2D2D2D',
+    SURFACE1: '#363636',
+    SURFACE2: '#444444'
   },
   text: {
-    BASE: 'hsl(0deg 0% 80%)',
-    SUBTEXT2: '#bbb',
-    SUBTEXT1: '#aaa',
-    SUBTEXT0: '#999'
+    BASE: '#E0E0E0',
+    SUBTEXT2: '#BDBDBD',
+    SUBTEXT1: '#9E9E9E',
+    SUBTEXT0: '#757575'
   },
   overlay: {
     OVERLAY2: '#666666',
@@ -48,7 +48,7 @@ export const palette = {
   border: {
     BORDER2: '#444444',
     BORDER1: '#333333',
-    BORDER0: '#2a2a2a'
+    BORDER0: '#2A2A2A'
   },
   utility: {
     WHITE: '#ffffff',
@@ -168,11 +168,11 @@ const darkTheme = {
 
   border: {
     radius: {
-      sm: '4px',
-      base: '6px',
-      md: '8px',
-      lg: '10px',
-      xl: '12px'
+      sm: '3px',
+      base: '4px',
+      md: '4px',
+      lg: '6px',
+      xl: '8px'
     },
     border2: palette.border.BORDER2,
     border1: palette.border.BORDER1,
@@ -209,31 +209,31 @@ const darkTheme = {
   },
 
   sidebar: {
-    color: palette.text.BASE,
-    muted: palette.text.SUBTEXT1,
-    bg: palette.background.BASE,
+    color: '#E0E0E0',
+    muted: '#9E9E9E',
+    bg: '#1A1A1A',
     dragbar: {
-      border: palette.border.BORDER1,
-      activeBorder: palette.border.BORDER2
+      border: '#333333',
+      activeBorder: '#555555'
     },
 
     collection: {
       item: {
-        bg: palette.background.SURFACE0,
-        hoverBg: palette.background.MANTLE,
-        focusBorder: palette.border.BORDER2,
-        indentBorder: palette.background.SURFACE0,
+        bg: '#2D2D2D',
+        hoverBg: '#333333',
+        focusBorder: '#555555',
+        indentBorder: '#333333',
         active: {
-          indentBorder: palette.background.SURFACE0
+          indentBorder: '#444444'
         },
         example: {
-          iconColor: palette.text.BASE
+          iconColor: '#9E9E9E'
         }
       }
     },
 
     dropdownIcon: {
-      color: palette.text.BASE
+      color: '#9E9E9E'
     }
   },
 
@@ -250,27 +250,27 @@ const darkTheme = {
   },
 
   workspace: {
-    accent: '#D9A342',
+    accent: '#FF6C37',
     border: '#444',
     button: {
-      bg: colors.GRAY_2
+      bg: '#333333'
     }
   },
 
   request: {
     methods: {
-      get: palette.hues.GREEN,
-      post: palette.hues.INDIGO,
-      put: palette.hues.ORANGE,
-      delete: lighten(0.08, palette.hues.RED),
-      patch: palette.hues.ORANGE,
-      options: palette.hues.TEAL,
-      head: palette.hues.CYAN
+      get: '#66BB6A',
+      post: '#FFC107',
+      put: '#42A5F5',
+      delete: '#EF5350',
+      patch: '#CE93D8',
+      options: '#78909C',
+      head: '#4DD0E1'
     },
 
-    grpc: palette.hues.TEAL,
-    ws: palette.hues.ORANGE,
-    gql: palette.hues.PINK
+    grpc: '#AB47BC',
+    ws: '#FF6C37',
+    gql: '#EC407A'
   },
 
   requestTabPanel: {
@@ -396,11 +396,11 @@ const darkTheme = {
   },
 
   tabs: {
-    marginRight: '1.2rem',
+    marginRight: '0',
     active: {
-      fontWeight: 400,
-      color: '#CCCCCC',
-      border: palette.primary.STRONG
+      fontWeight: 600,
+      color: '#FFFFFF',
+      border: '#FF6C37'
     },
     secondary: {
       active: {
@@ -415,16 +415,16 @@ const darkTheme = {
   },
 
   requestTabs: {
-    color: palette.text.BASE,
-    bg: palette.background.SURFACE0,
-    bottomBorder: palette.border.BORDER2,
+    color: '#BDBDBD',
+    bg: '#252525',
+    bottomBorder: '#333333',
     icon: {
-      color: '#9f9f9f',
-      hoverColor: 'rgb(204, 204, 204)',
-      hoverBg: '#1e1e1e'
+      color: '#757575',
+      hoverColor: '#E0E0E0',
+      hoverBg: '#333333'
     },
     example: {
-      iconColor: colors.GRAY_5
+      iconColor: '#757575'
     }
   },
 
@@ -493,8 +493,8 @@ const darkTheme = {
   },
 
   statusBar: {
-    border: '#323233',
-    color: 'rgb(169, 169, 169)'
+    border: 'transparent',
+    color: '#9E9E9E'
   },
 
   console: {

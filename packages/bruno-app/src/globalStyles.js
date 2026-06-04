@@ -4,12 +4,13 @@ import { rgba } from 'polished';
 const GlobalStyle = createGlobalStyle`
 
   * {
-    transition-property: background-color, border-color, box-shadow, opacity;
-    transition-duration: 0.12s;
-    transition-timing-function: ease;
+    transition-property: background-color, border-color, color, opacity;
+    transition-duration: 0.1s;
+    transition-timing-function: ease-out;
   }
 
   body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
     font-size: ${(props) => props.theme.font.size.base};
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -147,7 +148,7 @@ const GlobalStyle = createGlobalStyle`
   input[type="password"],
   input[type="email"],
   textarea {
-    border-radius: 8px;
+    border-radius: 4px;
   }
 
   @keyframes fade-in {

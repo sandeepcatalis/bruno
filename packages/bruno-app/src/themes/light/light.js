@@ -160,11 +160,11 @@ const lightTheme = {
 
   border: {
     radius: {
-      sm: '4px',
-      base: '6px',
-      md: '8px',
-      lg: '10px',
-      xl: '12px'
+      sm: '3px',
+      base: '4px',
+      md: '4px',
+      lg: '6px',
+      xl: '8px'
     },
     border2: palette.border.BORDER2,
     border1: palette.border.BORDER1,
@@ -230,22 +230,22 @@ const lightTheme = {
   },
 
   dropdown: {
-    color: palette.text.BASE,
-    iconColor: palette.text.SUBTEXT2,
-    bg: palette.utility.WHITE,
-    hoverBg: palette.background.CRUST,
-    shadow: '0 0px 3px rgba(0, 0, 0, 0.12), 0 0 0 1px rgba(0, 0, 0, 0.05)',
+    color: '#212121',
+    iconColor: '#757575',
+    bg: '#FFFFFF',
+    hoverBg: '#F5F5F5',
+    shadow: '0 4px 16px rgba(0, 0, 0, 0.12), 0 0 0 1px rgba(0, 0, 0, 0.05)',
     border: 'none',
-    separator: palette.border.BORDER1,
-    selectedColor: palette.primary.TEXT,
-    mutedText: palette.text.SUBTEXT0
+    separator: '#EEEEEE',
+    selectedColor: '#FF6C37',
+    mutedText: '#9E9E9E'
   },
 
   workspace: {
-    accent: palette.system.CONTROL_ACCENT,
-    border: palette.border.BORDER1,
+    accent: '#FF6C37',
+    border: '#E0E0E0',
     button: {
-      bg: palette.background.MANTLE
+      bg: '#F5F5F5'
     }
   },
 
@@ -477,14 +477,14 @@ const lightTheme = {
   },
 
   infoTip: {
-    bg: 'white',
-    border: palette.background.SURFACE1,
-    boxShadow: '0 4px 12px rgba(0, 0, 0, 0.15)'
+    bg: '#FFFFFF',
+    border: '#E0E0E0',
+    boxShadow: '0 4px 16px rgba(0, 0, 0, 0.12), 0 0 0 1px rgba(0, 0, 0, 0.05)'
   },
 
   statusBar: {
-    border: '#E9E9E9',
-    color: 'rgb(100, 100, 100)'
+    border: 'transparent',
+    color: '#BDBDBD'
   },
   console: {
     bg: '#f8f9fa',
