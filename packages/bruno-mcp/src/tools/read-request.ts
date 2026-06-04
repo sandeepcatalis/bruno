@@ -4,14 +4,16 @@ import * as path from 'node:path';
 import { readRequestFile, resolveWorkspace } from '../utils/collection-loader';
 
 export function registerReadRequest(server: McpServer) {
-  server.tool(
+  (server as any).registerTool(
     'read_request',
-    'Read and return the full contents of a .bru request file',
     {
-      filePath: z.string().describe('Absolute or relative path to the .bru/.yml request file'),
-      collectionPath: z.string().optional().describe('Collection root (used to resolve relative paths)')
+      description: 'Read and return the full contents of a .bru request file',
+      inputSchema: {
+        filePath: z.string().describe('Absolute or relative path to the .bru/.yml request file'),
+        collectionPath: z.string().optional().describe('Collection root (used to resolve relative paths)')
+      }
     },
-    async ({ filePath, collectionPath }) => {
+    async ({ filePath, collectionPath }: any) => {
       const base = collectionPath || resolveWorkspace();
       const resolved = path.isAbsolute(filePath) ? filePath : path.resolve(base, filePath);
       const content = readRequestFile(resolved);

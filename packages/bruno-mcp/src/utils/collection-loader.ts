@@ -121,7 +121,7 @@ export function listRequests(collectionPath: string, subPath?: string, recursive
       if (entry.isDirectory() && recursive) {
         scan(fullPath);
       } else if (entry.isFile() && entry.name.endsWith(ext) && entry.name !== collectionFile && entry.name !== folderFile) {
-        const info = parseRequestMeta(fullPath, collectionPath, format);
+        const info = parseRequestMeta(fullPath, collectionPath, format!);
         if (info) requests.push(info);
       }
     }

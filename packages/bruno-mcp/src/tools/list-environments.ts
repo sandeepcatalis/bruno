@@ -3,13 +3,15 @@ import { z } from 'zod';
 import { listEnvironments, resolveWorkspace } from '../utils/collection-loader';
 
 export function registerListEnvironments(server: McpServer) {
-  server.tool(
+  (server as any).registerTool(
     'list_environments',
-    'List available environments for a Bruno collection',
     {
-      collectionPath: z.string().describe('Path to the collection root directory')
+      description: 'List available environments for a Bruno collection',
+      inputSchema: {
+        collectionPath: z.string().describe('Path to the collection root directory')
+      }
     },
-    async ({ collectionPath }) => {
+    async ({ collectionPath }: any) => {
       const resolved = collectionPath || resolveWorkspace();
       const environments = listEnvironments(resolved);
 

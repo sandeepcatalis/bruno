@@ -16,10 +16,12 @@ const schema = {
 };
 
 export function registerRunRequest(server: McpServer) {
-  server.tool(
+  (server as any).registerTool(
     'run_request',
-    'Execute a Bruno request file (.bru) using the Bruno CLI. Returns status, headers, body, and test results.',
-    schema,
+    {
+      description: 'Execute a Bruno request file (.bru) using the Bruno CLI. Returns status, headers, body, and test results.',
+      inputSchema: schema
+    },
     async (params: any) => {
       const { path: reqPath, collectionPath, environment, envVars, tags, excludeTags, sandbox, bail, insecure } = params;
       const workspace = collectionPath || resolveWorkspace();

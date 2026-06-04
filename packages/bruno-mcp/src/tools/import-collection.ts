@@ -16,10 +16,12 @@ const schema = {
 };
 
 export function registerImportCollection(server: McpServer) {
-  server.tool(
+  (server as any).registerTool(
     'import_collection',
-    'Import an API collection from OpenAPI or WSDL into Bruno format. Creates .bru files on disk.',
-    schema,
+    {
+      description: 'Import an API collection from OpenAPI or WSDL into Bruno format. Creates .bru files on disk.',
+      inputSchema: schema
+    },
     async (params: any) => {
       const { source, type, outputPath, collectionName, collectionFormat, groupBy, insecure } = params;
       const workspace = resolveWorkspace();

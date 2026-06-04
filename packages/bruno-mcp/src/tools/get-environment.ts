@@ -3,14 +3,16 @@ import { z } from 'zod';
 import { listEnvironments, resolveWorkspace } from '../utils/collection-loader';
 
 export function registerGetEnvironment(server: McpServer) {
-  server.tool(
+  (server as any).registerTool(
     'get_environment',
-    'Get variables for a specific environment in a Bruno collection (secrets are masked)',
     {
-      collectionPath: z.string().describe('Path to the collection root directory'),
-      envName: z.string().describe('Name of the environment to read')
+      description: 'Get variables for a specific environment in a Bruno collection (secrets are masked)',
+      inputSchema: {
+        collectionPath: z.string().describe('Path to the collection root directory'),
+        envName: z.string().describe('Name of the environment to read')
+      }
     },
-    async ({ collectionPath, envName }) => {
+    async ({ collectionPath, envName }: any) => {
       const resolved = collectionPath || resolveWorkspace();
       const environments = listEnvironments(resolved);
       const env = environments.find(e => e.name === envName);

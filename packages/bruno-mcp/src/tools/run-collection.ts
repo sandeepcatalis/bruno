@@ -16,10 +16,12 @@ const schema = {
 };
 
 export function registerRunCollection(server: McpServer) {
-  server.tool(
+  (server as any).registerTool(
     'run_collection',
-    'Run all requests in an entire Bruno collection. Returns full execution report with test results.',
-    schema,
+    {
+      description: 'Run all requests in an entire Bruno collection. Returns full execution report with test results.',
+      inputSchema: schema
+    },
     async (params: any) => {
       const { collectionPath, environment, envVars, tags, excludeTags, sandbox, bail, insecure, delay } = params;
       const workspace = collectionPath || resolveWorkspace();

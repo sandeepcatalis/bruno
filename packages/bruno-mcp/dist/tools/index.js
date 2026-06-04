@@ -23,3 +23,4 @@ function registerTools(server) {
     (0, send_http_1.registerSendHttp)(server);
     (0, import_collection_1.registerImportCollection)(server);
 }
+//# sourceMappingURL=index.js.map

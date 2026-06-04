@@ -15,10 +15,12 @@ const schema = {
 };
 
 export function registerSendHttp(server: McpServer) {
-  server.tool(
+  (server as any).registerTool(
     'send_http_request',
-    'Send an ad-hoc HTTP request (no .bru file needed). Returns status, headers, and body.',
-    schema,
+    {
+      description: 'Send an ad-hoc HTTP request (no .bru file needed). Returns status, headers, and body.',
+      inputSchema: schema
+    },
     async (params: any) => {
       const { url, method, headers, body, timeout } = params;
       try {
@@ -58,8 +60,8 @@ function makeRequest(url: string, method: string, headers: Record<string, string
       timeout
     };
 
-    if (body && !options.headers!['content-length']) {
-      options.headers!['content-length'] = Buffer.byteLength(body).toString();
+    if (body && !(options.headers as Record<string, string>)['content-length']) {
+      (options.headers as Record<string, string>)['content-length'] = Buffer.byteLength(body).toString();
     }
 
     const req = lib.request(options, (res) => {

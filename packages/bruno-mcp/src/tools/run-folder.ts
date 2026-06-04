@@ -18,10 +18,12 @@ const schema = {
 };
 
 export function registerRunFolder(server: McpServer) {
-  server.tool(
+  (server as any).registerTool(
     'run_folder',
-    'Run all requests in a folder within a Bruno collection. Returns per-request results and summary.',
-    schema,
+    {
+      description: 'Run all requests in a folder within a Bruno collection. Returns per-request results and summary.',
+      inputSchema: schema
+    },
     async (params: any) => {
       const { folder, collectionPath, environment, envVars, recursive, tags, excludeTags, sandbox, bail, insecure, delay } = params;
       const workspace = collectionPath || resolveWorkspace();

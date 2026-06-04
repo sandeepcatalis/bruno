@@ -1,4 +1,37 @@
 "use strict";
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
+var __importStar = (this && this.__importStar) || (function () {
+    var ownKeys = function(o) {
+        ownKeys = Object.getOwnPropertyNames || function (o) {
+            var ar = [];
+            for (var k in o) if (Object.prototype.hasOwnProperty.call(o, k)) ar[ar.length] = k;
+            return ar;
+        };
+        return ownKeys(o);
+    };
+    return function (mod) {
+        if (mod && mod.__esModule) return mod;
+        var result = {};
+        if (mod != null) for (var k = ownKeys(mod), i = 0; i < k.length; i++) if (k[i] !== "default") __createBinding(result, mod, k[i]);
+        __setModuleDefault(result, mod);
+        return result;
+    };
+})();
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.getCollectionFormat = getCollectionFormat;
 exports.resolveWorkspace = resolveWorkspace;
@@ -6,15 +39,17 @@ exports.discoverCollections = discoverCollections;
 exports.listRequests = listRequests;
 exports.listEnvironments = listEnvironments;
 exports.readRequestFile = readRequestFile;
-const fs = require("node:fs");
-const path = require("node:path");
+const fs = __importStar(require("node:fs"));
+const path = __importStar(require("node:path"));
 const FORMAT_CONFIG = {
     yml: { ext: '.yml', collectionFile: 'opencollection.yml', folderFile: 'folder.yml' },
     bru: { ext: '.bru', collectionFile: 'collection.bru', folderFile: 'folder.bru' }
 };
 function getCollectionFormat(collectionPath) {
-    if (fs.existsSync(path.join(collectionPath, 'opencollection.yml'))) return 'yml';
-    if (fs.existsSync(path.join(collectionPath, 'bruno.json'))) return 'bru';
+    if (fs.existsSync(path.join(collectionPath, 'opencollection.yml')))
+        return 'yml';
+    if (fs.existsSync(path.join(collectionPath, 'bruno.json')))
+        return 'bru';
     return null;
 }
 function resolveWorkspace() {
@@ -22,7 +57,9 @@ function resolveWorkspace() {
 }
 function discoverCollections(workspacePath) {
     const collections = [];
-    if (!fs.existsSync(workspacePath)) return collections;
+    if (!fs.existsSync(workspacePath))
+        return collections;
+    // Check if workspacePath itself is a collection
     const format = getCollectionFormat(workspacePath);
     if (format) {
         const name = getCollectionName(workspacePath, format);
@@ -30,10 +67,13 @@ function discoverCollections(workspacePath) {
         collections.push({ name, path: workspacePath, format, requestCount });
         return collections;
     }
+    // Scan subdirectories
     const entries = fs.readdirSync(workspacePath, { withFileTypes: true });
     for (const entry of entries) {
-        if (!entry.isDirectory()) continue;
-        if (entry.name.startsWith('.') || entry.name === 'node_modules') continue;
+        if (!entry.isDirectory())
+            continue;
+        if (entry.name.startsWith('.') || entry.name === 'node_modules')
+            continue;
         const dirPath = path.join(workspacePath, entry.name);
         const dirFormat = getCollectionFormat(dirPath);
         if (dirFormat) {
@@ -50,6 +90,7 @@ function getCollectionName(collectionPath, format) {
             const brunoJson = JSON.parse(fs.readFileSync(path.join(collectionPath, 'bruno.json'), 'utf8'));
             return brunoJson.name || path.basename(collectionPath);
         }
+        // yml format - parse opencollection.yml for name
         const content = fs.readFileSync(path.join(collectionPath, 'opencollection.yml'), 'utf8');
         const nameMatch = content.match(/^name:\s*(.+)$/m);
         return nameMatch?.[1]?.trim() || path.basename(collectionPath);
@@ -64,7 +105,8 @@ function countRequests(dirPath, format, recursive = true) {
     let count = 0;
     const entries = fs.readdirSync(dirPath, { withFileTypes: true });
     for (const entry of entries) {
-        if (entry.name.startsWith('.') || entry.name === 'node_modules' || entry.name === 'environments') continue;
+        if (entry.name.startsWith('.') || entry.name === 'node_modules' || entry.name === 'environments')
+            continue;
         const fullPath = path.join(dirPath, entry.name);
         if (entry.isDirectory() && recursive) {
             count += countRequests(fullPath, format);
@@ -77,22 +119,26 @@ function countRequests(dirPath, format, recursive = true) {
 }
 function listRequests(collectionPath, subPath, recursive = true) {
     const format = getCollectionFormat(collectionPath);
-    if (!format) return [];
+    if (!format)
+        return [];
     const { ext, collectionFile, folderFile } = FORMAT_CONFIG[format];
     const scanPath = subPath ? path.join(collectionPath, subPath) : collectionPath;
     const requests = [];
     function scan(dir) {
-        if (!fs.existsSync(dir)) return;
+        if (!fs.existsSync(dir))
+            return;
         const entries = fs.readdirSync(dir, { withFileTypes: true });
         for (const entry of entries) {
-            if (entry.name.startsWith('.') || entry.name === 'node_modules' || entry.name === 'environments') continue;
+            if (entry.name.startsWith('.') || entry.name === 'node_modules' || entry.name === 'environments')
+                continue;
             const fullPath = path.join(dir, entry.name);
             if (entry.isDirectory() && recursive) {
                 scan(fullPath);
             }
             else if (entry.isFile() && entry.name.endsWith(ext) && entry.name !== collectionFile && entry.name !== folderFile) {
                 const info = parseRequestMeta(fullPath, collectionPath, format);
-                if (info) requests.push(info);
+                if (info)
+                    requests.push(info);
             }
         }
     }
@@ -104,9 +150,11 @@ function parseRequestMeta(filePath, collectionPath, format) {
         const content = fs.readFileSync(filePath, 'utf8');
         const relativePath = path.relative(collectionPath, filePath);
         const filename = path.basename(filePath);
+        // Extract meta block info using simple regex (avoid full parse dependency)
         const nameMatch = content.match(/^\s*name\s+(.+)$/m) || content.match(/^name:\s*(.+)$/m);
         const typeMatch = content.match(/^\s*type\s+(.+)$/m) || content.match(/^type:\s*(.+)$/m);
         const seqMatch = content.match(/^\s*seq\s+(\d+)$/m) || content.match(/^seq:\s*(\d+)$/m);
+        // Extract method and url
         let method;
         let url;
         if (format === 'bru') {
@@ -123,6 +171,7 @@ function parseRequestMeta(filePath, collectionPath, format) {
             const urlMatch = content.match(/^url:\s*(.+)$/m);
             url = urlMatch?.[1]?.trim();
         }
+        // Extract tags
         const tagsMatch = content.match(/^\s*tags\s+(.+)$/m) || content.match(/^tags:\s*(.+)$/m);
         const tags = tagsMatch?.[1]?.split(',').map(t => t.trim()).filter(Boolean);
         return {
@@ -143,22 +192,28 @@ function parseRequestMeta(filePath, collectionPath, format) {
 }
 function listEnvironments(collectionPath) {
     const format = getCollectionFormat(collectionPath);
-    if (!format) return [];
+    if (!format)
+        return [];
     const envDir = path.join(collectionPath, 'environments');
-    if (!fs.existsSync(envDir)) return [];
+    if (!fs.existsSync(envDir))
+        return [];
     const ext = FORMAT_CONFIG[format].ext;
     const environments = [];
     const entries = fs.readdirSync(envDir, { withFileTypes: true });
     for (const entry of entries) {
-        if (!entry.isFile()) continue;
-        if (!entry.name.endsWith(ext) && !entry.name.endsWith('.json') && !entry.name.endsWith('.yml')) continue;
+        if (!entry.isFile())
+            continue;
+        // Support both native format and .json
+        if (!entry.name.endsWith(ext) && !entry.name.endsWith('.json') && !entry.name.endsWith('.yml'))
+            continue;
         const filePath = path.join(envDir, entry.name);
-        const env = parseEnvironmentFile(filePath);
-        if (env) environments.push(env);
+        const env = parseEnvironmentFile(filePath, format);
+        if (env)
+            environments.push(env);
     }
     return environments;
 }
-function parseEnvironmentFile(filePath) {
+function parseEnvironmentFile(filePath, _format) {
     try {
         const content = fs.readFileSync(filePath, 'utf8');
         const ext = path.extname(filePath);
@@ -180,6 +235,7 @@ function parseEnvironmentFile(filePath) {
             }
             return { name, path: filePath, variables };
         }
+        // .bru or .yml format - extract variables with regex
         const name = baseName;
         const varBlockMatch = content.match(/vars\s*\{([^}]*)\}/s) || content.match(/variables:([\s\S]*?)(?=\n\w|\n$|$)/);
         if (varBlockMatch) {
@@ -187,11 +243,13 @@ function parseEnvironmentFile(filePath) {
             const lines = block.split('\n');
             for (const line of lines) {
                 const trimmed = line.trim();
-                if (!trimmed || trimmed.startsWith('#')) continue;
+                if (!trimmed || trimmed.startsWith('#'))
+                    continue;
                 const disabled = trimmed.startsWith('~');
                 const cleaned = disabled ? trimmed.slice(1) : trimmed;
                 const colonIdx = cleaned.indexOf(':');
-                if (colonIdx === -1) continue;
+                if (colonIdx === -1)
+                    continue;
                 const varName = cleaned.slice(0, colonIdx).trim();
                 const varValue = cleaned.slice(colonIdx + 1).trim();
                 const secret = varName.startsWith('secret:') || trimmed.includes(':secret');
@@ -217,3 +275,4 @@ function readRequestFile(filePath) {
         return null;
     }
 }
+//# sourceMappingURL=collection-loader.js.map

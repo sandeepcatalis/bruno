@@ -3,13 +3,15 @@ import { z } from 'zod';
 import { discoverCollections, resolveWorkspace } from '../utils/collection-loader';
 
 export function registerListCollections(server: McpServer) {
-  server.tool(
+  (server as any).registerTool(
     'list_collections',
-    'List Bruno API collections in the workspace directory',
     {
-      workspacePath: z.string().optional().describe('Path to workspace directory (defaults to BRUNO_WORKSPACE env or cwd)')
+      description: 'List Bruno API collections in the workspace directory',
+      inputSchema: {
+        workspacePath: z.string().optional().describe('Path to workspace directory (defaults to BRUNO_WORKSPACE env or cwd)')
+      }
     },
-    async ({ workspacePath }) => {
+    async ({ workspacePath }: any) => {
       const workspace = workspacePath || resolveWorkspace();
       const collections = discoverCollections(workspace);
 

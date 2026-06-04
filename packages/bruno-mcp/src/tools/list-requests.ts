@@ -3,15 +3,17 @@ import { z } from 'zod';
 import { listRequests, resolveWorkspace } from '../utils/collection-loader';
 
 export function registerListRequests(server: McpServer) {
-  server.tool(
+  (server as any).registerTool(
     'list_requests',
-    'List API requests in a Bruno collection or folder',
     {
-      collectionPath: z.string().describe('Path to the collection root directory'),
-      folder: z.string().optional().describe('Subfolder within the collection to list'),
-      recursive: z.boolean().optional().describe('Recursively list requests in subfolders (default: true)')
+      description: 'List API requests in a Bruno collection or folder',
+      inputSchema: {
+        collectionPath: z.string().describe('Path to the collection root directory'),
+        folder: z.string().optional().describe('Subfolder within the collection to list'),
+        recursive: z.boolean().optional().describe('Recursively list requests in subfolders (default: true)')
+      }
     },
-    async ({ collectionPath, folder, recursive }) => {
+    async ({ collectionPath, folder, recursive }: any) => {
       const resolvedPath = collectionPath || resolveWorkspace();
       const requests = listRequests(resolvedPath, folder, recursive ?? true);
 
