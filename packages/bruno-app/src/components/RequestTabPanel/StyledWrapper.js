@@ -11,16 +11,17 @@ const StyledWrapper = styled.div`
 
   .request-pane {
     flex-shrink: 0;
-    padding: 0 4px;
+    padding: 0;
+    border-right: 1px solid ${(props) => props.theme.border?.border1 || '#E0E0E0'};
   }
 
   .response-pane {
     min-width: 0;
-    padding: 0 4px;
+    padding: 0;
   }
 
   .main {
-    padding-bottom: 1rem;
+    padding-bottom: 0;
   }
 
   &.request-collapsed .query-url-wrapper,
@@ -42,8 +43,8 @@ const StyledWrapper = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 12px;
-    min-width: 12px;
+    width: 6px;
+    min-width: 6px;
     padding: 0;
     cursor: col-resize;
     background: transparent;
@@ -65,12 +66,13 @@ const StyledWrapper = styled.div`
 
   &.vertical-layout {
     .request-pane {
-      padding-bottom: 0.5rem;
-
+      padding-bottom: 0;
+      border-right: none;
+      border-bottom: 1px solid ${(props) => props.theme.border?.border1 || '#E0E0E0'};
     }
 
     .response-pane {
-      padding-top: 0.5rem;
+      padding-top: 0;
     }
     &.request-collapsed .response-pane {
       padding-top: 0;
@@ -82,9 +84,9 @@ const StyledWrapper = styled.div`
 
     div.dragbar-wrapper {
       width: 100%;
-      height: 12px;
+      height: 6px;
       cursor: row-resize;
-      padding: 0 1rem;
+      padding: 0;
       position: relative;
 
       div.dragbar-handle {

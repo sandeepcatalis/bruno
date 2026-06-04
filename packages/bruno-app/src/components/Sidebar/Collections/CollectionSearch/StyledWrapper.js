@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 const StyledWrapper = styled.div`
-  margin: 4px 10px 8px 10px;
+  margin: 8px 10px 8px 10px;
   position: relative;
 
   .search-icon {
@@ -9,7 +9,7 @@ const StyledWrapper = styled.div`
     left: 10px;
     top: 50%;
     transform: translateY(-50%);
-    color: ${(props) => props.theme.sidebar.muted};
+    color: #9E9E9E;
     pointer-events: none;
   }
 
@@ -18,24 +18,24 @@ const StyledWrapper = styled.div`
     height: 32px;
     padding: 0 32px 0 32px;
     font-size: 12px;
-    color: ${(props) => props.theme.sidebar.color};
-    background: ${(props) => props.theme.sidebar.collection.item.hoverBg};
-    border: 1px solid transparent;
-    border-radius: 6px;
+    color: #E0E0E0;
+    background: #383838;
+    border: 1px solid #4A4A4A;
+    border-radius: 4px;
     outline: none;
     transition: all 0.15s ease;
 
     &::placeholder {
-      color: ${(props) => props.theme.sidebar.muted};
+      color: #757575;
     }
 
     &:hover {
-      border-color: ${(props) => props.theme.input.border};
+      border-color: #666666;
     }
 
     &:focus {
-      background: ${(props) => props.theme.input.bg};
-      border-color: ${(props) => props.theme.input.border};
+      background: #404040;
+      border-color: #FF6C37;
     }
   }
 

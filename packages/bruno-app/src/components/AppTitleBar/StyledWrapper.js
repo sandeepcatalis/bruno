@@ -1,13 +1,13 @@
 import styled from 'styled-components';
 
 const Wrapper = styled.div`
-  height: 42px;
+  height: 48px;
   display: flex;
   align-items: center;
-  background: ${(props) => props.theme.sidebar.bg};
+  background: #1F1F1F;
   -webkit-app-region: drag;
   user-select: none;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
   z-index: 10;
 
   .titlebar-content {
@@ -65,12 +65,13 @@ const Wrapper = styled.div`
 
     .workspace-name {
       font-size: 13px;
-      font-weight: 500;
-      color: ${(props) => props.theme.sidebar.color};
+      font-weight: 600;
+      color: #FFFFFF;
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
       max-width: 180px;
+      letter-spacing: 0.01em;
     }
 
     .chevron-icon {
@@ -80,7 +81,7 @@ const Wrapper = styled.div`
     }
   }
 
-  /* Center section - Bruno branding */
+  /* Center section - branding */
   .titlebar-center {
     position: absolute;
     left: 50%;
@@ -91,10 +92,11 @@ const Wrapper = styled.div`
     pointer-events: none;
 
     .bruno-text {
-      font-size: 13px;
-      font-weight: 600;
-      color: ${(props) => props.theme.text};
+      font-size: 12px;
+      font-weight: 500;
+      color: #9E9E9E;
       letter-spacing: 0.5px;
+      text-transform: uppercase;
     }
   }
 

@@ -29,13 +29,18 @@ const StyledWrapper = styled.div`
     align-items: center;
     justify-content: space-between;
     gap: 16px;
-    padding: 6px 4px 6px 8px;
-    min-height: 28px;
-    height: 28px;
+    padding: 10px 12px 10px 12px;
+    min-height: 34px;
+    height: 34px;
     user-select: none;
     transition: background-color 0.15s ease;
     flex-shrink: 0;
-    border-bottom: 1px solid transparent;
+    border-bottom: 1px solid #3A3A3A;
+    text-transform: uppercase;
+    font-size: 0.6875rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    color: #9E9E9E;
 
     .section-header-left {
       display: flex;

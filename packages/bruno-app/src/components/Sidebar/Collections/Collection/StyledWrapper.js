@@ -2,11 +2,15 @@ import styled from 'styled-components';
 
 const Wrapper = styled.div`
   .collection-name {
-    height: 1.6rem;
+    height: 2rem;
     cursor: pointer;
     user-select: none;
-    padding-left: 4px;
+    padding-left: 8px;
+    padding-right: 4px;
     border: ${(props) => props.theme.dragAndDrop.borderStyle} transparent;
+    font-weight: 600;
+    font-size: 0.8125rem;
+    letter-spacing: 0.01em;
 
     .rotate-90 {
       transform: rotateZ(90deg);

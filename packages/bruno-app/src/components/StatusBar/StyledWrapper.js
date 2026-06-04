@@ -6,11 +6,11 @@ const StyledWrapper = styled.div`
     align-items: center;
     justify-content: space-between;
     padding: 0 1rem;
-    height: 1.5rem;
-    background: ${(props) => props.theme.sidebar.bg};
-    border-top: 1px solid ${(props) => props.theme.statusBar.border};
-    color: ${(props) => props.theme.statusBar.color};
-    font-size: ${(props) => props.theme.font.size.sm};
+    height: 1.625rem;
+    background: #1F1F1F;
+    border-top: none;
+    color: #BDBDBD;
+    font-size: 11px;
     user-select: none;
     position: relative;
   }

@@ -71,8 +71,8 @@ const StyledWrapper = styled.div`
     flex: 1 1 0;
     min-height: 0;
     position: relative;
-    padding: 0 1rem;
-    margin-top: 1rem;
+    padding: 0 12px;
+    margin-top: 8px;
 
     &.has-script-error {
       height: auto;
