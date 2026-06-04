@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "bruno": {
+      "command": "node",
+      "args": ["packages/bruno-mcp/bin/bruno-mcp.js"],
+      "env": {
+        "BRUNO_WORKSPACE": "."
+      }
+    }
+  }
+}

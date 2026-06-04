@@ -1,0 +1,35 @@
+{
+  "name": "@usedaffy/mcp",
+  "version": "0.1.0",
+  "license": "MIT",
+  "description": "MCP server for Bruno API client - exposes collections, requests, and execution to AI agents",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "bin": {
+    "bruno-mcp": "./bin/bruno-mcp.js"
+  },
+  "files": [
+    "dist",
+    "bin",
+    "package.json"
+  ],
+  "scripts": {
+    "clean": "rimraf dist",
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "start": "node bin/bruno-mcp.js",
+    "prebuild": "npm run clean"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.12.1",
+    "@usedaffy/common": "*",
+    "@usedaffy/filestore": "*",
+    "@usedaffy/lang": "*",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/node": "^22.14.1",
+    "rimraf": "^5.0.5",
+    "typescript": "^5.7.3"
+  }
+}
